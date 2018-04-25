@@ -1,0 +1,73 @@
+% Dieses Teildokument beschreibt die Titelseite.
+%
+
+% Seitenzähler auf 1, Römische Ziffern.
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\thispagestyle{headings}
+
+%\changepage{<text height>}{<text width>}{<even-side margin>}{<odd-side margin>}{<column sep.>}{<topmargin>}{<headheight>}{<headsep>}{<footskip>}
+\changepage{5,1cm}{2.4cm}{}{-0.7cm}{}{-2,3cm}{}{}{}
+
+% Eigentliche Titelseite.
+\begin{titlepage}
+	
+\begin{figure}\raggedleft\includegraphics[height=3.0cm]{src/pic/logo.jpg}\end{figure}
+  
+\begin{tikzpicture}[overlay]
+
+% horizontal lines
+\draw[color=se_dark_blue, thick] (-1.6, 0.9) -- (17.4, 0.9);
+\draw[color=se_light_blue, thick] (-1.4, 0.7) -- (17.4, 0.7);
+
+% vertical lines
+\draw[color=se_dark_blue, thick] (-1, 0.9) -- (-1, -24.5);
+\draw[color=se_light_blue, thick] (-0.8, 0.7) -- (-0.8, -24.5);
+
+\end{tikzpicture}
+
+\vspace*{-1.5em}
+
+\begin{flushleft}
+  {\fontfamily{phv}  
+  	{\LARGE
+      Rheinisch Westfälische Technische Hochschule Aachen \\
+      Lehrstuhl für Software Engineering \\}
+    \vspace{3em}
+  
+    {\LARGE \textbf{Erste Titel-Zeile}\\} 
+    {\LARGE \textbf{Zweite Titel-Zeile}\\} 
+    {\LARGE \textbf{Dritte Titel-Zeile}\\} % Oder \emptyLine falls nicht Titel kürzer
+    {\LARGE \textbf{Vierte Titel-Zeile}\\} % Oder \emptyLine falls nicht Titel kürzer
+    \vspace{3em}
+		
+    {\Large \textbf{Diplomarbeit/Masterarbeit/Studienarbeit}\\}
+		\vspace{3em} 
+		
+		{\large von\\} % presented by
+    
+    {\LARGE \textbf{Name, Vorname}\\}
+    \vspace{3em} 
+		    
+    {\Large \textbf{1. Prüfer: Prof.\ Dr.\ B.\ Rumpe}\\}
+    \vspace{1em} 
+    {\Large \textbf{2. Prüfer: }\\}
+    \vspace{1em} 
+    {\Large \textbf{Betreuer: }\\}
+    \vspace{7em} 
+
+    {\large Diese Arbeit wurde vorgelegt am Lehrstuhl für Software Engineering \\}
+    \vspace{1em}
+    % The present work was submitted to the chair of software engineering
+		{\large	Aachen, den \today\\}
+  }
+\end{flushleft}
+
+\end{titlepage}
+
+\changepage{-5,1cm}{-2.4cm}{}{0.7cm}{}{2,3cm}{}{}{}
+
+
+
+
