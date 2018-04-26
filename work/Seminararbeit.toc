@@ -1,0 +1,13 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Available Deep Learning Approaches}{1}
+\contentsline {section}{\numberline {1.2}Deep Learning Languages}{1}
+\contentsline {subsection}{\numberline {1.2.1}CNNArch}{1}
+\contentsline {subsection}{\numberline {1.2.2}MxNet}{1}
+\contentsline {chapter}{\numberline {2}Running Example}{3}
+\contentsline {section}{\numberline {2.1}Implementation}{3}
+\contentsline {section}{\numberline {2.2}Training}{3}
+\contentsline {chapter}{\numberline {3}Evaluation}{5}
+\contentsline {section}{\numberline {3.1}MontiSim}{5}
+\contentsline {section}{\numberline {3.2}Results}{5}
+\contentsline {chapter}{\numberline {4}Conclusion}{7}
+\contentsline {chapter}{Literaturverzeichnis}{7}

@@ -1,0 +1,53 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{TvWH17}
+
+\bibitem[CLL{\etalchar{+}}15]{chen2015mxnet}
+Tianqi Chen, Mu~Li, Yutian Li, Min Lin, Naiyan Wang, Minjie Wang, Tianjun Xiao,
+  Bing Xu, Chiyuan Zhang, and Zheng Zhang.
+\newblock Mxnet: A flexible and efficient machine learning library for
+  heterogeneous distributed systems.
+\newblock {\em arXiv preprint arXiv:1512.01274}, 2015.
+
+\bibitem[CSKX15]{chen2015deepdriving}
+Chenyi Chen, Ari Seff, Alain Kornhauser, and Jianxiong Xiao.
+\newblock Deepdriving: Learning affordance for direct perception in autonomous
+  driving.
+\newblock In {\em Computer Vision (ICCV), 2015 IEEE International Conference
+  on}, pages 2722--2730. IEEE, 2015.
+
+\bibitem[GLSU13]{geiger2013vision}
+Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun.
+\newblock Vision meets robotics: The kitti dataset.
+\newblock {\em The International Journal of Robotics Research},
+  32(11):1231--1237, 2013.
+
+\bibitem[Grz17]{grzywaczewski2017training}
+Adam Grzywaczewski.
+\newblock Training ai for self-driving vehicles: the challenge of scale.
+\newblock Technical report, Tech. rep., NVIDIA Corporation. URL
+  https://devblogs. nvidia.
+  com/parallelforall/training-self-driving-vehicles-challenge-scale, 2017.
+
+\bibitem[KSH12]{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
+\bibitem[Rea17]{MontiSim}
+Bernhard Rumpe and et. al.
+\newblock Montisim.
+\newblock https://github.com/MontiSim, 2017.
+
+\bibitem[TvWH17]{CNNArch}
+Thomas Timmermann, Michael von Wenckstern, and Malte Heithoff.
+\newblock Cnnarchlang.
+\newblock https://github.com/EmbeddedMontiArc/CNNArchLang, 2017.
+
+\bibitem[ZF14]{zeiler2014visualizing}
+Matthew~D Zeiler and Rob Fergus.
+\newblock Visualizing and understanding convolutional networks.
+\newblock In {\em European conference on computer vision}, pages 818--833.
+  Springer, 2014.
+
+\end{thebibliography}
