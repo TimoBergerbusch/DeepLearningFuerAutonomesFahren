@@ -1,5 +1,8 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Available Deep Learning Approaches}{1}
+\contentsline {subsection}{\numberline {1.1.1}Mediated Perception}{1}
+\contentsline {subsection}{\numberline {1.1.2}Behavior Reflex}{1}
+\contentsline {subsection}{\numberline {1.1.3}Direct Perception}{1}
 \contentsline {section}{\numberline {1.2}Deep Learning Languages}{1}
 \contentsline {subsection}{\numberline {1.2.1}CNNArch}{1}
 \contentsline {subsection}{\numberline {1.2.2}MxNet}{1}
