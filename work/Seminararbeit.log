@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  11 MAY 2018 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  11 MAY 2018 21:55
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -801,11 +801,23 @@ Overfull \hbox (36.18723pt too wide) in paragraph at lines 35--36
 [][] 
  []
 
-[2 <./src/pic/AlexNet-structure.PNG>]) (src/tex/example.tex [3] [4
+[2 <./src/pic/AlexNet-structure.PNG>]
+<src/pic/3D-boundingbox-example.png, id=183, 476.53032pt x 322.20375pt>
+File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
-]
+<use src/pic/3D-boundingbox-example.png>
+Package pdftex.def Info: src/pic/3D-boundingbox-example.png used on input line 
+62.
+(pdftex.def)             Requested size: 285.9204pt x 193.32373pt.
+ [3]) (src/tex/example.tex [4 <./src/pic/3D-boundingbox-example.png>]
 Chapter 2.
-) (src/tex/evaluation.tex [5] [6
+
+LaTeX Warning: Citation `geiger2013vision' on page 5 undefined on input line 12
+.
+
+) (src/tex/evaluation.tex [5
+
+] [6
 
 ]
 Chapter 3.
@@ -834,13 +846,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 33F746B5DF164FF43AD1B3B31C155321;1109.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 19438 strings out of 493333
- 368907 string characters out of 3144357
- 449159 words of memory out of 3000000
- 22566 multiletter control sequences out of 15000+200000
+ 19448 strings out of 493333
+ 369147 string characters out of 3144357
+ 450159 words of memory out of 3000000
+ 22573 multiletter control sequences out of 15000+200000
  18274 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,54p,558b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -852,9 +868,9 @@ amsfonts/cm/cmr8.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><
 D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/font
 s/type1/urw/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a
 .pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (16 pages, 366249 bytes).
+Output written on Seminararbeit.pdf (16 pages, 920268 bytes).
 PDF statistics:
- 281 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 289 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

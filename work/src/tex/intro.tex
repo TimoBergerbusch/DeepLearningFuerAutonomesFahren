@@ -48,7 +48,21 @@ All these three groups differ in the way of interpreting the given sensor data a
 
 \subsection{Mediated Perception} \label{subsec: Mediated Perception}
 
-State the approach of a Mediated Perception based CNN
+The mediated perception approach is a multi-component continuous process. Every component recognizes specific aspects for driving. For example traffic signs, lanes, other cars. Those components are then combined into one single world state representing the cars surrounding based on the sensor data. \cite{KITTI}\\
+These world states are 3D models of the current world. Cars are identified using a classifier and then often surrounded by a 3D bounding box. An example can be seen in \Cref{pic: 3D Bounding Box}. By comparing different frames generated one can estimate the speed and distance to those objects and derive an A.I. based precedence behavior. \cite{KITTI}\cite{chen2015deepdriving}
+
+The often stated problems with such approaches are, that computing such a scene is costly in terms of computation time. Some information is irrelevant, redundant or even misleading due to inaccuracy of sensors. To perform a right turn the sensor information of the distance to a car left behind me is irrelevant, but becomes very important when taking a left turn.\\
+Additionally many of the subtasks are still open research topics themselves. For example a reliable lane detection throughout various weather conditions or worse. Imagine a new road not having any drawn lines yet.\\
+Also mediated perception approaches require very detailed information up front, like up-to-date maps.
+
+The approach of mediated perception is a reasonable and very sturdy way of handling such a complex task, but has its drawbacks regarding computational time and additional knowledge.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.6]{src/pic/3D-boundingbox-example.png}
+	\caption{An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite{KITTI}}
+	\label{pic: 3D Bounding Box}
+\end{figure}
 
 \subsection{Behavior Reflex}\label{subsec: Behavior Reflex}
 
