@@ -11,6 +11,8 @@
 \usepackage{pdfpages}
 \usepackage[strict]{changepage}
 \usepackage{xspace}
+\usepackage{hyperref}
+\usepackage{cleveref}
 
 \pdfoptionpdfminorversion=6
 
@@ -63,8 +65,17 @@
 \setlength{\textheight}{23,5cm}		   
 \setlength{\parindent}{0cm}
 
+% own commands
+\newcommand{\red}[1]{\color{red}#1\color{black}}
+\newcommand{\todoLine}{\noindent\rule{15cm}{0.4pt}}
+\newcommand{\todo}[1]{\todoLine\\\red{TODO:}#1 \todoLine}
+
+% Words
 \newcommand{\emptyLine}{{\LARGE ~\\}}
 \newcommand{\MontiCar}{MontiCar\xspace}
+\newcommand{\kitti}{KITTI\xspace}
+\newcommand{\cnnarch}{CNNArch\xspace}
+\newcommand{\alexnet}{AlexNet\xspace}
 
 
 \begin{document}

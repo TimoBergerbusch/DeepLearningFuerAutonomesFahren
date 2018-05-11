@@ -15,6 +15,11 @@ Chenyi Chen, Ari Seff, Alain Kornhauser, and Jianxiong Xiao.
 \newblock In {\em Computer Vision (ICCV), 2015 IEEE International Conference
   on}, pages 2722--2730. IEEE, 2015.
 
+\bibitem[Gib14]{gibson2014ecological}
+James~J Gibson.
+\newblock {\em The ecological approach to visual perception: classic edition}.
+\newblock Psychology Press, 2014.
+
 \bibitem[GLSU13]{geiger2013vision}
 Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun.
 \newblock Vision meets robotics: The kitti dataset.
@@ -44,10 +49,15 @@ Thomas Timmermann, Michael von Wenckstern, and Malte Heithoff.
 \newblock Cnnarchlang.
 \newblock https://github.com/EmbeddedMontiArc/CNNArchLang, 2017.
 
-\bibitem[ZF14]{zeiler2014visualizing}
-Matthew~D Zeiler and Rob Fergus.
-\newblock Visualizing and understanding convolutional networks.
-\newblock In {\em European conference on computer vision}, pages 818--833.
-  Springer, 2014.
+\bibitem[Ull80]{ullman1980against}
+Shimon Ullman.
+\newblock Against direct perception.
+\newblock {\em Behavioral and Brain Sciences}, 3(3):373--381, 1980.
+
+\bibitem[{Wik}18]{wiki:CNN}
+{Wikipedia contributors}.
+\newblock Convolutional neural networks --- {W}ikipedia{,} the free
+  encyclopedia, 2018.
+\newblock [Online; accessed 11-May-2018].
 
 \end{thebibliography}

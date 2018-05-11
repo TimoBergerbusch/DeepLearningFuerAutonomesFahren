@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  27 APR 2018 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  11 MAY 2018 17:28
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -458,26 +458,155 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 ) (D:\Tools\MikTex\tex\latex\tools\xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
+(D:\Tools\MikTex\tex\latex\hyperref\hyperref.sty
+Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
+
+(D:\Tools\MikTex\tex\generic\oberdiek\hobsub-hyperref.sty
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+(D:\Tools\MikTex\tex\generic\oberdiek\hobsub-generic.sty
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+(D:\Tools\MikTex\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(D:\Tools\MikTex\tex\latex\oberdiek\auxhook.sty
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+(D:\Tools\MikTex\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen155
+\Hy@linkcounter=\count118
+\Hy@pagecounter=\count119
+
+(D:\Tools\MikTex\tex\latex\hyperref\pd1enc.def
+File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count120
+
+(D:\Tools\MikTex\tex\latex\00miktex\hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4735.
+\c@Hy@tempcnt=\count121
+
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5088.
+\XeTeXLinkMargin=\dimen156
+\Fld@menulength=\count122
+\Field@Width=\dimen157
+\Fld@charsize=\dimen158
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
+\Hy@abspage=\count123
+\c@Item=\count124
+\c@Hfootnote=\count125
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(D:\Tools\MikTex\tex\latex\hyperref\hpdftex.def
+File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
+\Fld@listcount=\count126
+\c@bookmark@seq@number=\count127
+
+(D:\Tools\MikTex\tex\latex\oberdiek\rerunfilecheck.sty
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip46
+)
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\cleveref\cleve
+ref.sty"
+Package: cleveref 2013/12/28 v0.19 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2230.
+LaTeX Info: Redefining \cref on input line 2230.
+LaTeX Info: Redefining \Cref on input line 2230.
+LaTeX Info: Redefining \crefrange on input line 2230.
+LaTeX Info: Redefining \Crefrange on input line 2230.
+LaTeX Info: Redefining \cpageref on input line 2230.
+LaTeX Info: Redefining \Cpageref on input line 2230.
+LaTeX Info: Redefining \cpagerefrange on input line 2230.
+LaTeX Info: Redefining \Cpagerefrange on input line 2230.
+LaTeX Info: Redefining \labelcref on input line 2230.
+LaTeX Info: Redefining \labelcpageref on input line 2230.
+)
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listi
 ngs.sty"
-\lst@mode=\count118
+\lst@mode=\count128
 \lst@gtempboxa=\box40
 \lst@token=\toks34
-\lst@length=\count119
-\lst@currlwidth=\dimen155
-\lst@column=\count120
-\lst@pos=\count121
-\lst@lostspace=\dimen156
-\lst@width=\dimen157
-\lst@newlines=\count122
-\lst@lineno=\count123
-\lst@maxwidth=\dimen158
+\lst@length=\count129
+\lst@currlwidth=\dimen159
+\lst@column=\count130
+\lst@pos=\count131
+\lst@lostspace=\dimen160
+\lst@width=\dimen161
+\lst@newlines=\count132
+\lst@lineno=\count133
+\lst@maxwidth=\dimen162
 
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmi
 sc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count124
-\lst@skipnumbers=\count125
+\c@lstnumber=\count134
+\lst@skipnumbers=\count135
 \lst@framebox=\box41
 )
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listi
@@ -488,68 +617,41 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
  (Seminararbeit.aux)
 \openout1 = `Seminararbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
+LaTeX Font Info:    ... okay on input line 81.
 
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count126
-\scratchdimen=\dimen159
+\scratchcounter=\count136
+\scratchdimen=\dimen163
 \scratchbox=\box42
-\nofMPsegments=\count127
-\nofMParguments=\count128
+\nofMPsegments=\count137
+\nofMParguments=\count138
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count129
-\MPscratchDim=\dimen160
-\MPnumerator=\count130
-\makeMPintoPDFobject=\count131
+\MPscratchCnt=\count139
+\MPscratchDim=\dimen164
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
 \everyMPtoPDFconversion=\toks36
-) (D:\Tools\MikTex\tex\generic\oberdiek\pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(D:\Tools\MikTex\tex\generic\oberdiek\ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(D:\Tools\MikTex\tex\latex\oberdiek\epstopdf-base.sty
+) (D:\Tools\MikTex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
 (D:\Tools\MikTex\tex\latex\oberdiek\grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-(D:\Tools\MikTex\tex\generic\oberdiek\kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-))
-(D:\Tools\MikTex\tex\latex\oberdiek\kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(D:\Tools\MikTex\tex\generic\oberdiek\kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(D:\Tools\MikTex\tex\generic\oberdiek\etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -570,13 +672,28 @@ Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package hyperref Info: Link coloring OFF on input line 81.
 
-(D:\Tools\MikTex\tex\generic\ifxetex\ifxetex.sty
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
-))
-\c@lstlisting=\count132
+(D:\Tools\MikTex\tex\latex\hyperref\nameref.sty
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+(D:\Tools\MikTex\tex\generic\oberdiek\gettitlestring.sty
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count142
+)
+LaTeX Info: Redefining \ref on input line 81.
+LaTeX Info: Redefining \pageref on input line 81.
+LaTeX Info: Redefining \nameref on input line 81.
+ (Seminararbeit.out)
+(Seminararbeit.out)
+\@outlinefile=\write5
+\openout5 = `Seminararbeit.out'.
+
+\c@lstlisting=\count143
  (src/tex/cover_en.tex
-<src/pic/logo.jpg, id=4, 1120.185pt x 284.56313pt>
+<src/pic/logo.jpg, id=77, 1120.185pt x 284.56313pt>
 File: src/pic/logo.jpg Graphic file (type jpg)
  <use src/pic/logo.jpg>
 Package pdftex.def Info: src/pic/logo.jpg used on input line 16.
@@ -594,49 +711,49 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 {C:/Users/Timo Bergerbusch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <
 ./src/pic/logo.jpg>])
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=11, 597.45204pt x 845.1575pt>
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=85, 597.45204pt x 845.1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
-nput line 84.
+nput line 95.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
-nput line 84.
+nput line 95.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=14, page=1, 597.45204pt x 845
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=88, page=1, 597.45204pt x 845
 .1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
  <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 84.
+ed on input line 95.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 84.
+ed on input line 95.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 84.
+ed on input line 95.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 84.
+ed on input line 95.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 84.
+ed on input line 95.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
  [2
 
@@ -657,26 +774,42 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
 )
-\tf@toc=\write5
-\openout5 = `Seminararbeit.toc'.
+\tf@toc=\write6
+\openout6 = `Seminararbeit.toc'.
 
 
 [5
 
 ] (src/tex/intro.tex
 Chapter 1.
-) (src/tex/example.tex [1
+[1
 
 
-] [2
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 27.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 27.
+ <src/pic/AlexNet-structure.PNG, id=159, 925.95938pt x 290.58563pt>
+File: src/pic/AlexNet-structure.PNG Graphic file (type png)
+
+<use src/pic/AlexNet-structure.PNG>
+Package pdftex.def Info: src/pic/AlexNet-structure.PNG used on input line 35.
+(pdftex.def)             Requested size: 462.97856pt x 145.29245pt.
+
+Overfull \hbox (36.18723pt too wide) in paragraph at lines 35--36
+[][] 
+ []
+
+[2 <./src/pic/AlexNet-structure.PNG>]) (src/tex/example.tex [3] [4
 
 ]
 Chapter 2.
-) (src/tex/evaluation.tex [3] [4
+) (src/tex/evaluation.tex [5] [6
 
 ]
 Chapter 3.
-) (src/tex/conclusion.tex [5] [6
+) (src/tex/conclusion.tex [7] [8
 
 ]
 Chapter 4.
@@ -685,33 +818,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (Seminararbeit.bbl [7] [8
+) (Seminararbeit.bbl [9] [10
 
 ]
-Underfull \hbox (badness 5696) in paragraph at lines 25--30
+Underfull \hbox (badness 5696) in paragraph at lines 30--35
 \OT1/cmr/m/n/10.95 lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDIA Cor
 -po-ra-
  []
 
-) [9] (Seminararbeit.aux) ) 
+) [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+ (Seminararbeit.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
+(rerunfilecheck)             Checksum: 33F746B5DF164FF43AD1B3B31C155321;1109.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
+ ) 
 Here is how much of TeX's memory you used:
- 14405 strings out of 493333
- 282599 string characters out of 3144357
- 324929 words of memory out of 3000000
- 17618 multiletter control sequences out of 15000+200000
- 17362 words of font info for 44 fonts, out of 3000000 for 9000
+ 19438 strings out of 493333
+ 368907 string characters out of 3144357
+ 449159 words of memory out of 3000000
+ 22566 multiletter control sequences out of 15000+200000
+ 18274 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,54p,484b,420s stack positions out of 5000i,500n,10000p,200000b,50000s
-{D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Too
-ls/MikTex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Tools/MikTex/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Tools/M
-ikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/fonts/type1/ur
-w/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/T
-ools/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (14 pages, 272592 bytes).
+ 55i,18n,54p,558b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+{D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
+lic/amsfonts/cm/cmbx10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Tools/MikT
+ex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Tools/MikTex/fonts/type1/public/
+amsfonts/cm/cmr8.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/font
+s/type1/urw/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a
+.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on Seminararbeit.pdf (16 pages, 366249 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 187 words of extra memory for PDF output out of 10000 (max. 10000000)
 
