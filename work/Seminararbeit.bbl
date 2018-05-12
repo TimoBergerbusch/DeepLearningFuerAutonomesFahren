@@ -39,6 +39,12 @@ Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock In {\em Advances in neural information processing systems}, pages
   1097--1105, 2012.
 
+\bibitem[Pom89]{pomerleau1989alvinn}
+Dean~A Pomerleau.
+\newblock Alvinn: An autonomous land vehicle in a neural network.
+\newblock In {\em Advances in neural information processing systems}, pages
+  305--313, 1989.
+
 \bibitem[Rea17]{MontiSim}
 Bernhard Rumpe and et. al.
 \newblock Montisim.

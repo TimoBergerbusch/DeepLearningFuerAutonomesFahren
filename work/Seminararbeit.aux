@@ -32,8 +32,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}AlexNet}{2}{subsection.1.1.1}}
 \newlabel{subsec: AlexNet}{{1.1.1}{2}{AlexNet}{subsection.1.1.1}{}}
 \newlabel{subsec: AlexNet@cref}{{[subsection][1][1,1]1.1.1}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces The AlexNet\xspace  -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The GPUs only communicate between two layers, but never within a layer.\cite  {krizhevsky2012imagenet}}}{2}{figure.1.1}}
-\newlabel{pic: AlexNet}{{1.1}{2}{The \alexnet -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The GPUs only communicate between two layers, but never within a layer.\cite {krizhevsky2012imagenet}}{figure.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces The AlexNet\xspace  -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The GPUs only communicate between two layers, but never within a layer.\cite  {krizhevsky2012imagenet}\relax }}{2}{figure.caption.3}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{pic: AlexNet}{{1.1}{2}{The \alexnet -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The GPUs only communicate between two layers, but never within a layer.\cite {krizhevsky2012imagenet}\relax }{figure.caption.3}{}}
 \newlabel{pic: AlexNet@cref}{{[figure][1][1]1.1}{2}}
 \citation{gibson2014ecological}
 \citation{ullman1980against}
@@ -42,6 +43,7 @@
 \citation{chen2015deepdriving}
 \citation{KITTI}
 \citation{KITTI}
+\citation{pomerleau1989alvinn}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Available Deep Learning Approaches}{3}{section.1.2}}
 \newlabel{sec: Deep Learning Approaches}{{1.2}{3}{Available Deep Learning Approaches}{section.1.2}{}}
 \newlabel{sec: Deep Learning Approaches@cref}{{[section][2][1]1.2}{3}}
@@ -51,49 +53,71 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.2}Behavior Reflex}{3}{subsection.1.2.2}}
 \newlabel{subsec: Behavior Reflex}{{1.2.2}{3}{Behavior Reflex}{subsection.1.2.2}{}}
 \newlabel{subsec: Behavior Reflex@cref}{{[subsection][2][1,2]1.2.2}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Direct Perception}{3}{subsection.1.2.3}}
-\newlabel{subsec: Direct Perception}{{1.2.3}{3}{Direct Perception}{subsection.1.2.3}{}}
-\newlabel{subsec: Direct Perception@cref}{{[subsection][3][1,2]1.2.3}{3}}
+\citation{chen2015deepdriving}
+\citation{pomerleau1989alvinn}
+\citation{pomerleau1989alvinn}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite  {KITTI}\relax }}{4}{figure.caption.4}}
+\newlabel{pic: 3D Bounding Box}{{1.2}{4}{An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite {KITTI}\relax }{figure.caption.4}{}}
+\newlabel{pic: 3D Bounding Box@cref}{{[figure][2][1]1.2}{4}}
+\newlabel{fig: behavior sketches: free lane}{{1.3a}{5}{free lane\relax }{figure.caption.5}{}}
+\newlabel{fig: behavior sketches: free lane@cref}{{[subfigure][1][1,3]1.3a}{5}}
+\newlabel{sub@fig: behavior sketches: free lane}{{a}{5}{free lane\relax }{figure.caption.5}{}}
+\newlabel{sub@fig: behavior sketches: free lane@cref}{{[subfigure][1][1,3]1.3a}{5}}
+\newlabel{fig: behavior sketches: blocked lane}{{1.3b}{5}{slower car in the same lane\relax }{figure.caption.5}{}}
+\newlabel{fig: behavior sketches: blocked lane@cref}{{[subfigure][2][1,3]1.3b}{5}}
+\newlabel{sub@fig: behavior sketches: blocked lane}{{b}{5}{slower car in the same lane\relax }{figure.caption.5}{}}
+\newlabel{sub@fig: behavior sketches: blocked lane@cref}{{[subfigure][2][1,3]1.3b}{5}}
+\newlabel{fig: behavior sketches: shared lane}{{1.3c}{5}{equal fast car in same lane\relax }{figure.caption.5}{}}
+\newlabel{fig: behavior sketches: shared lane@cref}{{[subfigure][3][1,3]1.3c}{5}}
+\newlabel{sub@fig: behavior sketches: shared lane}{{c}{5}{equal fast car in same lane\relax }{figure.caption.5}{}}
+\newlabel{sub@fig: behavior sketches: shared lane@cref}{{[subfigure][3][1,3]1.3c}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.\relax }}{5}{figure.caption.5}}
+\newlabel{fig: behavior sketches}{{1.3}{5}{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.\relax }{figure.caption.5}{}}
+\newlabel{fig: behavior sketches@cref}{{[figure][3][1]1.3}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces The neural network\xspace  called ALVINN\xspace  and used as a behavior reflex based autonomous agent. \cite  {pomerleau1989alvinn}\relax }}{5}{figure.caption.6}}
+\newlabel{pic: ALVINN}{{1.4}{5}{The \nn called \alvinn and used as a behavior reflex based autonomous agent. \cite {pomerleau1989alvinn}\relax }{figure.caption.6}{}}
+\newlabel{pic: ALVINN@cref}{{[figure][4][1]1.4}{5}}
 \citation{CNNArch}
 \citation{chen2015mxnet}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite  {KITTI}}}{4}{figure.1.2}}
-\newlabel{pic: 3D Bounding Box}{{1.2}{4}{An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite {KITTI}}{figure.1.2}{}}
-\newlabel{pic: 3D Bounding Box@cref}{{[figure][2][1]1.2}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Deep Learning Languages}{4}{section.1.3}}
-\newlabel{sec: DLL}{{1.3}{4}{Deep Learning Languages}{section.1.3}{}}
-\newlabel{sec: DLL@cref}{{[section][3][1]1.3}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}CNNArch}{4}{subsection.1.3.1}}
-\newlabel{subsec: CNNArch}{{1.3.1}{4}{CNNArch}{subsection.1.3.1}{}}
-\newlabel{subsec: CNNArch@cref}{{[subsection][1][1,3]1.3.1}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}MxNet}{4}{subsection.1.3.2}}
-\newlabel{subsec: MxNet}{{1.3.2}{4}{MxNet}{subsection.1.3.2}{}}
-\newlabel{subsec: MxNet@cref}{{[subsection][2][1,3]1.3.2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}Direct Perception}{6}{subsection.1.2.3}}
+\newlabel{subsec: Direct Perception}{{1.2.3}{6}{Direct Perception}{subsection.1.2.3}{}}
+\newlabel{subsec: Direct Perception@cref}{{[subsection][3][1,2]1.2.3}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Deep Learning Languages}{6}{section.1.3}}
+\newlabel{sec: DLL}{{1.3}{6}{Deep Learning Languages}{section.1.3}{}}
+\newlabel{sec: DLL@cref}{{[section][3][1]1.3}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}CNNArch}{6}{subsection.1.3.1}}
+\newlabel{subsec: CNNArch}{{1.3.1}{6}{CNNArch}{subsection.1.3.1}{}}
+\newlabel{subsec: CNNArch@cref}{{[subsection][1][1,3]1.3.1}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}MxNet}{6}{subsection.1.3.2}}
+\newlabel{subsec: MxNet}{{1.3.2}{6}{MxNet}{subsection.1.3.2}{}}
+\newlabel{subsec: MxNet@cref}{{[subsection][2][1,3]1.3.2}{6}}
 \citation{krizhevsky2012imagenet}
 \citation{geiger2013vision}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Running Example}{5}{chapter.2}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Running Example}{7}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Implementation}{5}{section.2.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Training}{5}{section.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Implementation}{7}{section.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Training}{7}{section.2.2}}
 \citation{MontiSim}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Evaluation}{7}{chapter.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Evaluation}{9}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}MontiSim}{7}{section.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Results}{7}{section.3.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}MontiSim}{9}{section.3.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Results}{9}{section.3.2}}
 \citation{grzywaczewski2017training}
 \bibstyle{alpha}
 \bibdata{src/bib/Literatur}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Conclusion}{9}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Conclusion}{11}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{9}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{11}{chapter.4}}
 \bibcite{chen2015mxnet}{CLL{$^{+}$}15}
 \bibcite{chen2015deepdriving}{CSKX15}
 \bibcite{gibson2014ecological}{Gib14}
 \bibcite{KITTI}{GLSU13}
 \bibcite{grzywaczewski2017training}{Grz17}
 \bibcite{krizhevsky2012imagenet}{KSH12}
+\bibcite{pomerleau1989alvinn}{Pom89}
 \bibcite{MontiSim}{Rea17}
 \bibcite{CNNArch}{TvWH17}
 \bibcite{ullman1980against}{Ull80}

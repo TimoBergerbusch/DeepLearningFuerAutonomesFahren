@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  11 MAY 2018 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  12 MAY 2018 11:49
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -587,26 +587,71 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2230.
 LaTeX Info: Redefining \labelcref on input line 2230.
 LaTeX Info: Redefining \labelcpageref on input line 2230.
 )
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontend
+layer\tikz\libraries\tikzlibraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\librarie
+s\shapes\pgflibraryshapes.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+
+))
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontend
+layer\tikz\libraries\tikzlibraryarrows.code.tex"
+File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\librarie
+s\pgflibraryarrows.code.tex"
+File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
+\arrowsize=\dimen159
+))
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcap
+tion.sty"
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\captio
+n.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\captio
+n3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen160
+\captionmargin@=\dimen161
+\captionwidth=\dimen162
+\caption@tempdima=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
+)
+\c@ContinuedFloat=\count128
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count129
+\c@subtable=\count130
+)
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listi
 ngs.sty"
-\lst@mode=\count128
+\lst@mode=\count131
 \lst@gtempboxa=\box40
 \lst@token=\toks34
-\lst@length=\count129
-\lst@currlwidth=\dimen159
-\lst@column=\count130
-\lst@pos=\count131
-\lst@lostspace=\dimen160
-\lst@width=\dimen161
-\lst@newlines=\count132
-\lst@lineno=\count133
-\lst@maxwidth=\dimen162
+\lst@length=\count132
+\lst@currlwidth=\dimen167
+\lst@column=\count133
+\lst@pos=\count134
+\lst@lostspace=\dimen168
+\lst@width=\dimen169
+\lst@newlines=\count135
+\lst@lineno=\count136
+\lst@maxwidth=\dimen170
 
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmi
 sc.sty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count134
-\lst@skipnumbers=\count135
+\c@lstnumber=\count137
+\lst@skipnumbers=\count138
 \lst@framebox=\box41
 )
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listi
@@ -617,34 +662,34 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
  (Seminararbeit.aux)
 \openout1 = `Seminararbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count136
-\scratchdimen=\dimen163
+\scratchcounter=\count139
+\scratchdimen=\dimen171
 \scratchbox=\box42
-\nofMPsegments=\count137
-\nofMParguments=\count138
+\nofMPsegments=\count140
+\nofMParguments=\count141
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count139
-\MPscratchDim=\dimen164
-\MPnumerator=\count140
-\makeMPintoPDFobject=\count141
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen172
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
 \everyMPtoPDFconversion=\toks36
 ) (D:\Tools\MikTex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -673,7 +718,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 81.
+Package hyperref Info: Link coloring OFF on input line 87.
 
 (D:\Tools\MikTex\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -681,17 +726,20 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (D:\Tools\MikTex\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count145
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
  (Seminararbeit.out)
 (Seminararbeit.out)
 \@outlinefile=\write5
 \openout5 = `Seminararbeit.out'.
 
-\c@lstlisting=\count143
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count146
  (src/tex/cover_en.tex
 <src/pic/logo.jpg, id=77, 1120.185pt x 284.56313pt>
 File: src/pic/logo.jpg Graphic file (type jpg)
@@ -711,49 +759,49 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 {C:/Users/Timo Bergerbusch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <
 ./src/pic/logo.jpg>])
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=85, 597.45204pt x 845.1575pt>
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=86, 597.45204pt x 845.1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
-nput line 95.
+nput line 101.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
-nput line 95.
+nput line 101.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=88, page=1, 597.45204pt x 845
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=89, page=1, 597.45204pt x 845
 .1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
  <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 95.
+ed on input line 101.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 95.
+ed on input line 101.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 95.
+ed on input line 101.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 95.
+ed on input line 101.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 95.
+ed on input line 101.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
  [2
 
@@ -790,7 +838,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 27.
- <src/pic/AlexNet-structure.PNG, id=159, 925.95938pt x 290.58563pt>
+ <src/pic/AlexNet-structure.PNG, id=160, 925.95938pt x 290.58563pt>
 File: src/pic/AlexNet-structure.PNG Graphic file (type png)
 
 <use src/pic/AlexNet-structure.PNG>
@@ -802,26 +850,45 @@ Overfull \hbox (36.18723pt too wide) in paragraph at lines 35--36
  []
 
 [2 <./src/pic/AlexNet-structure.PNG>]
-<src/pic/3D-boundingbox-example.png, id=183, 476.53032pt x 322.20375pt>
+<src/pic/3D-boundingbox-example.png, id=184, 870.25125pt x 589.4522pt>
 File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
 <use src/pic/3D-boundingbox-example.png>
 Package pdftex.def Info: src/pic/3D-boundingbox-example.png used on input line 
 62.
-(pdftex.def)             Requested size: 285.9204pt x 193.32373pt.
- [3]) (src/tex/example.tex [4 <./src/pic/3D-boundingbox-example.png>]
+(pdftex.def)             Requested size: 348.09433pt x 235.7767pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+<src/pic/ALVINN.png, id=206, 572.1375pt x 566.115pt>
+File: src/pic/ALVINN.png Graphic file (type png)
+ <use src/pic/ALVINN.png>
+Package pdftex.def Info: src/pic/ALVINN.png used on input line 191.
+(pdftex.def)             Requested size: 228.85094pt x 226.44199pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./src/pic/3D-boundingbox-example.png>] [5 <./src/pic/ALVINN.png>])
+(src/tex/example.tex [6]
 Chapter 2.
 
-LaTeX Warning: Citation `geiger2013vision' on page 5 undefined on input line 12
+LaTeX Warning: Citation `geiger2013vision' on page 7 undefined on input line 12
 .
 
-) (src/tex/evaluation.tex [5
+) (src/tex/evaluation.tex [7
 
-] [6
+] [8
 
 ]
 Chapter 3.
-) (src/tex/conclusion.tex [7] [8
+) (src/tex/conclusion.tex [9] [10
 
 ]
 Chapter 4.
@@ -830,7 +897,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (Seminararbeit.bbl [9] [10
+) (Seminararbeit.bbl [11] [12
 
 ]
 Underfull \hbox (badness 5696) in paragraph at lines 30--35
@@ -838,39 +905,40 @@ Underfull \hbox (badness 5696) in paragraph at lines 30--35
 -po-ra-
  []
 
-) [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+) [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
  (Seminararbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 136.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 136.
 Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
 (rerunfilecheck)             Checksum: 33F746B5DF164FF43AD1B3B31C155321;1109.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
- 19448 strings out of 493333
- 369147 string characters out of 3144357
- 450159 words of memory out of 3000000
- 22573 multiletter control sequences out of 15000+200000
+ 21648 strings out of 493333
+ 418230 string characters out of 3144357
+ 503780 words of memory out of 3000000
+ 24744 multiletter control sequences out of 15000+200000
  18274 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,54p,558b,452s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,18n,56p,977b,968s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Tools/MikT
 ex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Tools/MikTex/fonts/type1/public/
 amsfonts/cm/cmr8.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/font
-s/type1/urw/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a
-.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (16 pages, 920268 bytes).
+D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Tools/MikTex/font
+s/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/fonts/type1/urw/courier/
+ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Tools/MikTe
+x/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on Seminararbeit.pdf (18 pages, 2530887 bytes).
 PDF statistics:
- 289 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,9 +11,9 @@ Further in \Cref{sec: DLL} we see that there is the need of specific languages f
 
 \section{Convolutional Neural Network (CNN)}\label{sec:CNN}
 
-A CNN is a special class of deep feed-forward neural networks. On of the main design goals of a CNN is that they require a minimal amount of preprocessing. This is an important aspect, because they are often fed with images. Preprocessing high resolution images is very costly in terms of computational time. In the context of autonomous driving the time is even more crucial, since the driving agent needs to be able to react to spontaneous events.
+A CNN is a special class of deep feed-forward \nns. On of the main design goals of a CNN is that they require a minimal amount of preprocessing. This is an important aspect, because they are often fed with images. Preprocessing high resolution images is very costly in terms of computational time. In the context of autonomous driving the time is even more crucial, since the driving agent needs to be able to react to spontaneous events.
 
-Like most parts of neural networks, also the CNNs are inspired by biological processes. It is mainly based on the connectivity pattern of an animals visual cortex, where special neurons respond only to stimuli of their receptive field. Partially overlapping guarantees a complete coverage of the field of view. \cite{wiki:CNN}
+Like most parts of \nns, also the CNNs are inspired by biological processes. It is mainly based on the connectivity pattern of an animals visual cortex, where special neurons respond only to stimuli of their receptive field. Partially overlapping guarantees a complete coverage of the field of view. \cite{wiki:CNN}
 
 Further CNNs make strong and mostly correct assumptions about the nature of images, like staionarity of statistics nad locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
 
@@ -59,14 +59,139 @@ The approach of mediated perception is a reasonable and very sturdy way of handl
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.6]{src/pic/3D-boundingbox-example.png}
+	\includegraphics[scale=0.4]{src/pic/3D-boundingbox-example.png}
 	\caption{An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite{KITTI}}
 	\label{pic: 3D Bounding Box}
 \end{figure}
 
 \subsection{Behavior Reflex}\label{subsec: Behavior Reflex}
 
-State the approach of a Behavior Reflex CNN
+The behavior reflex approach of constructing a reliable autonomous driving agent can be dated back to 1989 , where researchers tried to directly map a single frame to a decision of a steering angle. For such approaches a quite simple \nn were created. \\
+The network \alvinn, shown in \Cref{pic: ALVINN}, consisted of a single hidden layer, used back-propagation and is fed by two cameras: a $30\times32$ pixel video and a $8\times32$ pixel range finder retina. The input neurons fired depending on the blue color band of its pixel, because it is believed to infer the highest contrast between road and non-road. The difference in color of road and non-road was fed back to the network. The bias (activation level) is proportional to the proximity of the corresponding area, based on the likelihood and importance of having road in particular fields of the image.\cite{pomerleau1989alvinn}\\
+For example having recognized that the road abruptly ends right in front of the car is more important than recognizing that there is a road in the top left corner.\\
+
+Such systems, even though they are simple compared to the in \Cref{subsec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
+
+The problem with behavior reflex approaches is, that they reach their limits very early when adding more complex scenarios. Having simple alternations to the trained scenarios, which enforce a different behavior, is very hard to train to such a \nn.\\
+For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an american highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn. 
+
+\begin{figure}
+	\centering	
+	\tikzset{->,very thick,>=stealth}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[scale=0.9] % left picture
+			\newcommand{\lineLength}{0.75}
+			\newcommand{\lineSpace}{0.5}
+			\newcommand{\startSpace}{0.25}
+		
+			\fill[green!50!black] (0,0) rectangle (5,5);		% background
+			\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+			\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+			\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+			
+			% left lane breaks		
+			\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+			\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+			\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+			\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+			
+			% right line breaks
+			\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+			\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+			\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+			\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+			
+			% cars
+			\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
+			\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
+			\draw[->,very thick,  color = green!75!black] (2.5,2) -- (2.5,3);
+			
+	%		\node [trapezium, minimum width = 3.6cm, trapezium angle=25,rotate = 180, opacity = 0.4, color = gray!50!white, fill] at (2.5,2) (test) {};
+	%		\fill[gray!50!white, opacity = 0.4] (0.5,2.378) rectangle (4.5,5);
+		\end{tikzpicture}
+		\caption{free lane}
+		\label{fig: behavior sketches: free lane}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[scale=0.9] % middle picture
+		\newcommand{\lineLength}{0.75}
+		\newcommand{\lineSpace}{0.5}
+		\newcommand{\startSpace}{0.25}
+		
+		\fill[green!50!black] (0,0) rectangle (5,5);		% background
+		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+		
+		% left lane breaks		
+		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% right line breaks
+		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% cars
+		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);	% agent
+		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
+		\draw[->,very thick,  color = green!75!black] (2,1.8) -- (1.3,2.5) -- (1.3,3);
+		\draw[->,very thick,  color = green!75!black] (3,1.8) -- (3.8,2.5) -- (3.8,3);
+		
+		
+		\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
+		\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4);
+		\end{tikzpicture}
+		\caption{slower car in the same lane}
+		\label{fig: behavior sketches: blocked lane}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[scale=0.9] % right picture
+		\newcommand{\lineLength}{0.75}
+		\newcommand{\lineSpace}{0.5}
+		\newcommand{\startSpace}{0.25}
+		
+		\fill[green!50!black] (0,0) rectangle (5,5);		% background
+		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+		
+		% left lane breaks		
+		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% right line breaks
+		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% cars
+		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
+		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
+		\draw[->,very thick,  color = green!75!black] (2.5,2) -- (2.5,3);
+		
+		\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
+		\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4.5);
+		\end{tikzpicture}
+		\caption{equal fast car in same lane}
+		\label{fig: behavior sketches: shared lane}
+	\end{subfigure}
+	\caption{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.}
+	\label{fig: behavior sketches}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.4]{src/pic/ALVINN.png}
+	\caption{The \nn called \alvinn and used as a behavior reflex based autonomous agent. \cite{pomerleau1989alvinn}}
+	\label{pic: ALVINN}
+\end{figure}
 
 \subsection{Direct Perception}\label{subsec: Direct Perception}
 
