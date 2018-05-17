@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  12 MAY 2018 11:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  16 MAY 2018 14:17
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -850,7 +850,7 @@ Overfull \hbox (36.18723pt too wide) in paragraph at lines 35--36
  []
 
 [2 <./src/pic/AlexNet-structure.PNG>]
-<src/pic/3D-boundingbox-example.png, id=184, 870.25125pt x 589.4522pt>
+<src/pic/3D-boundingbox-example.png, id=185, 870.25125pt x 589.4522pt>
 File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
 <use src/pic/3D-boundingbox-example.png>
@@ -867,15 +867,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-<src/pic/ALVINN.png, id=206, 572.1375pt x 566.115pt>
+<src/pic/ALVINN.png, id=208, 572.1375pt x 566.115pt>
 File: src/pic/ALVINN.png Graphic file (type png)
  <use src/pic/ALVINN.png>
-Package pdftex.def Info: src/pic/ALVINN.png used on input line 191.
+Package pdftex.def Info: src/pic/ALVINN.png used on input line 193.
 (pdftex.def)             Requested size: 228.85094pt x 226.44199pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./src/pic/3D-boundingbox-example.png>] [5 <./src/pic/ALVINN.png>])
+[4 <./src/pic/3D-boundingbox-example.png>] [5 <./src/pic/ALVINN.png>])
 (src/tex/example.tex [6]
 Chapter 2.
 
@@ -900,12 +898,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 ) (Seminararbeit.bbl [11] [12
 
 ]
-Underfull \hbox (badness 5696) in paragraph at lines 30--35
+Underfull \hbox (badness 5696) in paragraph at lines 41--46
 \OT1/cmr/m/n/10.95 lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDIA Cor
 -po-ra-
  []
 
-) [13]
+[13]) [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 136.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 136.
  (Seminararbeit.aux)
@@ -920,13 +918,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 136.
  ) 
 Here is how much of TeX's memory you used:
- 21648 strings out of 493333
- 418230 string characters out of 3144357
- 503780 words of memory out of 3000000
- 24744 multiletter control sequences out of 15000+200000
+ 21655 strings out of 493333
+ 418317 string characters out of 3144357
+ 504781 words of memory out of 3000000
+ 24746 multiletter control sequences out of 15000+200000
  18274 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,56p,977b,968s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,18n,56p,977b,966s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Tools/MikT
@@ -936,9 +934,9 @@ D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Tools/MikTex/font
 s/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/fonts/type1/urw/courier/
 ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Tools/MikTe
 x/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (18 pages, 2530887 bytes).
+Output written on Seminararbeit.pdf (19 pages, 2534740 bytes).
 PDF statistics:
- 318 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

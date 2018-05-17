@@ -42,7 +42,7 @@ An important note is that the original test is dated back to 2012 and therefore 
 
 There are various approaches of autonomous driving agents making a variety of assumptions and differ in numerous options. But they can be mostly categorized into two major groups of approaches: mediated perception approaches and behavior reflex approaches. \cite{chen2015deepdriving}
 
-In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson2014ecological} in the late 80's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
+In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson1979ecological} in the mid 50's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}. %TODO: fix 60's to be the first
 
 All these three groups differ in the way of interpreting the given sensor data and whether or not to create a some what bigger picture based on consequent data.
 
@@ -52,7 +52,7 @@ The mediated perception approach is a multi-component continuous process. Every 
 These world states are 3D models of the current world. Cars are identified using a classifier and then often surrounded by a 3D bounding box. An example can be seen in \Cref{pic: 3D Bounding Box}. By comparing different frames generated one can estimate the speed and distance to those objects and derive an A.I. based precedence behavior. \cite{KITTI}\cite{chen2015deepdriving}
 
 The often stated problems with such approaches are, that computing such a scene is costly in terms of computation time. Some information is irrelevant, redundant or even misleading due to inaccuracy of sensors. To perform a right turn the sensor information of the distance to a car left behind me is irrelevant, but becomes very important when taking a left turn.\\
-Additionally many of the subtasks are still open research topics themselves. For example a reliable lane detection throughout various weather conditions or worse. Imagine a new road not having any drawn lines yet.\\
+Additionally many of the subtasks are still open research topics themselves. For example a reliable lane detection throughout various weather conditions or even a new road not having any drawn lines yet. \cite{aly2008real}\\
 Also mediated perception approaches require very detailed information up front, like up-to-date maps.
 
 The approach of mediated perception is a reasonable and very sturdy way of handling such a complex task, but has its drawbacks regarding computational time and additional knowledge.
@@ -73,7 +73,9 @@ For example having recognized that the road abruptly ends right in front of the 
 Such systems, even though they are simple compared to the in \Cref{subsec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
 
 The problem with behavior reflex approaches is, that they reach their limits very early when adding more complex scenarios. Having simple alternations to the trained scenarios, which enforce a different behavior, is very hard to train to such a \nn.\\
-For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an american highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn. 
+For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an american highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn.
+
+\todo{noch mehr?\\}
 
 \begin{figure}
 	\centering	
@@ -195,7 +197,17 @@ For example comparing a simple straight 3 lane road with the car in the middle, 
 
 \subsection{Direct Perception}\label{subsec: Direct Perception}
 
-State the approach of direct perception 
+%In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson2014ecological} in the late 80's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
+
+The direct perception is the third group of approaches, which can be dated back to the 1954 and was mainly researched by James J. Gibson. \cite{gibson1954theory} The approach is based on analyzing a picture not simply deducing a steering angle, or velocity change, like the behavior reflex approaches (cf. \Cref{subsec: Behavior Reflex}), but also performing further computation without parsing it into a 3D world state model like the mediated perception approaches (cf. \Cref{subsec: Mediated Perception}). \cite{chen2015deepdriving}\\
+So it is a third paradigm, which can be interpreted as a hybrid of the two other paradigms. The approach tries to identify only the meaningful affordance indicators and make a decision based on those parameters. 
+
+We further consider a design based on \cite{chen2015deepdriving} and their way of training.
+
+\todo{\begin{enumerate}
+\item how to learn the affordance
+\item how to conclude affordance to action
+\end{enumerate}}
 
 \section{Deep Learning Languages}\label{sec: DLL}
 \todo{\begin{enumerate}
