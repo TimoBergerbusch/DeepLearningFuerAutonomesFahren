@@ -21,18 +21,24 @@ This new value gets forwarded to the neurons of the next layer.
 
 Those neurons are ordered in different groups often called layers, as seen in \Cref{fig: Simple NN}.
 \begin{enumerate}
-	\item input layer (green):\\
+	\item input layer (green):\\ \label{item input layer}
 		This layer gets fed with the input values of the problem, which can be for example sensor data or pixel color values.
-	\item hidden layer (blue):\\
+	\item hidden layer (blue):\\\label{item hidden layer}
 		The hidden layer consists of neurons receiving the values from the previous layer, while not being obliged to have the same number of neurons (c.f. \Cref{fig: Simple NN}).
 		Different hidden layer architectures can be distinguished to be deep (c.f. \Cref{fig: Deep Neural Net}). This means, that there are multiple layers of neurons within the hidden layer itself.\\
 		Also a variation within the hidden layer is the possibility of fully connectivity (c.f. \Cref{fig: not fullyconnected Neural Net}). Thus some neurons don't forward their value to every neuron of the next layer.\\
 		There is no rule of how to construct the best hidden layer, considering number of sub-layers, neurons per layer or the connectivity.
-	\item output layer (yellow):
+	\item output layer (yellow):\label{item output layer}
 		The output neurons contain the value the \nn produces. Depending on the \nns purpose it can be for example a confidence value of a classification, like recognizing a stop sign, or the value of changing the steering wheel angle. 
 \end{enumerate}
 
-\todo{training\\}
+In order to train a \nn one has to define the behaviour the \nn should have. In an image classification example one should know what the correct class of a given image of a sign is, i.e. a speed limit sign.\\
+A \nn can then be trained by giving it values for the input layer and comparing the values of the output layer with the solutions it should have resulted in. The difference can then be checked. Such a difference can be simply \texttt{true}/\texttt{false} or a value indicating how big the difference is. In the example of signs a classification of a ``speed limit 70''-sign as ``speed limit 50''-sign is still wrong, but as bad as a classification as a ``stop''-sign.\\
+Using this difference value the \nn can use linear algebra algorithms to adjust the weights $w_i$ and biases $b$ to improve the output iteratively.
+
+For further information about the underlying training algorithms please see %TODO
+
+\todo{training ref\\}
 \input{src/tex/neuralnets-tikz}
 \section{Convolutional Neural Network (CNN)}\label{sec:CNN}
 
@@ -43,12 +49,6 @@ These separation into those receptive fields has also the advantage that is redu
 
 Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
 
-
-
-\todo{\begin{enumerate}
-\item how detailed? 
-\item where starting?
-\end{enumerate}}
 
 \subsection{AlexNet} \label{subsec: AlexNet}
 
@@ -105,116 +105,7 @@ For example comparing a simple straight 3 lane road with the car in the middle, 
 
 \todo{noch mehr?\\}
 
-\begin{figure}
-	\centering	
-	\tikzset{->,very thick,>=stealth}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\begin{tikzpicture}[scale=0.9] % left picture
-			\newcommand{\lineLength}{0.75}
-			\newcommand{\lineSpace}{0.5}
-			\newcommand{\startSpace}{0.25}
-		
-			\fill[green!50!black] (0,0) rectangle (5,5);		% background
-			\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
-			\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
-			\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
-			
-			% left lane breaks		
-			\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
-			\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
-			\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
-			\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
-			
-			% right line breaks
-			\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
-			\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
-			\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
-			\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
-			
-			% cars
-			\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
-			\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
-			\draw[->,very thick,  color = green!75!black] (2.5,2) -- (2.5,3);
-			
-	%		\node [trapezium, minimum width = 3.6cm, trapezium angle=25,rotate = 180, opacity = 0.4, color = gray!50!white, fill] at (2.5,2) (test) {};
-	%		\fill[gray!50!white, opacity = 0.4] (0.5,2.378) rectangle (4.5,5);
-		\end{tikzpicture}
-		\caption{free lane}
-		\label{fig: behavior sketches: free lane}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\begin{tikzpicture}[scale=0.9] % middle picture
-		\newcommand{\lineLength}{0.75}
-		\newcommand{\lineSpace}{0.5}
-		\newcommand{\startSpace}{0.25}
-		
-		\fill[green!50!black] (0,0) rectangle (5,5);		% background
-		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
-		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
-		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
-		
-		% left lane breaks		
-		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
-		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
-		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
-		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
-		
-		% right line breaks
-		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
-		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
-		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
-		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
-		
-		% cars
-		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);	% agent
-		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
-		\draw[->,very thick,  color = green!75!black] (2,1.8) -- (1.3,2.5) -- (1.3,3);
-		\draw[->,very thick,  color = green!75!black] (3,1.8) -- (3.8,2.5) -- (3.8,3);
-		
-		
-		\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
-		\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4);
-		\end{tikzpicture}
-		\caption{slower car in the same lane}
-		\label{fig: behavior sketches: blocked lane}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.32\textwidth}
-		\begin{tikzpicture}[scale=0.9] % right picture
-		\newcommand{\lineLength}{0.75}
-		\newcommand{\lineSpace}{0.5}
-		\newcommand{\startSpace}{0.25}
-		
-		\fill[green!50!black] (0,0) rectangle (5,5);		% background
-		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
-		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
-		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
-		
-		% left lane breaks		
-		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
-		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
-		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
-		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
-		
-		% right line breaks
-		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
-		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
-		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
-		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
-		
-		% cars
-		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
-		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
-		\draw[->,very thick,  color = green!75!black] (2.5,2) -- (2.5,3);
-		
-		\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
-		\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4.5);
-		\end{tikzpicture}
-		\caption{equal fast car in same lane}
-		\label{fig: behavior sketches: shared lane}
-	\end{subfigure}
-	\caption{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.}
-	\label{fig: behavior sketches}
-\end{figure}
+\input{src/tex/three-driving-examples}
 
 \begin{figure}
 	\centering
@@ -244,9 +135,11 @@ We further consider a design based on \cite{chen2015deepdriving} and their way o
 \item state that different languages ex.
 \end{enumerate}}
 
-\subsection{CNNArch}\label{subsec: CNNArch}
+\subsection{CNNArchLang}\label{subsec: CNNArch}
 
-general and some more in depth information about CNNArch based on \cite{CNNArch}
+(The whole description is based on\cite{CNNArch})
+
+One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering at the RWTH Aachen University and part of the MontiCar language family. 
 
 \subsection{MxNet}\label{subsec: MxNet}
 

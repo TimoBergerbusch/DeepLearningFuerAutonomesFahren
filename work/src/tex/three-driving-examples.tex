@@ -1,0 +1,110 @@
+\begin{figure}
+	\centering	
+	\tikzset{->,very thick,>=stealth}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[scale=0.9] % left picture
+		\newcommand{\lineLength}{0.75}
+		\newcommand{\lineSpace}{0.5}
+		\newcommand{\startSpace}{0.25}
+		
+		\fill[green!50!black] (0,0) rectangle (5,5);		% background
+		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+		
+		% left lane breaks		
+		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% right line breaks
+		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% cars
+		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
+		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
+		\draw[->,very thick,  color = green!75!black] (2.5,2) -- (2.5,3);
+		
+		%		\node [trapezium, minimum width = 3.6cm, trapezium angle=25,rotate = 180, opacity = 0.4, color = gray!50!white, fill] at (2.5,2) (test) {};
+		%		\fill[gray!50!white, opacity = 0.4] (0.5,2.378) rectangle (4.5,5);
+		\end{tikzpicture}
+		\caption{free lane}
+		\label{fig: behavior sketches: free lane}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[scale=0.9] % middle picture
+		\newcommand{\lineLength}{0.75}
+		\newcommand{\lineSpace}{0.5}
+		\newcommand{\startSpace}{0.25}
+		
+		\fill[green!50!black] (0,0) rectangle (5,5);		% background
+		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+		
+		% left lane breaks		
+		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% right line breaks
+		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% cars
+		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);	% agent
+		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
+		\draw[->,very thick,  color = green!75!black] (2,1.8) -- (1.3,2.5) -- (1.3,3);
+		\draw[->,very thick,  color = green!75!black] (3,1.8) -- (3.8,2.5) -- (3.8,3);
+		
+		
+		\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
+		\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4);
+		\end{tikzpicture}
+		\caption{slower car in the same lane}
+		\label{fig: behavior sketches: blocked lane}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[scale=0.9] % right picture
+		\newcommand{\lineLength}{0.75}
+		\newcommand{\lineSpace}{0.5}
+		\newcommand{\startSpace}{0.25}
+		
+		\fill[green!50!black] (0,0) rectangle (5,5);		% background
+		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+		
+		% left lane breaks		
+		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% right line breaks
+		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		% cars
+		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
+		\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.5);
+		\draw[->,very thick,  color = green!75!black] (2.5,2) -- (2.5,3);
+		
+		\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
+		\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4.5);
+		\end{tikzpicture}
+		\caption{equal fast car in same lane}
+		\label{fig: behavior sketches: shared lane}
+	\end{subfigure}
+	\caption{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.}
+	\label{fig: behavior sketches}
+\end{figure}
