@@ -1,0 +1,204 @@
+\begin{figure}
+	\centering
+	\tikzset{input/.style = {ellipse,draw,fill=green!50!white, initial, initial text =}}
+	\tikzset{hidden/.style = {ellipse,draw,fill=blue!50!white}}
+	\tikzset{output/.style = {ellipse,draw,fill=yellow!50!white}}
+	\begin{subfigure}[b]{0.25\textwidth}
+	\begin{tikzpicture}[node distance = .5cm, on grid,auto]		
+		\node[input] (i1) {};
+		\node[input, below = of i1] (i2) {};
+		\node[input, below = of i2] (i3) {};
+		
+		\node[hidden, above right = .25cm and 1cm of i1] (h1) {};
+		\node[hidden, below = of h1] (h2) {};
+		\node[hidden, below = of h2] (h3) {};
+		\node[hidden, below = of h3] (h4) {};
+		
+		\node[output , right = 1cm of h2] (o1) {};
+		\node[output , below = of o1] (o2) {};
+		\coordinate[right = of o1] (c1) {};
+		\coordinate[right = of o2] (c2) {};
+		
+		\path[->] (i1.east) edge (h1.west)
+					(i1.east) edge (h2.west)
+					(i1.east) edge (h3.west)
+					(i1.east) edge (h4.west);
+		\path[->] (i2.east) edge (h1.west)
+					(i2.east) edge (h2.west)
+					(i2.east) edge (h3.west)
+					(i2.east) edge (h4.west);
+		\path[->] (i3.east) edge (h1.west)
+					(i3.east) edge (h2.west)
+					(i3.east) edge (h3.west)
+					(i3.east) edge (h4.west);
+		\path[->] (h1.east) edge (o1.west)
+				  (h2.east) edge (o1.west)
+				  (h3.east) edge (o1.west)
+				  (h4.east) edge (o1.west);
+		\path[->] (h1.east) edge (o2.west)
+					(h2.east) edge (o2.west)
+					(h3.east) edge (o2.west)
+					(h4.east) edge (o2.west);
+		\path[->] (o1) edge (c1)
+				  (o2) edge (c2);		
+	\end{tikzpicture}	
+	\caption{}
+	\label{fig: Simple NN}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.40\textwidth}
+	\begin{tikzpicture}[node distance = .5cm, on grid,auto]		
+	\node[input] (i1) {};
+	\node[input, below = of i1] (i2) {};
+	\node[input, below = of i2] (i3) {};
+	
+	\node[hidden, above right = .25cm and 1cm of i1] (h11) {};
+	\node[hidden, below = of h11] (h21) {};
+	\node[hidden, below = of h21] (h31) {};
+	\node[hidden, below = of h31] (h41) {};
+	
+	\node[hidden, above right = .5cm and 1cm of h11] (h12) {};
+	\node[hidden, below = of h12] (h22) {};
+	\node[hidden, below = of h22] (h32) {};
+	\node[hidden, below = of h32] (h42) {};
+	\node[hidden, below = of h42] (h52) {};
+	\node[hidden, below = of h52] (h62) {};
+	
+	\node[right =0.5cm of h12] (d1) {\dots};
+	\node[below = of d1] (d2) {\dots};
+	\node[below = of d2] (d3) {\dots};
+	\node[below = of d3] (d4) {\dots};
+	\node[below = of d4] (d5) {\dots};
+	\node[below = of d5] (d6) {\dots};
+	
+	\node[hidden, right = 0.5cm of d1] (h13) {};
+	\node[hidden, below = of h13] (h23) {};
+	\node[hidden, below = of h23] (h33) {};
+	\node[hidden, below = of h33] (h43) {};
+	\node[hidden, below = of h43] (h53) {};
+	\node[hidden, below = of h53] (h63) {};
+	
+	\node[output , right = 1cm of h33] (o1) {};
+	\node[output , below = of o1] (o2) {};
+	\coordinate[right = of o2] (c1) {};
+	\coordinate[right = of o1] (c1) {};
+	
+	\path[->] (i1.east) edge (h11.west)
+				(i1.east) edge (h21.west)
+				(i1.east) edge (h31.west)
+				(i1.east) edge (h41.west);
+	\path[->] (i2.east) edge (h11.west)
+				(i2.east) edge (h21.west)
+				(i2.east) edge (h31.west)
+				(i2.east) edge (h41.west);
+	\path[->] (i3.east) edge (h11.west)
+				(i3.east) edge (h21.west)
+				(i3.east) edge (h31.west)
+				(i3.east) edge (h41.west);
+	\path[->] (h11.east) edge (h12.west)			
+				(h11.east) edge (h22.west)
+				(h11.east) edge (h32.west)
+				(h11.east) edge (h42.west)
+				(h11.east) edge (h52.west)
+				(h11.east) edge (h62.west);
+	\path[->] (h21.east) edge (h12.west)			
+				(h21.east) edge (h22.west)
+				(h21.east) edge (h32.west)
+				(h21.east) edge (h42.west)
+				(h21.east) edge (h52.west)
+				(h21.east) edge (h62.west);
+	\path[->] (h31.east) edge (h12.west)			
+				(h31.east) edge (h22.west)
+				(h31.east) edge (h32.west)
+				(h31.east) edge (h42.west)
+				(h31.east) edge (h52.west)
+				(h31.east) edge (h62.west);			
+	\path[->] (h41.east) edge (h12.west)			
+				(h41.east) edge (h22.west)
+				(h41.east) edge (h32.west)
+				(h41.east) edge (h42.west)
+				(h41.east) edge (h52.west)
+				(h41.east) edge (h62.west);
+					
+	\path[->] (h13.east) edge (o1.west)
+				(h23.east) edge (o1.west)
+				(h33.east) edge (o1.west)
+				(h43.east) edge (o1.west)
+				(h53.east) edge (o1.west)
+				(h63.east) edge (o1.west);		
+	\path[->] (h13.east) edge (o2.west)
+				(h23.east) edge (o2.west)
+				(h33.east) edge (o2.west)
+				(h43.east) edge (o2.west)
+				(h53.east) edge (o2.west)
+				(h63.east) edge (o2.west);		
+	\end{tikzpicture}
+	\caption{}
+	\label{fig: Deep Neural Net}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.32\textwidth}
+		\begin{tikzpicture}[node distance = .5cm, on grid,auto]		
+		\node[input] (i1) {};
+		\node[input, below = of i1] (i2) {};
+		\node[input, below = of i2] (i3) {};
+		
+		\node[hidden, above right = .25cm and 1cm of i1] (h11) {};
+		\node[hidden, below = of h11] (h21) {};
+		\node[hidden, below = of h21] (h31) {};
+		\node[hidden, below = of h31] (h41) {};
+		
+		\node[hidden, above right = .5cm and 1cm of h11] (h12) {};
+		\node[hidden, below = of h12] (h22) {};
+		\node[hidden, below = of h22] (h32) {};
+		\node[hidden, below = of h32] (h42) {};
+		\node[hidden, below = of h42] (h52) {};
+		\node[hidden, below = of h52] (h62) {};
+		
+		
+		\node[output , right = 1cm of h32] (o1) {};
+		\node[output , below = of o1] (o2) {};
+		\coordinate[right = of o2] (c1) {};
+		\coordinate[right = of o1] (c1) {};
+		
+		\path[->] (i1.east) edge (h11.west)
+			(i1.east) edge (h21.west)
+			(i1.east) edge (h31.west)
+			(i1.east) edge (h41.west);
+		\path[->] (i2.east) edge (h11.west)
+			(i2.east) edge (h21.west)
+			(i2.east) edge (h31.west)
+			(i2.east) edge (h41.west);
+		\path[->] (i3.east) edge (h11.west)
+			(i3.east) edge (h21.west)
+			(i3.east) edge (h41.west);
+
+		\path[->] (h11.east) edge (h12.west)			
+			(h11.east) edge (h22.west)
+			(h11.east) edge (h32.west);
+		\path[->] (h21.east) edge (h22.west)
+			(h21.east) edge (h32.west)
+			(h21.east) edge (h42.west)
+			(h21.east) edge (h12.west);
+		\path[->] (h31.east) edge (h32.west)
+			(h31.east) edge (h42.west)
+			(h31.east) edge (h52.west)
+			(h31.east) edge (h62.west);			
+		\path[->] (h41.east) edge (h42.west)
+			(h41.east) edge (h52.west)
+			(h41.east) edge (h62.west);
+		\path[->] (h12.east) edge (o1.west)
+			(h22.east) edge (o1.west)
+			(h52.east) edge (o1.west)
+			(h62.east) edge (o1.west);		
+		\path[->] (h12.east) edge (o2.west)
+			(h22.east) edge (o2.west)
+			(h32.east) edge (o2.west)
+			(h42.east) edge (o2.west)
+			(h52.east) edge (o2.west)
+			(h62.east) edge (o2.west);		
+		\end{tikzpicture}
+		\caption{}
+		\label{fig: not fullyconnected Neural Net}
+	\end{subfigure}
+	% das Dritte ist wenig Sinvoll vom Aufbau her
+\end{figure}
+
