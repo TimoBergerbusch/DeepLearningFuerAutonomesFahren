@@ -1,0 +1,16 @@
+always:
+  1) angle: angle between the car’s heading and the tangent of the road
+“in lane system”, when driving in the lane:
+  2) toMarking LL: distance to the left lane marking of the left lane
+  3) toMarking ML: distance to the left lane marking of the current lane
+  4) toMarking MR: distance to the right lane marking of the current lane
+  5) toMarking RR: distance to the right lane marking of the right lane
+  6) dist LL: distance to the preceding car in the left lane
+  7) dist MM: distance to the preceding car in the current lane
+  8) dist RR: distance to the preceding car in the right lane
+“on marking system”, when driving on the lane marking:
+  9) toMarking L: distance to the left lane marking
+  10) toMarking M: distance to the central lane marking
+  11) toMarking R: distance to the right lane marking
+  12) dist L: distance to the preceding car in the left lane
+  13) dist R: distance to the preceding car in the right lane
