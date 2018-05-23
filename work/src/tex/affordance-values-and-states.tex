@@ -29,6 +29,15 @@
 		\fill[orange] (0.8,3.9) rectangle (0.8 + 0.8,3.9 + 1.1);	% left other car
 		\fill[orange] (2.1,2.6) rectangle (2.1 + 0.8,2.6 + 1.5);	% middle other car
 		\fill[orange] (3.4,3.2) rectangle (3.4 + 0.8,3.2 + 1.5);	% right other car
+		
+		
+		\draw[-, white] (2.5,1.2) -- (2.5,0.4);
+		
+		\draw[<->, white, ultra thick] (2.5,0.95) -- (1.9,0.95);
+		\draw[<->, white, ultra thick] (2.5,0.95) -- (3.1,0.95);
+		
+		\draw[<->, white, ultra thick] (2.5,0.65) -- (0.6,0.65);
+		\draw[<->, white, ultra thick] (2.5,0.65) -- (4.4,0.65);
 		\end{tikzpicture}
 		\caption{slower car in the same lane}
 		\label{fig: affordance indicators: in lane - lines}
@@ -61,42 +70,33 @@
 		\fill[orange] (0.8,3.9) rectangle (0.8 + 0.8,3.9 + 1.1);	% left other car
 		\fill[orange] (2.1,2.6) rectangle (2.1 + 0.8,2.6 + 1.5);	% middle other car
 		\fill[orange] (3.4,3.2) rectangle (3.4 + 0.8,3.2 + 1.5);	% right other car
+		
+		\draw[-, white] (0.8,0.95) -- (4.2, 0.95);
+		
+		\draw[<->, white, ultra thick] (1.2,0.95) -- (1.2,3.9);
+		\draw[<->, white, ultra thick] (2.5,0.95) -- (2.5,2.6);
+		\draw[<->, white, ultra thick] (3.8,0.95) -- (3.8,3.2);
 		\end{tikzpicture}
 		\caption{equal fast car in same lane}
 		\label{fig: affordance indicators: in lane - cars}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.32\textwidth}
-		\begin{tikzpicture}[scale=0.9] % top left picture
-		\newcommand{\lineLength}{0.75}
-		\newcommand{\lineSpace}{0.5}
-		\newcommand{\startSpace}{0.25}
-		
-		\fill[green!50!black] (0,0) rectangle (5,5);		% background
-		
-%		\draw [-,gray!50!black,thick,domain=0:60] plot ({2.5*cos(\x)-1.25}, {2.5*sin(\x)});
-%		\draw [-,gray!50!black,thick,domain=16:50] plot ({6.5*cos(\x)-1.25}, {6.5*sin(\x)});
-%		\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
-		
-%		\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
-%		\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
-		
-		% left lane breaks		
-%		\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
-%		\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
-%		\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
-%		\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
-		
-		% right line breaks
-%		\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
-%		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
-%		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
-%		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
-		
-		% cars
-%		\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);
-		
-		%		\node [trapezium, minimum width = 3.6cm, trapezium angle=25,rotate = 180, opacity = 0.4, color = gray!50!white, fill] at (2.5,2) (test) {};
-		%		\fill[gray!50!white, opacity = 0.4] (0.5,2.378) rectangle (4.5,5);
+		\begin{tikzpicture}
+			\clip (0,0) rectangle (4.5,4.5);
+			\coordinate (O) at (0,0);
+			\path[fill=green!50!black] (0,0) rectangle (5,5);
+%			\path[fill=green!50!black] (O) circle (3.95cm);
+			\path[fill=gray!50!black] (O) circle (4cm);
+			\path[fill=green!50!black] (O) circle (2cm);
+			\draw[yellow!75!black,thin](O) circle (2.05cm);
+			\draw[yellow!75!black,thin] (O) circle (3.95cm);
+			\draw[loosely dashed,white,thin] (O) circle (2.68cm); % loosely dashed
+			\draw[loosely dashed,white,thin] (O) circle (3.32cm);
+			
+			\path[fill=red, rotate=40] (2.8,0) rectangle (2.8+0.4,0+.8);
+			
+			\draw[->, white, ultra thick] (2,2.3) -- (1,3.45);
+			\draw[->, white, ultra thick] (2,2.3) -- (1,3);
 		\end{tikzpicture}
 		\caption{}
 		\label{fig: affordance indicators: angle}
@@ -126,12 +126,17 @@
 		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
 		
 		% cars
-		\fill[red] (1.5,0.2) rectangle (1.5 + 0.8,0.2 + 1.5);
+		\fill[red] (1.7,0.2) rectangle (1.7 + 0.8,0.2 + 1.5);
 		\fill[orange] (0.8,3.9) rectangle (0.8 + 0.8,3.9 + 1.1);	% left other car
 		\fill[orange] (2.1,2.6) rectangle (2.1 + 0.8,2.6 + 1.5);	% middle other car
 		\fill[gray!50!white] (3.4,3.2) rectangle (3.4 + 0.8,3.2 + 1.5);	% right other car
-		%		\node [trapezium, minimum width = 3.6cm, trapezium angle=25,rotate = 180, opacity = 0.4, color = gray!50!white, fill] at (2.5,2) (test) {};
-		%		\fill[gray!50!white, opacity = 0.4] (0.5,2.378) rectangle (4.5,5);
+		
+		\draw[-, white] (2.1,1.2) -- (2.1,0.4);
+		
+		\draw[<->, white, thin] (2.1,0.95) -- (1.8,0.95);
+		
+		\draw[<->, white, ultra thick] (2.1,0.65) -- (0.6,0.65);
+		\draw[<->, white, ultra thick] (2.1,0.65) -- (3.1,0.65);
 		\end{tikzpicture}
 		\caption{free lane}
 		\label{fig: affordance indicators: on lane - lines}
@@ -164,6 +169,11 @@
 		\fill[orange] (0.8,3.9) rectangle (0.8 + 0.8,3.9 + 1.1);	% left other car
 		\fill[orange] (2.1,2.6) rectangle (2.1 + 0.8,2.6 + 1.5);	% middle other car
 		\fill[gray!50!white] (3.4,3.2) rectangle (3.4 + 0.8,3.2 + 1.5);	% right other car
+		
+		\draw[-, white] (0.8,0.95) -- (2.9, 0.95);
+		
+		\draw[<->, white, ultra thick] (1.2,0.95) -- (1.2,3.9);
+		\draw[<->, white, ultra thick] (2.5,0.95) -- (2.5,2.6);
 		\end{tikzpicture}
 		\caption{slower car in the same lane}
 		\label{fig: affordance indicators: on lane - cars}
@@ -200,6 +210,10 @@
 		\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
 		\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
 		\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+		
+		\draw[<->, white, ultra thick] (2.15,1) -- (2.8,1);
+		
+		\draw[<->, white, ultra thick] (1.4,2) -- (2.3,2);
 		\end{tikzpicture}
 		\caption{equal fast car in same lane}
 		\label{fig: affordance indicators: overlapping areas}
@@ -207,4 +221,5 @@
 	
 	\caption{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.}
 	\label{fig: behavior sketches}
+	\todo{name the arrows\\}
 \end{figure}

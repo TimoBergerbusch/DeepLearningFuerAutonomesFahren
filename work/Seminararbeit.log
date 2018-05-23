@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.27)  20 MAY 2018 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.10.27)  22 MAY 2018 12:28
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -919,67 +919,65 @@ Chapter 1.
 File: src/pic/AlexNet-structure.PNG Graphic file (type png)
 
 <use src/pic/AlexNet-structure.PNG>
-Package pdftex.def Info: src/pic/AlexNet-structure.PNG used on input line 63.
+Package pdftex.def Info: src/pic/AlexNet-structure.PNG used on input line 66.
 (pdftex.def)             Requested size: 462.97856pt x 145.29245pt.
 
-Overfull \hbox (36.18723pt too wide) in paragraph at lines 63--64
+Overfull \hbox (36.18723pt too wide) in paragraph at lines 66--67
 [][] 
  []
 
-[3] <src/pic/3D-boundingbox-example.png, id=204, 870.25125pt x 589.4522pt>
+[3] [4 <./src/pic/AlexNet-structure.PNG>]
+<src/pic/3D-boundingbox-example.png, id=214, 870.25125pt x 589.4522pt>
 File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
 <use src/pic/3D-boundingbox-example.png>
 Package pdftex.def Info: src/pic/3D-boundingbox-example.png used on input line 
-90.
+93.
 (pdftex.def)             Requested size: 348.09433pt x 235.7767pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
 
  []
 
-[4 <./src/pic/AlexNet-structure.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
 [5 <./src/pic/3D-boundingbox-example.png>] (src/tex/three-driving-examples.tex)
-<src/pic/ALVINN.png, id=235, 572.1375pt x 566.115pt>
+<src/pic/ALVINN.png, id=233, 572.1375pt x 566.115pt>
 File: src/pic/ALVINN.png Graphic file (type png)
  <use src/pic/ALVINN.png>
-Package pdftex.def Info: src/pic/ALVINN.png used on input line 112.
+Package pdftex.def Info: src/pic/ALVINN.png used on input line 115.
 (pdftex.def)             Requested size: 228.85094pt x 226.44199pt.
 
-Overfull \hbox (14.213pt too wide) in paragraph at lines 133--134
+[6]
+Overfull \hbox (14.213pt too wide) in paragraph at lines 136--137
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (2.21288pt too wide) in paragraph at lines 135--136
+Overfull \hbox (2.21288pt too wide) in paragraph at lines 138--139
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (20.21306pt too wide) in paragraph at lines 136--137
+Overfull \hbox (20.21306pt too wide) in paragraph at lines 139--140
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (26.21312pt too wide) in paragraph at lines 137--138
+Overfull \hbox (26.21312pt too wide) in paragraph at lines 140--141
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.213pt too wide) in paragraph at lines 138--139
+Overfull \hbox (14.213pt too wide) in paragraph at lines 141--142
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-(src/tex/affordance-values-and-states.tex
-Overfull \hbox (14.47676pt too wide) in paragraph at lines 111--112
-[][] 
- []
-
-) [6] [7 <./src/pic/ALVINN.png>] [8]) (src/tex/example.tex [9] [10
+(src/tex/affordance-values-and-states.tex) [7 <./src/pic/ALVINN.png>] [8])
+(src/tex/example.tex [9] [10
 
 ]
 Chapter 2.
@@ -1026,10 +1024,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 139.
  ) 
 Here is how much of TeX's memory you used:
- 25001 strings out of 493334
- 487065 string characters out of 3142680
- 631368 words of memory out of 3000000
- 27969 multiletter control sequences out of 15000+200000
+ 24986 strings out of 493334
+ 486347 string characters out of 3142680
+ 628368 words of memory out of 3000000
+ 27955 multiletter control sequences out of 15000+200000
  21976 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,71p,977b,1196s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1046,9 +1044,9 @@ ublic/amsfonts/cm/cmti10.pfb><E:/RWTHTools/MiKTeX/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb><E:/RWTHTools/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><E:/R
 WTHTools/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><E:/RWTHTools/MiKTeX/fonts/
 type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (23 pages, 2585175 bytes).
+Output written on Seminararbeit.pdf (23 pages, 2586403 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 92 named destinations out of 1000 (max. 500000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
