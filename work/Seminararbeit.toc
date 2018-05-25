@@ -12,6 +12,7 @@
 \contentsline {subsection}{\numberline {1.4.2}Array handling}{10}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Predefined Layers and Functions}{10}{subsection.1.4.3}
 \contentsline {subsection}{\numberline {1.4.4}Caffe}{11}{subsection.1.4.4}
+\contentsline {subsubsection}{Caffe2}{11}{section*.12}
 \contentsline {subsection}{\numberline {1.4.5}MxNet}{11}{subsection.1.4.5}
 \contentsline {chapter}{\numberline {2}Running Example}{13}{chapter.2}
 \contentsline {section}{\numberline {2.1}Implementation}{13}{section.2.1}

@@ -52,7 +52,7 @@ These separation into those receptive fields has also the advantage that is redu
 
 Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
 
-\todo{ erklären von kernel/filter}
+\todo{ erklären von kernel/filter\\}
 
 \subsection{AlexNet} \label{subsec: AlexNet}
 
@@ -253,7 +253,18 @@ Also there are already defined functions like the \texttt{Sigmoid}, \texttt{Soft
 
 \caffe is a full deep learning framework, created by Yangqing Jia during hos PhD at UC Berkeley. It is a framework specially build to deal with multimedia input formats using state-of-the-art deep learning techniques. It comes as a BSD-license C++ library offering python and MATLAB bindings. One of its reasons why it's so well known and frequently used is because of its design based on expressiveness, speed and modularity.
 
+Using Nvidias Deep Neural Network library cuDNN Caffe can use the GPU in order to process even faster and learn in a rate of 60 million pictures per day. The possibility of using multiple GPUs in SLI or multiple computers to train the same CNN is not stated and therefore not taken into account. \cite{wiki:Caffe}
+
+
+\subsubsection{Caffe2}
+The framework \caffetwo is the successor of \caffe. \caffetwo is developed by Facebook and its current main usage is the phrase-wise translation in social networks. Since the whole architecture is rewritten from scratch and regarding its now roughly one year of existence the library performs relatively well, but does not have the impact to outperform \caffe \cite{heise:Caffe2}.
+
 \subsection{MxNet}\label{subsec: MxNet}
 
 general information from \cite{chen2015mxnet}
 
+\todo{\begin{itemize}
+\item Multiple GPUs or even computer
+\item from Microsoft and Amazon
+\item languages: 
+\end{itemize}}

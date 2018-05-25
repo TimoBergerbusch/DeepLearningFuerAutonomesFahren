@@ -44,11 +44,10 @@ Adam Grzywaczewski.
   https://devblogs. nvidia.
   com/parallelforall/training-self-driving-vehicles-challenge-scale, 2017.
 
-\bibitem[JSD{\etalchar{+}}14]{jia2014caffe}
-Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
-  Girshick, Sergio Guadarrama, and Trevor Darrell.
-\newblock Caffe: Convolutional architecture for fast feature embedding.
-\newblock {\em arXiv preprint arXiv:1408.5093}, 2014.
+\bibitem[{Hei}17]{heise:Caffe2}
+{Heise Verlag}.
+\newblock Machine learning: Facebook erweitert einsatz von caffe2, 2017.
+\newblock [Online; accessed 25-May-2018].
 
 \bibitem[KSH12]{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
