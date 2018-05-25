@@ -9,7 +9,7 @@ A CNN, as explained in \Cref{sec:CNN}, has a general structure, but can be alter
 
 Further in \Cref{sec: DLL} we see that there is the need of specific languages for the design and implementation of such agents. Two languages will be discussed and compared based on their suitability regarding the \alexnet, stated in  \Cref{subsec: AlexNet}.
 
-\section{Neural Networks}
+\section{Neural Networks}\label{sec: NN}
 
 The \nns are a construct adapted from biological processes. The general construct is very simple, but the expressiveness is very high but still not fully researched.
 A neural net is made out of neurons and has one very basic function:
@@ -52,6 +52,7 @@ These separation into those receptive fields has also the advantage that is redu
 
 Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
 
+\todo{ erklären von kernel/filter}
 
 \subsection{AlexNet} \label{subsec: AlexNet}
 
@@ -177,20 +178,80 @@ In order to identify the current state the host car is in, every state has their
 
 (The whole description is based on\cite{CNNArch})
 
-One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering at the RWTH Aachen University and part of the MontiCar language family. 
+One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering at the RWTH Aachen University and part of the MontiCar language family. Its basic structure is very similar to python. 
 
+In contrast to other languages for deep learning \cnnarch does not denote the connections of layers directly, but tries to model the data flow through the network. For that specific task it contains two main operators:
+\begin{itemize}
+	\item[-$>$:] Serial Connection:\label{item: sequential connection}\\
+		This orders two elements sequentially. This means it denotes the first elements output as the second elements input. 
+	\item[$|$:] Parallelization:\\
+		This allows the split of the network into separate data streams, which can be computed in parallel.
+\end{itemize}
+Since serial connection has the higher precedence one has to use brackets. Also to merge the splitted streams, created by $|$, one can use the operators: \texttt{Concatenate()}, \texttt{Add()} and \texttt{Get(index)}.
 
+\subsubsection{General Definitions}\label{subsec: general definitions}
+The general definitions of a CNN, which are the input, i.e. an image, maybe additional data in a specific file type, i.e. sensor data, and the output dimension, denoting the predictions or in our example the actions the car should perform.
 
+Such definitions can be modeled in \cnnarch as presented in \Cref{lst: general definitons CNNArchLang}.
 
+\begin{figure}[H]
+	\centering
+\begin{lstlisting}
+def input Z(0:255)^{3, h, w} image[2]
+def input Q(-oo:+oo)^{10} additionalData
+def output Q(0:1)^{3} predictions
+\end{lstlisting}
+	\caption{A general definition of a CNN using \cnnarch}
+	\label{lst: general definitons CNNArchLang}
+\end{figure}
 
+Further analyzed the definition can be broken down to the following components:
+\begin{itemize}
+	\item Keyword: \texttt{def}\\
+		Every input and output can be introduced using the keyword \texttt{def}
+	\item Direction: \texttt{input}/\texttt{output}\\
+		Every definition, being a part of the \ref{subsec: general definitions}, has to be defined to be either an \texttt{input} or an \texttt{output}
+	\item Range of numbers:\\
+		One can define the input to have special constraints. For example only integer values are denoted by a \texttt{Z} representing $\mathbb{Z}$. The same for \texttt{Q} and $\mathbb{Q}$. \\
+		Also the range has to be given via \texttt{(x:y)}, where \texttt{x} and \texttt{y} either are numbers or \texttt{-oo}( or \texttt{oo}) to denote $\infty$.
+	\item Size:\\
+		The size of for example the input or the number of classes is denoted by a matrix like notation using \texttt{\^{}\{size\}}  . For the input image (line 1) the size \texttt{\^{}\{3,h,w\}} determines the input image to have 3 channels with an image width of \texttt{w} and image height of \texttt{h}.
+		The others are just defined as 1$\times$10 or 1$\times$3 vectors/tensors.
+	\item Naming:\\
+		At the end of the line there has to be a name to identify the corresponding input/output.\\
+		Also through the \texttt{[2]} behind the name \texttt{image} one can define it to be a fixed length array of images.
+\end{itemize}
 
+\subsection{Array handling}
+An array, like in the example shown in \Cref{lst: general definitons CNNArchLang}, can be used either element wise:
+\begin{center}
+	\texttt{image[0]-$>$}
+\end{center}
+which would access the first image and create a sequential connection (c.f. \Cref{item: sequential connection}),
+whereas 
+\begin{center}
+	\texttt{image-$>$} $\equiv$ \texttt{(image[0] | image[1]) -$>$}
+\end{center}
+would result in two separate streams. If the receiving end of the sequential connection, for sake of example let it be called \texttt{out}, is also an array of size two one can also use
+\begin{center}
+	\texttt{image -$>$ out} $\equiv$  \texttt{([0]-$>$ out[0] | [1] -$>$ out[1])}
+\end{center}
 
+\subsection{Predefined Layers and Functions}
+Creating different CNN often use a similar set of layers. For that purpose there are some layers already defined by \cnnarch to simplify the usage.
+There is for example the \texttt{FullyConnected}-layer with parameters for the number of units within and whether they should use a bias value (c.f. \Cref{sec: NN}), the \texttt{Convolutional}-2D-layer with parameters for the kernel (rectangle) size, number of filters, the stride defining the distance of two rectangles, padding and the usage of biases. Further information on any of these parameters or other predefined layers can be found in \cite{CNNArch}.
 
+Also there are already defined functions like the \texttt{Sigmoid}, \texttt{Softmax}, \texttt{Tanh} or \texttt{ReLu}. 
 
+\todo{\begin{itemize}
+\item structural specialties
+\end{itemize}}
 
+\subsection{Caffe} \label{subsec: Caffe}
 
+%information based on \cite{jia2014caffe}
 
-
+\caffe is a full deep learning framework, created by Yangqing Jia during hos PhD at UC Berkeley. It is a framework specially build to deal with multimedia input formats using state-of-the-art deep learning techniques. It comes as a BSD-license C++ library offering python and MATLAB bindings. One of its reasons why it's so well known and frequently used is because of its design based on expressiveness, speed and modularity.
 
 \subsection{MxNet}\label{subsec: MxNet}
 
