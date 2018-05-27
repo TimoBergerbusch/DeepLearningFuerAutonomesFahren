@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{{Wik}18b}
+\begin{thebibliography}{MMMK03}
 
 \bibitem[Aly08]{aly2008real}
 Mohamed Aly.
@@ -49,11 +49,28 @@ Adam Grzywaczewski.
 \newblock Machine learning: Facebook erweitert einsatz von caffe2, 2017.
 \newblock [Online; accessed 25-May-2018].
 
+\bibitem[JSD{\etalchar{+}}14]{jia2014caffe}
+Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
+  Girshick, Sergio Guadarrama, and Trevor Darrell.
+\newblock Caffe: Convolutional architecture for fast feature embedding.
+\newblock {\em arXiv preprint arXiv:1408.5093}, 2014.
+
 \bibitem[KSH12]{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock In {\em Advances in neural information processing systems}, pages
   1097--1105, 2012.
+
+\bibitem[L{\etalchar{+}}15]{lecun2015lenet}
+Yann LeCun et~al.
+\newblock Lenet-5, convolutional neural networks.
+\newblock {\em URL: http://yann. lecun. com/exdb/lenet}, page~20, 2015.
+
+\bibitem[MMMK03]{matsugu2003subject}
+Masakazu Matsugu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda.
+\newblock Subject independent facial expression recognition with robust face
+  detection using a convolutional neural network.
+\newblock {\em Neural Networks}, 16(5-6):555--559, 2003.
 
 \bibitem[Pom89]{pomerleau1989alvinn}
 Dean~A Pomerleau.
@@ -65,6 +82,12 @@ Dean~A Pomerleau.
 Bernhard Rumpe and et. al.
 \newblock Montisim.
 \newblock https://github.com/MontiSim, 2017.
+
+\bibitem[SCE{\etalchar{+}}17]{sze2017hardware}
+Vivienne Sze, Yu-Hsin Chen, Joel Einer, Amr Suleiman, and Zhengdong Zhang.
+\newblock Hardware for machine learning: Challenges and opportunities.
+\newblock In {\em Custom Integrated Circuits Conference (CICC), 2017 IEEE},
+  pages 1--8. IEEE, 2017.
 
 \bibitem[Tim18]{tim2018CNNArchLang}
 Thomas Timmermanns.
@@ -81,15 +104,15 @@ Shimon Ullman.
 \newblock Against direct perception.
 \newblock {\em Behavioral and Brain Sciences}, 3(3):373--381, 1980.
 
-\bibitem[{Wik}18a]{wiki:Caffe}
+\bibitem[Var08]{varda2008protocol}
+Kenton Varda.
+\newblock Protocol buffers: Google’s data interchange format.
+\newblock {\em Google Open Source Blog, Available at least as early as Jul},
+  72, 2008.
+
+\bibitem[{Wik}18]{wiki:Caffe}
 {Wikipedia contributors}.
 \newblock Caffe --- {W}ikipedia{,} the free encyclopedia, 2018.
-\newblock [Online; accessed 11-May-2018].
-
-\bibitem[{Wik}18b]{wiki:CNN}
-{Wikipedia contributors}.
-\newblock Convolutional neural networks --- {W}ikipedia{,} the free
-  encyclopedia, 2018.
 \newblock [Online; accessed 11-May-2018].
 
 \end{thebibliography}

@@ -1,0 +1,58 @@
+
+\begin{figure}
+	\centering
+\begin{subfigure}[b]{0.45\textwidth}
+\begin{lstlisting}[basicstyle=\tiny]
+name: "loss-net"
+layers {
+	name: "mnist"
+	type: DATA
+	top: "data"
+	top: "label"
+	data_param { ### }
+}
+
+layers {
+	name: "ip"
+	type: CONVOLUTIONAL
+	bottom: "data"
+	top: "conv"
+	convolutional_param { ### }
+}
+
+layers {
+	name: "loss"
+	type: SOFTMAX_LOSS
+	bottom: "ip"
+	bottom: "label"
+	top: "loss"
+}
+\end{lstlisting}
+\caption{}
+\label{lst: Google Protocol Buffer Example}
+\end{subfigure}
+\begin{subfigure}[b]{0.45\textwidth}
+	\begin{tikzpicture}[every node/.style={draw, line width=0.5mm}, scale = 0.6]
+		\node[rectangle, fill = blue!50] at (1,8) (mnist) {mnist(DATA)};
+		\node[chamfered rectangle, draw, fill=yellow!75!orange] at (0,6) (data) {data};
+		\node[chamfered rectangle, draw, fill=yellow!75!orange] at (5,4) (label) {label};
+		
+		\node[rectangle, fill = blue!50] at (0,4) (conv1) {ip(INNER\_PRODUCT)};
+		
+		\node[chamfered rectangle, draw, fill=yellow!75!orange] at (0,2) (conv) {ip};
+		
+		\node[rectangle, fill = blue!50] at (1,0) (loss) {loss({\footnotesize LOSS\_TYPE})};
+		
+		\path[->, thick] (mnist) edge (data);
+		\path[->, thick] (mnist) edge (label);
+		\path[->, thick] (data) edge (conv1);
+		\path[->, thick] (conv1) edge (conv);		
+		\path[->, thick] (conv) edge (loss);
+		\path[->, thick] (label) edge (loss);
+	\end{tikzpicture}
+	\caption{}
+	\label{fig: Caffe Graph Example}
+\end{subfigure}
+\caption{An example of a Softmax loss network. blue boxes are the different layers and the yellow boxes are the blobs. Note that in (a) the parameters are not mentioned since they don't add value for this example. There are things defined like kernel size, image scaling or image origin.}
+\label{fig: Caffe Graph and Protobuf}
+\end{figure}

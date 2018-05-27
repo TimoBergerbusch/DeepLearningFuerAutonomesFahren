@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  27 MAY 2018 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  27 MAY 2018 15:54
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -911,7 +911,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count159
  (src/tex/cover_en.tex
-<src/pic/logo.jpg, id=89, 1120.185pt x 284.56313pt>
+<src/pic/logo.jpg, id=101, 1120.185pt x 284.56313pt>
 File: src/pic/logo.jpg Graphic file (type jpg)
  <use src/pic/logo.jpg>
 Package pdftex.def Info: src/pic/logo.jpg used on input line 16.
@@ -929,9 +929,10 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 {C:/Users/Timo Bergerbusch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <
 ./src/pic/logo.jpg>])
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=98, 597.45204pt x 845.1575pt>
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=110, 597.45204pt x 845.1575pt
+>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
-<use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
+ <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
 nput line 107.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
@@ -942,7 +943,7 @@ Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
 nput line 107.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=101, page=1, 597.45204pt x 84
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=113, page=1, 597.45204pt x 84
 5.1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
  <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
@@ -1000,140 +1001,149 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [5
 
-] (src/tex/intro.tex
+] (src/tex/preliminaries.tex
 Chapter 1.
 [1
 
 
 ] (src/tex/neuralnets-tikz.tex) [2]
-("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def"
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) <src/pic/AlexNet-structure.PNG, id=193, 925.95938pt x 290.58563pt>
+<src/pic/AlexNet-structure.PNG, id=210, 925.95938pt x 290.58563pt>
 File: src/pic/AlexNet-structure.PNG Graphic file (type png)
 
 <use src/pic/AlexNet-structure.PNG>
-Package pdftex.def Info: src/pic/AlexNet-structure.PNG used on input line 67.
+Package pdftex.def Info: src/pic/AlexNet-structure.PNG used on input line 68.
 (pdftex.def)             Requested size: 462.97856pt x 145.29245pt.
 
-Overfull \hbox (36.18723pt too wide) in paragraph at lines 67--68
+Overfull \hbox (36.18723pt too wide) in paragraph at lines 68--69
 [][] 
  []
 
-[3] [4 <./src/pic/AlexNet-structure.PNG>]
-<src/pic/3D-boundingbox-example.png, id=224, 870.25125pt x 589.4522pt>
-File: src/pic/3D-boundingbox-example.png Graphic file (type png)
+) (src/tex/deep-learning-languages.tex [3] [4 <./src/pic/AlexNet-structure.PNG>
+]
+Chapter 2.
+[5
 
-<use src/pic/3D-boundingbox-example.png>
-Package pdftex.def Info: src/pic/3D-boundingbox-example.png used on input line 
-94.
-(pdftex.def)             Requested size: 348.09433pt x 235.7767pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
-
- []
-
-[5 <./src/pic/3D-boundingbox-example.png>] (src/tex/three-driving-examples.tex)
-<src/pic/ALVINN.png, id=243, 572.1375pt x 566.115pt>
-File: src/pic/ALVINN.png Graphic file (type png)
- <use src/pic/ALVINN.png>
-Package pdftex.def Info: src/pic/ALVINN.png used on input line 116.
-(pdftex.def)             Requested size: 228.85094pt x 226.44199pt.
-
-[6]
-Overfull \hbox (14.213pt too wide) in paragraph at lines 137--138
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (2.21288pt too wide) in paragraph at lines 139--140
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (20.21306pt too wide) in paragraph at lines 140--141
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (26.21312pt too wide) in paragraph at lines 141--142
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.213pt too wide) in paragraph at lines 142--143
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-(src/tex/affordance-values-and-states.tex) [7 <./src/pic/ALVINN.png>] [8]
-[9]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 212.
-
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 47.
  (D:\Tools\MikTex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 212.
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 220.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 47.
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 55.
 
 (D:\Tools\MikTex\tex\latex\psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 220.
- [10])
-Underfull \hbox (badness 10000) in paragraph at lines 282--124
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
+ [6]
+(src/tex/caffe-graph-and-protobuf-example.tex
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
+) [7])
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
-(src/tex/example.tex [11] [12
+(src/tex/available-deep-learning-approaches.tex [8]
+<src/pic/3D-boundingbox-example.png, id=312, 870.25125pt x 589.4522pt>
+File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
-]
-Chapter 2.
+<use src/pic/3D-boundingbox-example.png>
+Package pdftex.def Info: src/pic/3D-boundingbox-example.png used on input line 
+22.
+(pdftex.def)             Requested size: 348.09433pt x 235.7767pt.
 
-LaTeX Warning: Citation `geiger2013vision' on page 13 undefined on input line 1
-2.
+Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
-) (src/tex/evaluation.tex [13] [14
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 33--34
+
+ []
+
+(src/tex/three-driving-examples.tex)
+<src/pic/ALVINN.png, id=334, 572.1375pt x 566.115pt>
+File: src/pic/ALVINN.png Graphic file (type png)
+ <use src/pic/ALVINN.png>
+Package pdftex.def Info: src/pic/ALVINN.png used on input line 44.
+(pdftex.def)             Requested size: 228.85094pt x 226.44199pt.
+
+[10 <./src/pic/3D-boundingbox-example.png>] [11 <./src/pic/ALVINN.png>]
+Overfull \hbox (14.213pt too wide) in paragraph at lines 65--66
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (2.21288pt too wide) in paragraph at lines 67--68
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (20.21306pt too wide) in paragraph at lines 68--69
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.21312pt too wide) in paragraph at lines 69--70
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.213pt too wide) in paragraph at lines 70--71
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+(src/tex/affordance-values-and-states.tex)) (src/tex/example.tex [12] [13]
+[14
 
 ]
 Chapter 3.
-) (src/tex/conclusion.tex [15] [16
+
+LaTeX Warning: Citation `geiger2013vision' on page 15 undefined on input line 1
+2.
+
+) (src/tex/evaluation.tex [15] [16
 
 ]
 Chapter 4.
+) (src/tex/conclusion.tex [17] [18
+
+]
+Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (Seminararbeit.bbl [17] [18
+) (Seminararbeit.bbl [19] [20
 
 ]
-Underfull \hbox (badness 1509) in paragraph at lines 41--46
+Underfull \hbox (badness 4242) in paragraph at lines 41--46
 []\OT1/cmr/m/n/10.95 Adam Grzywaczewski.  Train-ing ai for self-driving ve-hi-c
-les: the chal-
+les: the
  []
 
 
-Underfull \hbox (badness 3460) in paragraph at lines 41--46
-\OT1/cmr/m/n/10.95 lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDIA Cor
--po-ra-tion.
+Underfull \hbox (badness 1675) in paragraph at lines 41--46
+\OT1/cmr/m/n/10.95 chal-lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDI
+A Cor-po-ra-
  []
 
-[19]) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
+[21]
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-32.def
+"
+File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
+)) [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (Seminararbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 12777C65045C64E664EC70139F47EA53;1322.
+(rerunfilecheck)             Checksum: A9139B3A1BD2D25A81BB43F60DE3A181;1471.
 
 
 LaTeX Warning: There were undefined references.
@@ -1141,16 +1151,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 25602 strings out of 493333
- 500746 string characters out of 3144357
- 630646 words of memory out of 3000000
- 28540 multiletter control sequences out of 15000+200000
+ 25504 strings out of 493333
+ 501487 string characters out of 3144357
+ 630517 words of memory out of 3000000
+ 28406 multiletter control sequences out of 15000+200000
  21976 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,71p,977b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,18n,71p,1006b,1387s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Tools/Mik
@@ -1159,13 +1169,14 @@ ic/amsfonts/cm/cmmi8.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr10.
 pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Tools/MikTex/f
 onts/type1/public/amsfonts/cm/cmr8.pfb><D:/Tools/MikTex/fonts/type1/public/amsf
 onts/cm/cmr9.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:
-/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/fonts/
-type1/public/amsfonts/symbols/msbm10.pfb><D:/Tools/MikTex/fonts/type1/urw/couri
-er/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Tools/Mi
-kTex/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (25 pages, 2606236 bytes).
+/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/Tools/MikTex/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb><D:/Tools/MikTex/fonts/type1/urw/courier/ucrr8a.pfb><D:/Too
+ls/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Tools/MikTex/fonts/type1/urw/
+helvetic/uhvr8a.pfb>
+Output written on Seminararbeit.pdf (27 pages, 2637708 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 513 PDF objects out of 1000 (max. 8388607)
+ 135 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
