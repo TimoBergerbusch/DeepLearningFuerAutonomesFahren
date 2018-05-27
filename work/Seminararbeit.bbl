@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{TvWH17}
+\begin{thebibliography}{{Wik}18b}
 
 \bibitem[Aly08]{aly2008real}
 Mohamed Aly.
@@ -66,6 +66,11 @@ Bernhard Rumpe and et. al.
 \newblock Montisim.
 \newblock https://github.com/MontiSim, 2017.
 
+\bibitem[Tim18]{tim2018CNNArchLang}
+Thomas Timmermanns.
+\newblock Modelling languages for deep learning based cyber-physical systems.
+\newblock 2018.
+
 \bibitem[TvWH17]{CNNArch}
 Thomas Timmermann, Michael von Wenckstern, and Malte Heithoff.
 \newblock Cnnarchlang.
@@ -76,7 +81,12 @@ Shimon Ullman.
 \newblock Against direct perception.
 \newblock {\em Behavioral and Brain Sciences}, 3(3):373--381, 1980.
 
-\bibitem[{Wik}18]{wiki:CNN}
+\bibitem[{Wik}18a]{wiki:Caffe}
+{Wikipedia contributors}.
+\newblock Caffe --- {W}ikipedia{,} the free encyclopedia, 2018.
+\newblock [Online; accessed 11-May-2018].
+
+\bibitem[{Wik}18b]{wiki:CNN}
 {Wikipedia contributors}.
 \newblock Convolutional neural networks --- {W}ikipedia{,} the free
   encyclopedia, 2018.

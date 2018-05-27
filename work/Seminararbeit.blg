@@ -2,4 +2,5 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: Seminararbeit.aux
 The style file: alpha.bst
 Database file #1: src/bib/Literatur.bib
 Warning--I didn't find a database entry for "geiger2013vision"
-(There was 1 warning)
+Warning--empty booktitle in tim2018CNNArchLang
+(There were 2 warnings)

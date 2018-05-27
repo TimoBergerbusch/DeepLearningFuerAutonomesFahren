@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  25 MAY 2018 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  27 MAY 2018 11:09
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -911,7 +911,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count159
  (src/tex/cover_en.tex
-<src/pic/logo.jpg, id=93, 1120.185pt x 284.56313pt>
+<src/pic/logo.jpg, id=89, 1120.185pt x 284.56313pt>
 File: src/pic/logo.jpg Graphic file (type jpg)
  <use src/pic/logo.jpg>
 Package pdftex.def Info: src/pic/logo.jpg used on input line 16.
@@ -929,10 +929,9 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 
 {C:/Users/Timo Bergerbusch/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <
 ./src/pic/logo.jpg>])
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=102, 597.45204pt x 845.1575pt
->
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=98, 597.45204pt x 845.1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
- <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
+<use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
 nput line 107.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
@@ -943,7 +942,7 @@ Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
 nput line 107.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 
-<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=105, page=1, 597.45204pt x 84
+<Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=101, page=1, 597.45204pt x 84
 5.1575pt>
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
  <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
@@ -1009,7 +1008,7 @@ Chapter 1.
 ] (src/tex/neuralnets-tikz.tex) [2]
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def"
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) <src/pic/AlexNet-structure.PNG, id=198, 925.95938pt x 290.58563pt>
+) <src/pic/AlexNet-structure.PNG, id=193, 925.95938pt x 290.58563pt>
 File: src/pic/AlexNet-structure.PNG Graphic file (type png)
 
 <use src/pic/AlexNet-structure.PNG>
@@ -1021,7 +1020,7 @@ Overfull \hbox (36.18723pt too wide) in paragraph at lines 67--68
  []
 
 [3] [4 <./src/pic/AlexNet-structure.PNG>]
-<src/pic/3D-boundingbox-example.png, id=229, 870.25125pt x 589.4522pt>
+<src/pic/3D-boundingbox-example.png, id=224, 870.25125pt x 589.4522pt>
 File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
 <use src/pic/3D-boundingbox-example.png>
@@ -1039,7 +1038,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
  []
 
 [5 <./src/pic/3D-boundingbox-example.png>] (src/tex/three-driving-examples.tex)
-<src/pic/ALVINN.png, id=248, 572.1375pt x 566.115pt>
+<src/pic/ALVINN.png, id=243, 572.1375pt x 566.115pt>
 File: src/pic/ALVINN.png Graphic file (type png)
  <use src/pic/ALVINN.png>
 Package pdftex.def Info: src/pic/ALVINN.png used on input line 116.
@@ -1071,25 +1070,28 @@ Overfull \hbox (14.213pt too wide) in paragraph at lines 142--143
  []
 
 (src/tex/affordance-values-and-states.tex) [7 <./src/pic/ALVINN.png>] [8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 210.
+[9]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 212.
 
-
-(D:\Tools\MikTex\tex\latex\base\omscmr.fd
+ (D:\Tools\MikTex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 210.
- [9]
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 218.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 212.
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 220.
 
 
 (D:\Tools\MikTex\tex\latex\psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 218.
- [10]) (src/tex/example.tex
-[11] [12
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 220.
+ [10])
+Underfull \hbox (badness 10000) in paragraph at lines 282--124
+
+ []
+
+(src/tex/example.tex [11] [12
 
 ]
 Chapter 2.
@@ -1113,9 +1115,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 ) (Seminararbeit.bbl [17] [18
 
 ]
-Underfull \hbox (badness 5696) in paragraph at lines 41--46
+Underfull \hbox (badness 1509) in paragraph at lines 41--46
+[]\OT1/cmr/m/n/10.95 Adam Grzywaczewski.  Train-ing ai for self-driving ve-hi-c
+les: the chal-
+ []
+
+
+Underfull \hbox (badness 3460) in paragraph at lines 41--46
 \OT1/cmr/m/n/10.95 lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDIA Cor
--po-ra-
+-po-ra-tion.
  []
 
 [19]) [20]
@@ -1125,7 +1133,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 142.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 142.
 Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 94E9302C4776519690438E92B88F7CA3;1391.
+(rerunfilecheck)             Checksum: 12777C65045C64E664EC70139F47EA53;1322.
 
 
 LaTeX Warning: There were undefined references.
@@ -1136,10 +1144,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 25595 strings out of 493333
- 500603 string characters out of 3144357
- 630464 words of memory out of 3000000
- 28537 multiletter control sequences out of 15000+200000
+ 25602 strings out of 493333
+ 500746 string characters out of 3144357
+ 630646 words of memory out of 3000000
+ 28540 multiletter control sequences out of 15000+200000
  21976 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,71p,977b,1198s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1155,9 +1163,9 @@ onts/cm/cmr9.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:
 type1/public/amsfonts/symbols/msbm10.pfb><D:/Tools/MikTex/fonts/type1/urw/couri
 er/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Tools/Mi
 kTex/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (25 pages, 2605199 bytes).
+Output written on Seminararbeit.pdf (25 pages, 2606236 bytes).
 PDF statistics:
- 447 PDF objects out of 1000 (max. 8388607)
- 104 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 448 PDF objects out of 1000 (max. 8388607)
+ 108 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
