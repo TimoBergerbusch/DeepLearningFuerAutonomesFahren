@@ -7,6 +7,15 @@ Mohamed Aly.
 \newblock In {\em Intelligent Vehicles Symposium, 2008 IEEE}, pages 7--12.
   IEEE, 2008.
 
+\bibitem[{Caf}18]{Caffe2Homepage}
+{Caffe2}.
+\newblock What is caffe2?, 2018.
+\newblock [Online; accessed 28-May-2018].
+
+\bibitem[CL]{chenmxnet}
+Tianqi Chen and Mu~Li.
+\newblock Mxnet: Flexible and efficient library for deep learning.
+
 \bibitem[CLL{\etalchar{+}}15]{chen2015mxnet}
 Tianqi Chen, Mu~Li, Yutian Li, Min Lin, Naiyan Wang, Minjie Wang, Tianjun Xiao,
   Bing Xu, Chiyuan Zhang, and Zheng Zhang.
@@ -72,6 +81,16 @@ Masakazu Matsugu, Katsuhiko Mori, Yusuke Mitari, and Yuji Kaneda.
   detection using a convolutional neural network.
 \newblock {\em Neural Networks}, 16(5-6):555--559, 2003.
 
+\bibitem[MxNa]{MxNetHomepage}
+Amalgamation: Making the whole system a single file.
+\newblock \url{https://mxnet.incubator.apache.org/faq/smart_device.html}.
+\newblock [Online; accessed 25-May-2018].
+
+\bibitem[MxNb]{MxNetGithubModelGallery}
+Mxnet model gallery.
+\newblock \url{https://github.com/dmlc/mxnet-model-gallery}.
+\newblock [Online; accessed 25-May-2018].
+
 \bibitem[Pom89]{pomerleau1989alvinn}
 Dean~A Pomerleau.
 \newblock Alvinn: An autonomous land vehicle in a neural network.
@@ -114,5 +133,12 @@ Kenton Varda.
 {Wikipedia contributors}.
 \newblock Caffe --- {W}ikipedia{,} the free encyclopedia, 2018.
 \newblock [Online; accessed 11-May-2018].
+
+\bibitem[Yeg16]{infoworld}
+Serdar Yegulalp.
+\newblock Why amazon picked mxnet for deep learning.
+\newblock {\em URL:
+  https://www.infoworld.com/article/3144025/cloud-computing/why-amazon-picked-mxnet-for-deep-learning.html},
+  2016.
 
 \end{thebibliography}

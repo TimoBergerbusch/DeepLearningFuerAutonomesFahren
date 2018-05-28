@@ -19,9 +19,11 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{arrows.meta, automata, shapes, matrix,positioning}
 \usepackage{amssymb}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
 \usepackage{amsmath}
 \usepackage{subcaption} 
 \usepackage{float}
+\usepackage{fixfoot}
 
 \pdfoptionpdfminorversion=6
 
@@ -76,6 +78,8 @@
 \newcommand{\red}[1]{\color{red}#1\color{black}}
 \newcommand{\todoLine}{\noindent\rule{15cm}{0.4pt}}
 \newcommand{\todo}[1]{\todoLine\\\red{TODO:}\xspace #1 \todoLine}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 
 % Words
 \newcommand{\emptyLine}{{\LARGE ~\\}}
@@ -84,11 +88,14 @@
 \newcommand{\cnnarch}{CNNArchLang\xspace}
 \newcommand{\caffe}{Caffe\xspace}
 \newcommand{\caffetwo}{Caffe2\xspace}
+\newcommand{\mxnet}{MxNet\xspace}
+\newcommand{\tensorflow}{Tensorflow\xspace}
 \newcommand{\alexnet}{AlexNet\xspace}
 \newcommand{\nn}{neural network\xspace}
 \newcommand{\nns}{neural networks\xspace}
 \newcommand{\alvinn}{ALVINN\xspace}
 
+\DeclareFixedFootnote{\repnote}{ This is a repated footnote} 
 
 \begin{document}
 

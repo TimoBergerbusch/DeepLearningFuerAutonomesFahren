@@ -2,17 +2,50 @@
 
 Conclusion of differences and similarities between the frameworks\\
 
-Possible Criteria: %SEE: 4.4.1 in CNNArchLang
+\begin{tabular}{l |c |c |c |c }
+	Property 						& \cnnarch 		& \caffe 		& \caffetwo 		& \mxnet \\ \hline
+					\multicolumn{5}{c}{General Information}\\\hline
+	SLI usage						& \cmark 		& \xmark$^1$ 	& \xmark$^1$ 		& \cmark \\
+	mult. computers 				& \xmark$^2$ 	& \cmark		& \cmark			& \cmark \\
+	full framework  				& \xmark		& \cmark		& \cmark			& \cmark \\
+	CNNs							& \cmark		& \cmark		& \cmark			& \cmark \\
+	Recurrent NNs					& \xmark		& \cmark		& \cmark			& \cmark \\ 
+	\hline
+					\multicolumn{5}{c}{Constructs}\\ \hline
+	predefined NNs					& \cmark		& \cmark		& \cmark			& \cmark \\
+	pretrained NNs  				& \xmark		& \cmark		& \xmark$^2$		& \cmark \\
+	simple arbitrary net creation	& \cmark		& \xmark 		& \xmark			& \cmark \\	
+	predefined functions 		  	& \cmark		& \cmark		& \cmark			& \cmark \\
+	simple function creation 	  	& \cmark 		& \xmark		& \xmark$^2$		& \cmark \\
+	low-level operations			& \xmark		& \xmark		& \xmark			& \cmark \\ %check
+	\hline
+					\multicolumn{5}{c}{Language bindings}\\ \hline
+	C++								& \xmark		& \cmark		& \cmark			& \cmark \\
+	Python							& \cmark		& \xmark$^3$	& \cmark			& \cmark \\
+	MatLab							& ? 			& \cmark		& \xmark			& \cmark \\ 
+	Others							& ?				& ?				& ?					& R, Go, Julia, Perl\\
+									&				&				&					& JavaScript, Scala \\ 
+	\hline
+					\multicolumn{5}{c}{Usage}\\ \hline
+					understandability & & & & \\
+					handling & & & & \\
+\end{tabular}
+
+\begin{itemize}
+	\item[$^1$] depending on CUDA version/installation
+	\item[$^2$] not clearly stated, but also not denied
+	\item[$^3$] added lately
+\end{itemize}
+
+Possible Criteria%SEE: 4.4.1 in CNNArchLang
 \begin{itemize}
 	\item generality
 	\item expressiveness
 	\item modularity
-	\item Understandability
 	\item is Framework?
 	\item Installation 
 	\item Error Handling
-	\item RCNNs?
 	\item for equal task?
-	\item SLI/Cluster
+	\item low-level computations
 \end{itemize}
 Also a general conclusion based on results and \cite{grzywaczewski2017training}

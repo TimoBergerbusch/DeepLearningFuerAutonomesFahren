@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  27 MAY 2018 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  28 MAY 2018 17:41
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -703,6 +703,18 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(D:\Tools\MikTex\tex\latex\psnfss\pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(D:\Tools\MikTex\tex\latex\psnfss\upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(D:\Tools\MikTex\tex\latex\psnfss\upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
 (D:\Tools\MikTex\tex\latex\amsmath\amsmath.sty
 Package: amsmath 2016/06/28 v2.15d AMS math features
 \@mathmargin=\skip47
@@ -794,6 +806,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks41
 \@floatcapt=\box63
 )
+("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\fixfoot\fixfoo
+t.sty"
+Package: fixfoot 2007/12/12 v0.3a fixed-text footnotes
+)
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listi
 ngs.sty"
 \lst@mode=\count144
@@ -821,6 +837,7 @@ ngs.cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
+\c@@repnote@fftn@serial=\count152
  (Seminararbeit.aux
 
 LaTeX Warning: Label `fig: behavior sketches' multiply defined.
@@ -831,34 +848,34 @@ LaTeX Warning: Label `fig: behavior sketches@cref' multiply defined.
 )
 \openout1 = `Seminararbeit.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
-LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
 
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pd
 f.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count152
+\scratchcounter=\count153
 \scratchdimen=\dimen184
 \scratchbox=\box66
-\nofMPsegments=\count153
-\nofMParguments=\count154
+\nofMPsegments=\count154
+\nofMParguments=\count155
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count155
+\MPscratchCnt=\count156
 \MPscratchDim=\dimen185
-\MPnumerator=\count156
-\makeMPintoPDFobject=\count157
+\MPnumerator=\count157
+\makeMPintoPDFobject=\count158
 \everyMPtoPDFconversion=\toks44
 ) (D:\Tools\MikTex\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -887,7 +904,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-Package hyperref Info: Link coloring OFF on input line 93.
+Package hyperref Info: Link coloring OFF on input line 100.
 
 (D:\Tools\MikTex\tex\latex\hyperref\nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -895,11 +912,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (D:\Tools\MikTex\tex\generic\oberdiek\gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count158
+\c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 93.
-LaTeX Info: Redefining \pageref on input line 93.
-LaTeX Info: Redefining \nameref on input line 93.
+LaTeX Info: Redefining \ref on input line 100.
+LaTeX Info: Redefining \pageref on input line 100.
+LaTeX Info: Redefining \nameref on input line 100.
  (Seminararbeit.out)
 (Seminararbeit.out)
 \@outlinefile=\write5
@@ -909,7 +926,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count159
+\c@lstlisting=\count160
  (src/tex/cover_en.tex
 <src/pic/logo.jpg, id=101, 1120.185pt x 284.56313pt>
 File: src/pic/logo.jpg Graphic file (type jpg)
@@ -934,13 +951,13 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
  <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
-nput line 107.
+nput line 114.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf used on i
-nput line 107.
+nput line 114.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 
 <Statutory_Declaration_in_Lieu_of_an_Oath.pdf, id=113, page=1, 597.45204pt x 84
@@ -948,31 +965,31 @@ nput line 107.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
  <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 107.
+ed on input line 114.
 (pdftex.def)             Requested size: 597.45058pt x 845.15544pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 107.
+ed on input line 114.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 107.
+ed on input line 114.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 107.
+ed on input line 114.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
 File: Statutory_Declaration_in_Lieu_of_an_Oath.pdf Graphic file (type pdf)
 
 <use Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page 1>
 Package pdftex.def Info: Statutory_Declaration_in_Lieu_of_an_Oath.pdf, page1 us
-ed on input line 107.
+ed on input line 114.
 (pdftex.def)             Requested size: 597.47792pt x 845.19412pt.
  [2
 
@@ -1041,13 +1058,9 @@ LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10.95> not available
 (src/tex/caffe-graph-and-protobuf-example.tex
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
-) [7])
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
-
- []
-
-(src/tex/available-deep-learning-approaches.tex [8]
-<src/pic/3D-boundingbox-example.png, id=312, 870.25125pt x 589.4522pt>
+) [7] [8])
+(src/tex/available-deep-learning-approaches.tex [9]
+<src/pic/3D-boundingbox-example.png, id=332, 870.25125pt x 589.4522pt>
 File: src/pic/3D-boundingbox-example.png Graphic file (type png)
 
 <use src/pic/3D-boundingbox-example.png>
@@ -1059,19 +1072,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--32
 
  []
 
-[9]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
 (src/tex/three-driving-examples.tex)
-<src/pic/ALVINN.png, id=334, 572.1375pt x 566.115pt>
+<src/pic/ALVINN.png, id=354, 572.1375pt x 566.115pt>
 File: src/pic/ALVINN.png Graphic file (type png)
  <use src/pic/ALVINN.png>
 Package pdftex.def Info: src/pic/ALVINN.png used on input line 44.
 (pdftex.def)             Requested size: 228.85094pt x 226.44199pt.
 
-[10 <./src/pic/3D-boundingbox-example.png>] [11 <./src/pic/ALVINN.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./src/pic/3D-boundingbox-example.png>] [12 <./src/pic/ALVINN.png>]
 Overfull \hbox (14.213pt too wide) in paragraph at lines 65--66
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1096,16 +1111,15 @@ Overfull \hbox (14.213pt too wide) in paragraph at lines 70--71
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-(src/tex/affordance-values-and-states.tex)) (src/tex/example.tex [12] [13]
-[14
-
-]
+(src/tex/affordance-values-and-states.tex)) (src/tex/example.tex [13] [14]
 Chapter 3.
 
 LaTeX Warning: Citation `geiger2013vision' on page 15 undefined on input line 1
 2.
 
-) (src/tex/evaluation.tex [15] [16
+) (src/tex/evaluation.tex [15
+
+] [16
 
 ]
 Chapter 4.
@@ -1118,30 +1132,41 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-) (Seminararbeit.bbl [19] [20
-
-]
-Underfull \hbox (badness 4242) in paragraph at lines 41--46
+[19]) (Seminararbeit.bbl [20]
+Underfull \hbox (badness 4242) in paragraph at lines 50--55
 []\OT1/cmr/m/n/10.95 Adam Grzywaczewski.  Train-ing ai for self-driving ve-hi-c
 les: the
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 41--46
+Underfull \hbox (badness 1675) in paragraph at lines 50--55
 \OT1/cmr/m/n/10.95 chal-lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDI
 A Cor-po-ra-
  []
 
-[21]
+[21
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 90--93
+[]\OT1/cmr/m/n/10.95 Mxnet model gallery.  []$\OT1/pcr/m/n/10.95 https : / / gi
+thub . com / dmlc /
+ []
+
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-32.def
 "
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
-)) [22]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 138--143
+\OT1/cmr/m/it/10.95 https://www.infoworld.com/article/3144025/cloud-computing/w
+hy-amazon-
+ []
+
+) [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (Seminararbeit.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
 (rerunfilecheck)             Checksum: A9139B3A1BD2D25A81BB43F60DE3A181;1471.
 
@@ -1151,14 +1176,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 25504 strings out of 493333
- 501487 string characters out of 3144357
- 630517 words of memory out of 3000000
- 28406 multiletter control sequences out of 15000+200000
- 21976 words of font info for 64 fonts, out of 3000000 for 9000
+ 25584 strings out of 493333
+ 502870 string characters out of 3144357
+ 632378 words of memory out of 3000000
+ 28466 multiletter control sequences out of 15000+200000
+ 22666 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,18n,71p,1006b,1387s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
@@ -1173,10 +1198,10 @@ onts/cm/cmr9.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:
 ype1/public/amsfonts/cm/cmti10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb><D:/Tools/MikTex/fonts/type1/urw/courier/ucrr8a.pfb><D:/Too
 ls/MikTex/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Tools/MikTex/fonts/type1/urw/
-helvetic/uhvr8a.pfb>
-Output written on Seminararbeit.pdf (27 pages, 2637708 bytes).
+helvetic/uhvr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Seminararbeit.pdf (27 pages, 2651547 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 135 named destinations out of 1000 (max. 500000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
  245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
