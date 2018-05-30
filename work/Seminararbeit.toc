@@ -13,12 +13,12 @@
 \contentsline {subsection}{\numberline {2.5.1}Mediated Perception}{10}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Behavior Reflex}{10}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Direct Perception}{13}{subsection.2.5.3}
-\contentsline {chapter}{\numberline {3}Running Example}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Implementation}{15}{section.3.1}
-\contentsline {section}{\numberline {3.2}Training}{15}{section.3.2}
-\contentsline {chapter}{\numberline {4}Evaluation}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}MontiSim}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Results}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Future Work}{17}{section.4.3}
-\contentsline {chapter}{\numberline {5}Conclusion}{19}{chapter.5}
-\contentsline {chapter}{Literaturverzeichnis}{20}{chapter.5}
+\contentsline {chapter}{\numberline {3}Running Example}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Implementation}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Training}{17}{section.3.2}
+\contentsline {chapter}{\numberline {4}Evaluation}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}MontiSim}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Results}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Future Work}{19}{section.4.3}
+\contentsline {chapter}{\numberline {5}Conclusion}{21}{chapter.5}
+\contentsline {chapter}{Literaturverzeichnis}{22}{chapter.5}

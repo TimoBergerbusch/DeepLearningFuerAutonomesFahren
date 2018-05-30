@@ -50,12 +50,14 @@ For example comparing a simple straight 3 lane road with the car in the middle, 
 
 %In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson2014ecological} in the late 80's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
 
-The direct perception is the third group of approaches, which can be dated back to the 1954 and was initially mainly researched by James J. Gibson. \cite{gibson1954theory} The approach is based on analyzing a picture not simply deducing a steering angle, or velocity change, like the behavior reflex approaches (cf. \Cref{subsec: Behavior Reflex}), but also performing further computation without parsing it into a 3D world state model like the mediated perception approaches (cf. \Cref{subsec: Mediated Perception}). \cite{chen2015deepdriving}\\
+The direct perception is the third group of approaches, which can be dated back to the 1954 and was initially mainly researched by James J. Gibson. \cite{gibson1954theory} The approach is based on analyzing a picture, not simply deducing a steering angle, or velocity change, like the behavior reflex approaches (cf. \Cref{subsec: Behavior Reflex}), but also performing further computation without parsing it into a 3D world state model like the mediated perception approaches (cf. \Cref{subsec: Mediated Perception}). \cite{chen2015deepdriving}\\
 So it is a third paradigm, which can be interpreted as a hybrid of the two other paradigms. The approach tries to identify only the meaningful affordance indicators and make a decision based on those parameters. 
+
+The CNN gets trained to make a reasonable assumption about the distance of other vehicles, their velocity and lane marks. These assumptions are further called affordance indicators.
 
 We further consider a design based on \cite{chen2015deepdriving} and their way of training.
 
-The original paper \cite{chen2015deepdriving} stated the a total number of 13 indicators separated in two states to be sufficient. The states are: in line driving (following the lane) and on line driving (changing lanes). The values themselves can be categorized as: preceding car distances, distances to the lane markers and the steering angle. The indicators and their affiliation to the states can be seen in \Cref{lst: affordance indicators}.
+The original paper \cite{chen2015deepdriving} stated the a total number of 13 indicators separated in two states to be sufficient for their design of a highway only autonomous agent. The states are: in line driving (following the lane) and on line driving (changing lanes). The values themselves can be categorized as: preceding car distances, distances to the lane markers and the steering angle. The indicators and their affiliation to the states can be seen in \Cref{lst: affordance indicators}.
 
 \begin{figure}
 \centering
@@ -78,6 +80,7 @@ always:
   12) dist L: distance to the preceding car in the left lane
   13) dist R: distance to the preceding car in the right lane
 \end{lstlisting}
+
 \todoLine
 \caption{The affordance indicators and their affiliation states}
 \label{lst: affordance indicators}
@@ -86,12 +89,20 @@ always:
 Based on the current state, all affordance indicators of the other state are not used, since the other state is defined to be inactive.\\
 In order to identify the current state the host car is in, every state has their respective region, where they are active with an overlapping region for smooth transitioning.
 
-%These affordance values and their recognition in an image is trained to the \nn.
+Training is done by feeding the CNN with images of a current driving scenario as input and give estimated values to the mentioned affordance indicators active in the current state. Those values get forwarded to a controller dealing with the car. In the original approach the training was done via the \torcs game further explained in TODO %TODO: ref
+
+The controller is setup to take the affordance values and compute a decision from it in an imperative way. For example the steering can be computed as 
+	$$ steerCmd = C \cdot (angle-\frac{dist\_center}{road\_width})$$
+where $dist\_center$ is the center of the current state (line we are on or middle of the lane), a coefficient $C$ suited for the current conditions, like weather or speed, and $angle\in [-\pi, \pi]$ as the affordance indicator.
+
+Also using the controller to compute the accelerating and braking one can adjust the desired speed ($desired\_speed$) based on the affordance indicators. The $desired\_speed$ is set to the speed the agent wants to drive and can drop if a drastic steering motion is considered or accelerate to overtake a slower car.\\
+In a one lane scenario with a  preceding car driving slower than the $desired\_speed$ there is no space to overtake. For that the controller has the velocity control car-following model:
+	$$ v(t) = v_{max}(1-e^{-\frac{c\cdot dist(t)}{v_{max}} -d})$$
+where $v_{max}$ is the maximal speed the agent is allowed to drive, $c$ and $d$ are coefficients specific to external conditions, like a wet lane or the cars potential of accelerating and braking, and $dist(t)$ is the distance to the preceding car. This distance is given through the trained CNN.
 
 \input{src/tex/affordance-values-and-states}
 
 \todo{\begin{enumerate}
-\item how to learn the affordance
-\item how to conclude affordance to action
+\item show graphic of how controller computes
 \end{enumerate}}
 
