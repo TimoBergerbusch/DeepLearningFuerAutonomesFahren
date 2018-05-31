@@ -1,4 +1,4 @@
-\section{Available Deep Learning Approaches}\label{sec: Deep Learning Approaches}
+\chapter{Available Deep Learning Approaches}\label{chapter: Deep Learning Approaches}
 
 There are various approaches of autonomous driving agents making a variety of assumptions and differ in numerous options. But they can be mostly categorized into two major groups of approaches: mediated perception approaches and behavior reflex approaches. \cite{chen2015deepdriving}
 
@@ -6,7 +6,7 @@ In this paper we further analyse a suggested third group, called direct percepti
 
 All these three groups differ in the way of interpreting the given sensor data and whether or not to create a some what bigger picture based on consequent data.
 
-\subsection{Mediated Perception} \label{subsec: Mediated Perception}
+\section{Mediated Perception} \label{sec: Mediated Perception}
 
 The mediated perception approach is a multi-component continuous process. Every component recognizes specific aspects for driving. For example traffic signs, lanes, other cars. Those components are then combined into one single world state representing the cars surrounding based on the sensor data. \cite{KITTI}\\
 These world states are 3D models of the current world. Cars are identified using a classifier and then often surrounded by a 3D bounding box. An example can be seen in \Cref{pic: 3D Bounding Box}. By comparing different frames generated one can estimate the speed and distance to those objects and derive an A.I. based precedence behavior. \cite{KITTI}\cite{chen2015deepdriving}
@@ -24,10 +24,10 @@ The approach of mediated perception is a reasonable and very sturdy way of handl
 	\label{pic: 3D Bounding Box}
 \end{figure}
 
-\subsection{Behavior Reflex}\label{subsec: Behavior Reflex}
+\section{Behavior Reflex}\label{sec: Behavior Reflex}
 
 The behavior reflex approach of constructing a reliable autonomous driving agent can be dated back to 1989 , where researchers tried to directly map a single frame to a decision of a steering angle. For such approaches a quite simple \nn were created. \\
-The network \alvinn, shown in \Cref{pic: ALVINN}, consisted of a single hidden layer, used back-propagation and is fed by two cameras: a $30\times32$ pixel video and a $8\times32$ pixel range finder retina. The input neurons fired depending on the blue color band of its pixel, because it is believed to infer the highest contrast between road and non-road. The difference in color of road and non-road was fed back to the network. The bias (activation level) is proportional to the proximity of the corresponding area, based on the likelihood and importance of having road in particular fields of the image.\cite{pomerleau1989alvinn}\\
+The network \alvinn consisted of a single hidden layer, used back-propagation and is fed by two cameras: a $30\times32$ pixel video and a $8\times32$ pixel range finder retina. The input neurons fired depending on the blue color band of its pixel, because it is believed to infer the highest contrast between road and non-road. The difference in color of road and non-road was fed back to the network. The bias (activation level) is proportional to the proximity of the corresponding area, based on the likelihood and importance of having road in particular fields of the image.\cite{pomerleau1989alvinn}\\
 For example having recognized that the road abruptly ends right in front of the car is more important than recognizing that there is a road in the top left corner.\\
 
 Such systems, even though they are simple compared to the in \Cref{subsec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
@@ -39,14 +39,14 @@ For example comparing a simple straight 3 lane road with the car in the middle, 
 
 \input{src/tex/three-driving-examples}
 
-\begin{figure}
-	\centering
-	\includegraphics[scale=0.4]{src/pic/ALVINN.png}
-	\caption{The \nn called \alvinn and used as a behavior reflex based autonomous agent. \cite{pomerleau1989alvinn}}
-	\label{pic: ALVINN}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics[scale=0.4]{src/pic/ALVINN.png}
+%	\caption{The \nn called \alvinn and used as a behavior reflex based autonomous agent. \cite{pomerleau1989alvinn}}
+%	\label{pic: ALVINN}
+%\end{figure}
 
-\subsection{Direct Perception}\label{subsec: Direct Perception}
+\section{Direct Perception}\label{sec: Direct Perception}
 
 %In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson2014ecological} in the late 80's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
 
@@ -97,7 +97,7 @@ where $dist\_center$ is the center of the current state (line we are on or middl
 
 Also using the controller to compute the accelerating and braking one can adjust the desired speed ($desired\_speed$) based on the affordance indicators. The $desired\_speed$ is set to the speed the agent wants to drive and can drop if a drastic steering motion is considered or accelerate to overtake a slower car.\\
 In a one lane scenario with a  preceding car driving slower than the $desired\_speed$ there is no space to overtake. For that the controller has the velocity control car-following model:
-	$$ v(t) = v_{max}(1-e^{-\frac{c\cdot dist(t)}{v_{max}} -d})$$
+	$$ v(t) = v_{max}(1-e^{-\frac{c\cdot dist(t)}{v_{max}} -d})$$ 
 where $v_{max}$ is the maximal speed the agent is allowed to drive, $c$ and $d$ are coefficients specific to external conditions, like a wet lane or the cars potential of accelerating and braking, and $dist(t)$ is the distance to the preceding car. This distance is given through the trained CNN.
 
 \input{src/tex/affordance-values-and-states}

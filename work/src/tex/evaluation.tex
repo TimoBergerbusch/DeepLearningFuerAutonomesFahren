@@ -1,15 +1,59 @@
-\chapter{Evaluation}
+\chapter{Evaluation of Direct Perception}
 
-Test the trained set in a simulation environment
+In this chapter we take a look back at the direct perception approach and evaluate its performance. For that we compare the, via \torcs (c.f. \Cref{subsec: TORCS}), trained version to a behavior reflex approach (c.f. \Cref{sec: Behavior Reflex}). In addition to that there is also a comparison of the direct perception approach, trained via \kitti (c.f. \Cref{subsec: KITTI}), to a mediated perception approach stated in \cite{geiger20143d}. \cite{DeepDriving}
+Finally we take a look at possible scenarios causing problems which may emerge. 
 
-\section{MontiSim}
+The directed perception as stated in \cite{chen2015deepdriving} and discussed in \Cref{sec: Direct Perception} is designed to handle highway driving tasks, such as driving in a lane, overtaking slower cars, detecting the lane configuration and breaking to avoid a collision.
 
-Short introduction of the tool used to evaluate the net in \cite{MontiSim}
 
-\section{Results}
+\begin{wrapfigure}[15]{r}{4cm}
+	\vspace*{-1em}
+	\begin{tikzpicture}[scale=0.9] % middle picture
+	\newcommand{\lineLength}{0.75}
+	\newcommand{\lineSpace}{0.5}
+	\newcommand{\startSpace}{0.25}
+	
+	\fill[green!50!black] (0,0) rectangle (5,5);		% background
+	\fill[gray!50!black] (0.5,0) rectangle (4.5,5);     % pavement
+	\fill[yellow!75!black] (0.55,0) rectangle (0.6,5);  % left yellow line
+	\fill[yellow!75!black] (4.4,0) rectangle (4.45,5);  % right yellow line
+	
+	% left lane breaks		
+	\fill[white] (1.84,\startSpace) rectangle (1.86,\lineLength+\startSpace);		
+	\fill[white] (1.84,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (1.86,2*\lineLength + 1*\lineSpace + \startSpace);
+	\fill[white] (1.84,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (1.86,3*\lineLength + 2*\lineSpace + \startSpace);
+	\fill[white] (1.84,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (1.86,4*\lineLength + 3*\lineSpace + \startSpace);
+	
+	% right line breaks
+	\fill[white] (3.12,\startSpace) rectangle (3.14,\lineLength+\startSpace);		
+	\fill[white] (3.12,1*\lineLength + 1*\lineSpace + \startSpace) rectangle (3.14,2*\lineLength + 1*\lineSpace + \startSpace);
+	\fill[white] (3.12,2*\lineLength + 2*\lineSpace + \startSpace) rectangle (3.14,3*\lineLength + 2*\lineSpace + \startSpace);
+	\fill[white] (3.12,3*\lineLength + 3*\lineSpace + \startSpace) rectangle (3.14,4*\lineLength + 3*\lineSpace + \startSpace);
+	
+	% cars
+	\fill[red] (2.1,0.2) rectangle (2.1 + 0.8,0.2 + 1.5);	% agent
+	\draw[->,very thick,  color = white] (2.5,0.4) -- (2.5,1.2);
+	\draw[->,very thick,  color = red!75!black] (2,1.8) -- (1.3,2.5) -- (1.3,3);
+	
+	
+	\fill[orange] (2.1,3.2) rectangle (2.1 + 0.8,3.2 + 1.5);	% other car
+	\draw[->,very thick,  color = white] (2.5,3.4) -- (2.5,4);
+	
+	\fill[orange] (0.8,0) rectangle (0.8 + 0.8,0 + 1.1);	% other car
+	\draw[->,very thick,  color = white] (1.2,0) -- (1.2,1);
+	\end{tikzpicture}
+	\caption{A scenario that has to be considered to create a full autonomous driving agent}
+	\label{fig: behavior sketche complex scenario}
+\end{wrapfigure}
 
-Evaluating the results of the test of the net in MontiSim
+The behavior reflex approach was able to follow empty lanes perfectly, but was completely unable to have a acceptable behavior considering other cars. Neither a sufficient speed regulation nor the task of staying in lane was observable. The agent left the track various times and had multiple collisions.
+On the other hand the direct perception approach manages to change lanes smoothly to avoid collisions and stay in lane. Due to the speed regulation in the controller, stated in \Cref{sec: Direct Perception}, the agent is able to perform an emergency brake if necessary. So considering those scenarios the direct perception outperforms the behavior reflex approach.
 
-\section{Future Work}
+In order to compare with the state-of-the-art mediated perception approach, the training is done using the \kitti dataset and also combine two CNNs for near and far perception, both using the direct perception approach. It shows that the direct perception approach is able to perform roughly as good, even though they restrict themselves to the cars closest to the host car. So the direct perception is sufficient for real world examples as well. \cite{DeepDriving} \cite{chen2015deepdriving}
 
-Analyse the direct perception approach with a more complex scenario, like road signs, pedestrians and intersections.
+Despite the two mentioned comparisons there are still others that need further investigation. Considering more complex tasks, which mediated perception approaches are able to handle, the direct perception needs to prove itself.
+Considering classification tasks like road signs, pedestrians detection or traffic light detection including its current light showing still have to be done in order to create a sufficient agent for real-life cars. 
+Also more complex scenarios like busy intersections have to be solved. Also scenarios as sketched in \Cref{fig: behavior sketche complex scenario}, where the overtaking can not take place since a car left and possibly a bit behind of the host is even faster.
+A number of those scenarios can be managed by a sophisticated controller, but this would again take more time and provides less flexibility.
+
+So concluding the direct perception definitely is state-of-the-art and has the potential to found the base of a sophisticated autonomous driving agent, if considered as a predictor of distances they call affordance indicators. But whether or not the direct perception can handle a complete real-life scenario is still up to prove.

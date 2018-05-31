@@ -1,0 +1,25 @@
+1. pom.xml mit settings.xml
+
+	Ich kann den Build mittels: mvn clean install --settings settings.xml
+	zwar ausführen doch er läuft nur manchmal durch
+
+2. import de.se_rwth.commons.Joiners
+
+	Nicht gefunden trotz maven build
+	Lösung: logging statt dem normalen commons paket nutzen
+	
+3. import javax.annotation.Nullable
+
+	Auch nicht gefunden.
+	Lösung:
+	<dependency>
+		<groupId>com.google.code.findbugs</groupId>
+		<artifactId>jsr305</artifactId>
+		<version>3.0.2</version>
+	</dependency>
+	im pom.xml?
+	
+4. import freemarker.template.TemplateException
+	
+	fehlt auch.
+	Lösung: manuelles Installieren via IntelliJ -> libs -> Maven

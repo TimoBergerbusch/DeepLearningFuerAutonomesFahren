@@ -1,12 +1,66 @@
-\chapter{Running Example}
+\chapter{Comparison: \cnnarch \& \caffe}
 
-The example net, AlexNet \cite{krizhevsky2012imagenet} implemented as a Direct Perception approach 
+In this chapter we want to compare the \alexnet (c.f. \Cref{sec: AlexNet}) implemented using \cnnarch and \caffe. For both we take an in depth look at the predefined architecture by their respective language. We do that, since both implementations were done by language experts and build up to be as efficient and precise in the language as possible.
 
-\section{Implementation}
+Further we state the currently most used training databases and possible other ways to train the CNNs. 
 
-Implementation of the net using CNNArch or MxNet
-(maybe discuss already implemented approaches to cover more details)
+\todo{more explanation \\}
+
+\section{Implementation} \label{sec: Implementation}
+
+\subsection{\caffe} \label{subsec: Caffe Implementation}
+The implementation of the \alexnet using \caffe is given partly in \Cref{lst: Caffe AlexNet}. The whole net has a total number of 284 lines. Obviously the code written very verbosely. Every layer has to be explicitly specified even if they have a very similar structure to a previous layer.
+
+\newpage  %TODO restructure
+For example comparing the pooling layer ``pool1'' from line 51 to 61 and the pooling layer ``pool2'' from line 99 to 109:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\hspace*{2cm}\vdots
+		\lstinputlisting[numbers=left, firstnumber = 51, basicstyle=\scriptsize,firstline=51, lastline=61]{src/listing/alexnet.prototxt}
+		\hspace*{2cm}\vdots
+		\caption{``pool1''}
+		\label{lst: pool1}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\hspace*{2cm}\vdots
+		\lstinputlisting[numbers=left, firstnumber = 99, basicstyle=\scriptsize,firstline=99, lastline=109]{src/listing/alexnet.prototxt}
+		\hspace*{2cm}\vdots
+		\caption{``pool2''}
+		\label{lst: pool2}
+	\end{subfigure}
+	\caption{}
+	\label{lst: pool1 and pool2}
+\end{figure}
+The lines first 3 and last 6 lines are completely similar. The other 2 lines are just different in the name of the incoming and outgoing connections. Creating a huge and deep net would lead to a enormously large description file. 
+
+\subsection{\cnnarch} \label{subsec: CNNArch Implementation}
+
+The implementation of the \alexnet using \cnnarch can be seen in \Cref{lst: CNNArchLang AlexNet}. The complete script has 43 lines and defines the same net construction as the 284 line definition in \caffe. This shows the efficient language design used in the creation of \cnnarch (c.f. \Cref{sec: CNNArch}). \\
+The two pooling operations of \Cref{lst: pool1 and pool2} can be located in line 32 using the python like syntax of definition and the sequential connection \texttt{->} (c.f. \Cref{item: sequential connection}).
+
+Using those techniques \cnnarch is able to write even complex \nn using few lines of code. This and the syntax itself create an easy to read program.
 
 \section{Training}
 
-The training of the implemented net based on the KITTI dataset \cite{geiger2013vision}
+In order to train a CNN, independent of the underlying approach (c.f. \Cref{chapter: DLL}), one has obtain a huge database of input images and the labels, i.e. actions the CNN should have computed. For autonomous driving the training has to be very intensively done. Otherwise the car driven by the agent will take damage by just slight changes of the circumstances.\\
+Also different scenarios have to be trained. Only training the driving on a road without others cars and simply following the lane is a very disparate task than overtaking a slower car.\\
+For that the following sources of such databases are currently state-of-the-art.
+
+\subsection{KITTI Dataset} \label{subsec: KITTI}
+
+The \kitti dataset is a 6 hour recoding by the Karlsruhe Institute of Technology. They mounted various cameras and laser scanners on a VW Passat and drove around the german city Karlsruhe.\\
+During those hours they collected a total amount of 180 GB of data. This data includes images, in different channels,from the drivers point of view, sensor data of distances, steering angle, acceleration/braking, current speed, GPS coordinates and others. \\
+While other test sets are often developed using a very specific setup for a corresponding approach, the \kitti dataset has such a high variety of data captured that it is used by many approaches. It has become one of the default datasets to compare different approaches on. \cite{KITTI}
+
+\subsection{TORCS} \label{subsec: TORCS}
+
+A game called \textbf{T}he \textbf{O}pen \textbf{R}acing \textbf{C}ar \textbf{S}imulator or short \torcs is a racing game specially designed for artificial intelligence research. It is designed to be modular in order to retrieve every kind of data one needs for their approach. Also it offers a documented API to create for example a driving agent. 
+
+The possibility to collect any kind of data is what makes this game so popular in current research. The advantage over the \kitti dataset is that if one needs a very specific value not included within the \kitti dataset the approach can not be tested with it. Neglecting if such a value is meaningful in terms of the ability to collect it during real driving, there would be an other specialized set collecting only the data this specific approach needs and maybe not collecting the data one needs to compare it to an other approach.
+
+The disadvantage of the training via \torcs and training via \kitti is that \torcs only uses artificial images, other artificial agents and is completely exempt from any kind of data noise like rain disturbing sensor data or sunlight blending the camera. Also other cars behave different in a game than in real life. The \kitti includes some of those problems. To which extend is arguable. \cite{wymann2000torcs}
+
+\subsection{MontiSim} \label{subsec: MontiSim}
+
+TODO

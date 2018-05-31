@@ -7,6 +7,12 @@ Mohamed Aly.
 \newblock In {\em Intelligent Vehicles Symposium, 2008 IEEE}, pages 7--12.
   IEEE, 2008.
 
+\bibitem[Caf]{CaffeAlexNetGithub}
+Caffe model zoo - alexnet.
+\newblock
+  \url{https://github.com/BVLC/caffe/blob/master/models/bvlc_alexnet/deploy.prototxt}.
+\newblock [Online; accessed 30-May-2018].
+
 \bibitem[{Caf}18]{Caffe2Homepage}
 {Caffe2}.
 \newblock What is caffe2?, 2018.
@@ -30,6 +36,12 @@ Chenyi Chen, Ari Seff, Alain Kornhauser, and Jianxiong Xiao.
 \newblock In {\em Computer Vision (ICCV), 2015 IEEE International Conference
   on}, pages 2722--2730. IEEE, 2015.
 
+\bibitem[CSKX18]{DeepDriving}
+Chenyi Chen, Ari Seff, Alain Kornhauser, and Jianxiong Xiao.
+\newblock Deepdriving: Learning affordance for direct perception in autonomous
+  driving.
+\newblock http://deepdriving.cs.princeton.edu/, 2018.
+
 \bibitem[Gib54]{gibson1954theory}
 James~J Gibson.
 \newblock A theory of pictorial perception.
@@ -45,6 +57,13 @@ Andreas Geiger, Philip Lenz, Christoph Stiller, and Raquel Urtasun.
 \newblock Vision meets robotics: The kitti dataset.
 \newblock {\em The International Journal of Robotics Research},
   32(11):1231--1237, 2013.
+
+\bibitem[GLW{\etalchar{+}}14]{geiger20143d}
+Andreas Geiger, Martin Lauer, Christian Wojek, Christoph Stiller, and Raquel
+  Urtasun.
+\newblock 3d traffic scene understanding from movable platforms.
+\newblock {\em IEEE transactions on pattern analysis and machine intelligence},
+  36(5):1012--1025, 2014.
 
 \bibitem[Grz17]{grzywaczewski2017training}
 Adam Grzywaczewski.
@@ -97,11 +116,6 @@ Dean~A Pomerleau.
 \newblock In {\em Advances in neural information processing systems}, pages
   305--313, 1989.
 
-\bibitem[Rea17]{MontiSim}
-Bernhard Rumpe and et. al.
-\newblock Montisim.
-\newblock https://github.com/MontiSim, 2017.
-
 \bibitem[SCE{\etalchar{+}}17]{sze2017hardware}
 Vivienne Sze, Yu-Hsin Chen, Joel Einer, Amr Suleiman, and Zhengdong Zhang.
 \newblock Hardware for machine learning: Challenges and opportunities.
@@ -128,6 +142,12 @@ Kenton Varda.
 \newblock Protocol buffers: Google’s data interchange format.
 \newblock {\em Google Open Source Blog, Available at least as early as Jul},
   72, 2008.
+
+\bibitem[WEG{\etalchar{+}}00]{wymann2000torcs}
+Bernhard Wymann, Eric Espi{\'e}, Christophe Guionneau, Christos Dimitrakakis,
+  R{\'e}mi Coulom, and Andrew Sumner.
+\newblock Torcs, the open racing car simulator.
+\newblock {\em Software available at http://torcs. sourceforge. net}, 4, 2000.
 
 \bibitem[{Wik}18]{wiki:Caffe}
 {Wikipedia contributors}.

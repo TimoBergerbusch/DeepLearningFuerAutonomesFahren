@@ -5,11 +5,14 @@ Conclusion of differences and similarities between the frameworks\\
 \begin{tabular}{l |c |c |c |c }
 	Property 						& \cnnarch 		& \caffe 		& \caffetwo 		& \mxnet \\ \hline
 					\multicolumn{5}{c}{General Information}\\\hline
-	SLI usage						& \cmark 		& \xmark$^1$ 	& \xmark$^1$ 		& \cmark \\
-	mult. computers 				& \xmark$^2$ 	& \cmark		& \cmark			& \cmark \\
-	full framework  				& \xmark		& \cmark		& \cmark			& \cmark \\
-	CNNs							& \cmark		& \cmark		& \cmark			& \cmark \\
-	Recurrent NNs					& \xmark		& \cmark		& \cmark			& \cmark \\ 
+	is full framework  				& \xmark		& \cmark		& \cmark			& \cmark \\
+	SLI usage						& -- 			& \xmark$^1$ 	& \xmark$^1$ 		& \cmark \\
+	mult. computers 				& -- 			& \cmark		& \cmark			& \cmark \\	
+	\hline
+					\multicolumn{5}{c}{Nets Supported}\\ \hline
+	typical CNNs					& \cmark		& \cmark		& \cmark			& \cmark \\
+	arbitrary CNNs					& \xmark		& \cmark		& \cmark			& \cmark \\
+	Recurrent NNs					& \xmark		& \cmark		& \cmark			& \cmark \\
 	\hline
 					\multicolumn{5}{c}{Constructs}\\ \hline
 	predefined NNs					& \cmark		& \cmark		& \cmark			& \cmark \\
@@ -25,10 +28,10 @@ Conclusion of differences and similarities between the frameworks\\
 	MatLab							& ? 			& \cmark		& \xmark			& \cmark \\ 
 	Others							& ?				& ?				& ?					& R, Go, Julia, Perl\\
 									&				&				&					& JavaScript, Scala \\ 
-	\hline
-					\multicolumn{5}{c}{Usage}\\ \hline
-					understandability & & & & \\
-					handling & & & & \\
+%	\hline
+%					\multicolumn{5}{c}{Usage}\\ \hline
+%					understandability & & & & \\
+%					handling & & & & \\
 \end{tabular}
 
 \begin{itemize}

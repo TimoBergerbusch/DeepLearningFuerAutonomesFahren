@@ -1,0 +1,27 @@
+\chapter{Appendix}
+\vspace*{-4em}
+\begin{figure}[H]
+\begin{minipage}[t]{0.33\textwidth}
+	\lstinputlisting[numbers=left, basicstyle=\scriptsize,firstline=1, lastline=51]{src/listing/alexnet.prototxt}
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+	\lstinputlisting[numbers=left, firstnumber = 51, basicstyle=\scriptsize,firstline=51, lastline=101]{src/listing/alexnet.prototxt}
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+	\lstinputlisting[numbers=left, firstnumber = 101, basicstyle=\scriptsize,firstline=101, lastline=139]{src/listing/alexnet.prototxt}
+	\hspace*{2cm}\vdots
+\end{minipage}
+
+\caption{The \caffe implementation of the \alexnet. This is only the first 169 lines. The whole net has a size of 284 lines of code. The main reason of this is the highly verbose Protocol Buffer prototxt style. Further explanation in \Cref{sec: Caffe}. \cite{CaffeAlexNetGithub}}
+\label{lst: Caffe AlexNet}
+\end{figure}
+
+\begin{figure}
+	%	\centering
+	\todoLine
+	\hspace*{-0.5cm}
+	\lstinputlisting[numbers = left, basicstyle=\scriptsize]{src/listing/alexnet.txt}
+	\todoLine
+	\caption{The \alexnet implemented in \cnnarch. This is the whole program to describe the whole net. Further explanation in \Cref{sec: CNNArch}. \cite{CNNArch}}
+	\label{lst: CNNArchLang AlexNet}
+\end{figure}
