@@ -45,14 +45,14 @@ A CNN is a special class of deep feed-forward \nns. On of the main design goals 
 
 Like most parts of \nns, also the CNNs are inspired by biological processes. It is mainly based on the connectivity pattern of an animals visual cortex, where special neurons respond only to stimuli of their receptive field, represented as rectangles lying in the image. Partially overlapping guarantees a complete coverage of the field of view. Those rectangles are often called kernel or filters.\cite{matsugu2003subject}
 
-The partitioning into those rectangles can also has the advantage, that the size of the input image is not relevant. If there would be a direct correspondence of a pixel to one input value then a change of the size would infer null values or additional input values, where the weights are not directly well suited. But with partitioning it into sub-rectangles of the image the values can be unified by selecting these rectangles relative to the size.
-This is only given, if there are no fully connected layers. Otherwise one has to perform other steps like cropping, scaling or padding. %TODO ref
+%The partitioning into those rectangles can also have the advantage, that the size of the input image is not relevant. If there would be a direct correspondence of a pixel to one input value then a change of the size would infer null values or additional input values, where the weights are not directly well suited. But with partitioning it into sub-rectangles of the image the values can be unified by selecting these rectangles relative to the size.
+%This is only given, if there are no fully connected layers. Otherwise one has to perform other steps like cropping, scaling or padding. %TODO ref
+
+Using the so called pooling the net reduces the amount of inputs by mapping a number of values, for example the color values of a kernel, to one single value. One often used pooling type is the max pooling, which takes the maximal value of a property. Using pooling and relative sizes of kernels one can avoid the necessity of equally sized images. \cite{wiki:CNN} 
 
 These separation into those receptive fields has also the advantage that is reduces the effort to train a CNN. The weights and biases of neurons of each receptive field are equal. This is reasonable since for example a speed limit road sign should be identified independent whether it is located next to the road, like on a normal road, or above the road, like on an highway. \cite{lecun2015lenet}
 
 Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
-
-\todo{mention pooling}
 
 
 \section{AlexNet} \label{sec: AlexNet}
@@ -61,7 +61,7 @@ The \textit{\alexnet} is one of the best performing CNN architectures currently 
 
 A highly optimized GPU implementation of this architecture combined with innovative features is publicly available. Those features lead to improve performance and reduce training time.\cite{krizhevsky2012imagenet}
 
-An important note is that the original test is dated back to 2012 and therefore was used with an overall GPU memory of 6GB, with which training took abound six days. With modern hardware like new GPUs, SLI usage or even clusters, the training can be done faster, or the model can be trained with more data to improve performance. The improvement cased only by hardware can be roughly grasped through \cite{sze2017hardware}.
+An important note is that the original test is dated back to 2012 and therefore was used with an overall GPU memory of 6 GB, with which training took abound six days. With modern hardware like new GPUs, SLI usage or even clusters, the training can be done faster, or the model can be trained with more data to improve performance. The improvement cased only by hardware can be roughly grasped through \cite{sze2017hardware}.
 
 %\todo{maybe calc the possible speed up based on ``Hardware for Machine Learning''}
 

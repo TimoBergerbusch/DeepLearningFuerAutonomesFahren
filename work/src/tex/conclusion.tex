@@ -1,6 +1,6 @@
 \chapter{Conclusion}
 
-Conclusion of differences and similarities between the frameworks\\
+In this final chapter we want to recap the languages and frameworks about their abilities and provided functionality.
 
 \begin{tabular}{l |c |c |c |c }
 	Property 						& \cnnarch 		& \caffe 		& \caffetwo 		& \mxnet \\ \hline
@@ -16,17 +16,17 @@ Conclusion of differences and similarities between the frameworks\\
 	\hline
 					\multicolumn{5}{c}{Constructs}\\ \hline
 	predefined NNs					& \cmark		& \cmark		& \cmark			& \cmark \\
-	pretrained NNs  				& \xmark		& \cmark		& \xmark$^2$		& \cmark \\
+	pre-trained NNs  				& \xmark		& \cmark		& \xmark$^2$		& \cmark \\
 	simple arbitrary net creation	& \cmark		& \xmark 		& \xmark			& \cmark \\	
 	predefined functions 		  	& \cmark		& \cmark		& \cmark			& \cmark \\
 	simple function creation 	  	& \cmark 		& \xmark		& \xmark$^2$		& \cmark \\
 	low-level operations			& \xmark		& \xmark		& \xmark			& \cmark \\ %check
 	\hline
 					\multicolumn{5}{c}{Language bindings}\\ \hline
-	C++								& \xmark		& \cmark		& \cmark			& \cmark \\
-	Python							& \cmark		& \xmark$^3$	& \cmark			& \cmark \\
-	MatLab							& ? 			& \cmark		& \xmark			& \cmark \\ 
-	Others							& ?				& ?				& ?					& R, Go, Julia, Perl\\
+	C++								& \xmark		& \cmark$^3$	& \cmark			& \cmark \\
+	Python							& \cmark		& \cmark$^3$	& \cmark			& \cmark \\
+	MATLAB							& \xmark$^2$	& \cmark$^3$	& \xmark			& \cmark \\ 
+	Others							& --			& Apache Spark$^4$& --				& R, Go, Julia, Perl\\
 									&				&				&					& JavaScript, Scala \\ 
 %	\hline
 %					\multicolumn{5}{c}{Usage}\\ \hline
@@ -34,21 +34,42 @@ Conclusion of differences and similarities between the frameworks\\
 %					handling & & & & \\
 \end{tabular}
 
-\begin{itemize}
-	\item[$^1$] depending on CUDA version/installation
-	\item[$^2$] not clearly stated, but also not denied
-	\item[$^3$] added lately
-\end{itemize}
+\vspace{-1em}
+\begin{figure}[H]
+	\footnotesize
+	\begin{multicols}{2}
+	\begin{itemize}
+		\item[$^1$] CUDA does not generally support SLI
+		\item[$^2$] not clearly stated, but also not denied
+		\item[$^3$] nets written in prototxt (c.f. \Cref{sec: Caffe})
+		\item[$^4$] made by a third party\cite{CaffeOnSpark}
+	\end{itemize}
+	\end{multicols}
+\end{figure}
 
-Possible Criteria%SEE: 4.4.1 in CNNArchLang
-\begin{itemize}
-	\item generality
-	\item expressiveness
-	\item modularity
-	\item is Framework?
-	\item Installation 
-	\item Error Handling
-	\item for equal task?
-	\item low-level computations
-\end{itemize}
-Also a general conclusion based on results and \cite{grzywaczewski2017training}
+Overall we can conclude that \cnnarch has the potential to become a recognized domain specific language for deep learning. The python like syntax and simplistic way of defining a net is superior to the protocol buffer approach of \caffe. Since \cnnarch is not a full framework but compiles its code to \mxnet code it benefits from MxNets ability of SLI and even cluster usage. The possibility to define recurrent \nns is still up to be implemented and a library of pre-trained models would also increase its potential.
+
+Overall the most important aspects of state-of-the-art deep learning frameworks are the efficiency. Through various methods and researches like \kitti and \torcs the data to train a network is available.
+Also to mention is the data estimation mentioned in \cite{grzywaczewski2017training}. There a fleet of 100 cars is analyzed, how much useful data is produces during 1 year. After conservative preprocessing this leads to 104 TB of data, which would take an \alexnet roughly $1.2$ years to train, if only a single GPU is used. The possibility of using multiple machines is a key element. Using 18 DGX-1 Volta systems the same effort of training can be done within 7 days.
+
+So \cnnarch is on the right path using \mxnet in order to have the cluster computing ability.
+
+%It makes 4 assumptions:
+%\begin{itemize}
+%	\item a fleet size of 100 vehicles
+%	\item data collection interval = 1 year = 2080 hours/car
+%	\item a single car produces $1+\frac{TB}{h}$
+%	\item reducing of preprocessing: reduction to ca. $0.05\%$ 
+%\end{itemize}
+%This would 
+%Regarding the estimations mentioned in \cite{grzywaczewski2017training} a modern car provides roughly $\frac{1+TB}{h}$. Training a net in sufficient set of scenarios therefore uses 
+
+%Possible Criteria%SEE: 4.4.1 in CNNArchLang
+%\begin{itemize}
+%	\item modularity
+%	\item Installation 
+%	\item Error Handling
+%	\item for equal task?
+%	\item low-level computations
+%\end{itemize}
+%Also a general conclusion based on results and \cite{grzywaczewski2017training}

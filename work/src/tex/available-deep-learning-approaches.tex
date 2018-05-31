@@ -19,8 +19,9 @@ The approach of mediated perception is a reasonable and very sturdy way of handl
 
 \begin{figure}
 	\centering
-	\includegraphics[scale=0.4]{src/pic/3D-boundingbox-example.png}
-	\caption{An example of a scene using 3D bounding boxes. This image is taken from the MATLAB delvopment kit of \cite{KITTI}}
+%	\includegraphics[scale=0.4]{src/pic/3D-boundingbox-example.png}
+	\includegraphics[scale=0.7]{src/pic/intersection.png}
+	\caption{An example of a scene using 3D bounding boxes and path prediction.}
 	\label{pic: 3D Bounding Box}
 \end{figure}
 
@@ -33,7 +34,7 @@ For example having recognized that the road abruptly ends right in front of the 
 Such systems, even though they are simple compared to the in \Cref{subsec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
 
 The problem with behavior reflex approaches is, that they reach their limits very early when adding more complex scenarios. Having simple alternations to the trained scenarios, which enforce a different behavior, is very hard to train to such a \nn.\\
-For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an american highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn.
+For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: problematic behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an American highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn.
 
 %\todo{noch mehr?\\}
 
@@ -50,7 +51,7 @@ For example comparing a simple straight 3 lane road with the car in the middle, 
 
 %In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson2014ecological} in the late 80's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
 
-The direct perception is the third group of approaches, which can be dated back to the 1954 and was initially mainly researched by James J. Gibson. \cite{gibson1954theory} The approach is based on analyzing a picture, not simply deducing a steering angle, or velocity change, like the behavior reflex approaches (cf. \Cref{subsec: Behavior Reflex}), but also performing further computation without parsing it into a 3D world state model like the mediated perception approaches (cf. \Cref{subsec: Mediated Perception}). \cite{chen2015deepdriving}\\
+The direct perception is the third group of approaches, which can be dated back to the 1954 and was initially mainly researched by James J. Gibson. \cite{gibson1954theory} The approach is based on analyzing a picture, not simply deducing a steering angle, or velocity change, like the behavior reflex approaches (cf. \Cref{sec: Behavior Reflex}), but also performing further computation without parsing it into a 3D world state model like the mediated perception approaches (cf. \Cref{sec: Mediated Perception}). \cite{chen2015deepdriving}\\
 So it is a third paradigm, which can be interpreted as a hybrid of the two other paradigms. The approach tries to identify only the meaningful affordance indicators and make a decision based on those parameters. 
 
 The CNN gets trained to make a reasonable assumption about the distance of other vehicles, their velocity and lane marks. These assumptions are further called affordance indicators.
@@ -62,7 +63,7 @@ The original paper \cite{chen2015deepdriving} stated the a total number of 13 in
 \begin{figure}
 \centering
 \todoLine
-\begin{lstlisting}
+\begin{lstlisting}[ basicstyle=\scriptsize]
 always:
   1) angle: angle between the car's heading and the tangent of the road
 "in lane system", when driving in the lane:
@@ -102,7 +103,7 @@ where $v_{max}$ is the maximal speed the agent is allowed to drive, $c$ and $d$ 
 
 \input{src/tex/affordance-values-and-states}
 
-\todo{\begin{enumerate}
-\item show graphic of how controller computes
-\end{enumerate}}
+%\todo{\begin{enumerate}
+%\item show graphic of how controller computes
+%\end{enumerate}}
 

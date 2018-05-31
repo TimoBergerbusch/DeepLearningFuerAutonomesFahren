@@ -127,6 +127,13 @@ Thomas Timmermanns.
 \newblock Modelling languages for deep learning based cyber-physical systems.
 \newblock 2018.
 
+\bibitem[TM16]{CaffeOnSpark}
+Michael Thomas and Gabriela Motroc.
+\newblock Caffeonspark: Yahoo macht deep-learning-software quelloffen.
+\newblock
+  https://jaxenter.de/caffeonspark-yahoo-deep-learning-software-quelloffen-35668,
+  2016.
+
 \bibitem[TvWH17]{CNNArch}
 Thomas Timmermann, Michael von Wenckstern, and Malte Heithoff.
 \newblock Cnnarchlang.
@@ -149,9 +156,15 @@ Bernhard Wymann, Eric Espi{\'e}, Christophe Guionneau, Christos Dimitrakakis,
 \newblock Torcs, the open racing car simulator.
 \newblock {\em Software available at http://torcs. sourceforge. net}, 4, 2000.
 
-\bibitem[{Wik}18]{wiki:Caffe}
+\bibitem[{Wik}18a]{wiki:Caffe}
 {Wikipedia contributors}.
 \newblock Caffe --- {W}ikipedia{,} the free encyclopedia, 2018.
+\newblock [Online; accessed 11-May-2018].
+
+\bibitem[{Wik}18b]{wiki:CNN}
+{Wikipedia contributors}.
+\newblock Convolutional neural networks --- {W}ikipedia{,} the free
+  encyclopedia, 2018.
 \newblock [Online; accessed 11-May-2018].
 
 \bibitem[Yeg16]{infoworld}

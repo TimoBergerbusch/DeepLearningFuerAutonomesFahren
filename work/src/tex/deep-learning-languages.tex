@@ -2,7 +2,7 @@
 
 Constructing a CNN from scratch in any typical language like Java, C++, or Python is very elaborately and has a high error potential. Even libraries in any such language often encounter the problem of over-complication due to their own style and syntactical and semantic architecture. Therefore there is a need of specialized languages.
 
-The Deep Learning Languages (DLLs) are part of the Domain Specific Languages (DSL). Their main goal is to provide an easy to understand, as less verbose but as expressive as possible way of describing a CNN with its different layers and connections. Also one wants to have simple build pre-sets.
+The Deep Learning Languages (DLLs) are part of the Domain Specific Languages (DSL). Their main goal is to provide an easy to understand, as less verbose but as expressive as possible way of describing a CNN with its different layers and connections. Also one wants to have simple build presets
 
 %SEE: maybe maintain the number
 For that we consider three deep learning languages and analyse them on the previously mentioned properties.
@@ -26,38 +26,38 @@ In contrast to other languages for deep learning \cnnarch does not denote the co
 \end{itemize}
 Since serial connection has the higher precedence one has to use brackets. Also to merge the splitted streams, created by $|$, one can use the operators: \texttt{Concatenate()}, \texttt{Add()} and \texttt{Get(index)}.
 
-\subsection{General Definitions}\label{subsec: general definitions}
-The general definitions of a CNN, which are the input, i.e. an image, maybe additional data in a specific file type, i.e. sensor data, and the output dimension, denoting the predictions or in our example the actions the car should perform. Those are the only typed values within the CNN model.
-
-Such definitions can be modeled in \cnnarch as presented in \Cref{lst: general definitons CNNArchLang}.
-
-\begin{figure}[H]
-	\centering
-	\begin{lstlisting}
-	def input Z(0:255)^{3, h, w} image[2]
-	def input Q(-oo:+oo)^{10} additionalData
-	def output Q(0:1)^{3} predictions
-	\end{lstlisting}
-	\caption{A general definition of a CNN using \cnnarch}
-	\label{lst: general definitons CNNArchLang}
-\end{figure}
-
-Further analyzed the definition can be broken down to the following components:
-\begin{itemize}
-	\item Keyword: \texttt{def}\\
-	Every input and output can be introduced using the keyword \texttt{def}
-	\item Direction: \texttt{input}/\texttt{output}\\
-	Every definition, being a part of the \ref{subsec: general definitions}, has to be defined to be either an \texttt{input} or an \texttt{output}
-	\item Range of numbers:\\
-	One can define the input to have special constraints. For example only integer values are denoted by a \texttt{Z} representing $\mathbb{Z}$. The same for \texttt{Q} and $\mathbb{Q}$. \\
-	Also the range has to be given via \texttt{(x:y)}, where \texttt{x} and \texttt{y} either are numbers or \texttt{-oo}( or \texttt{oo}) to denote $\infty$.
-	\item Size:\\
-	The size of for example the input or the number of classes is denoted by a matrix like notation using \texttt{\^{}\{size\}}  . For the input image (line 1) the size \texttt{\^{}\{3,h,w\}} determines the input image to have 3 channels with an image width of \texttt{w} and image height of \texttt{h}.
-	The others are just defined as 1$\times$10 or 1$\times$3 vectors/tensors.
-	\item Naming:\\
-	At the end of the line there has to be a name to identify the corresponding input/output.\\
-	Also through the \texttt{[2]} behind the name \texttt{image} one can define it to be a fixed length array of images.
-\end{itemize}
+%\subsection{General Definitions}\label{subsec: general definitions}
+%The general definitions of a CNN, which are the input, i.e. an image, maybe additional data in a specific file type, i.e. sensor data, and the output dimension, denoting the predictions or in our example the actions the car should perform. Those are the only typed values within the CNN model.
+%
+%Such definitions can be modeled in \cnnarch as presented in \Cref{lst: general definitons CNNArchLang}.
+%
+%\begin{figure}[H]
+%	\centering
+%	\begin{lstlisting}[ basicstyle=\scriptsize]
+%	def input Z(0:255)^{3, h, w} image[2]
+%	def input Q(-oo:+oo)^{10} additionalData
+%	def output Q(0:1)^{3} predictions
+%	\end{lstlisting}
+%	\caption{A general definition of a CNN using \cnnarch}
+%	\label{lst: general definitons CNNArchLang}
+%\end{figure}
+%
+%Further analyzed the definition can be broken down to the following components:
+%\begin{itemize}
+%	\item Keyword: \texttt{def}\\
+%	Every input and output can be introduced using the keyword \texttt{def}
+%	\item Direction: \texttt{input}/\texttt{output}\\
+%	Every definition, being a part of the \ref{subsec: general definitions}, has to be defined to be either an \texttt{input} or an \texttt{output}
+%	\item Range of numbers:\\
+%	One can define the input to have special constraints. For example only integer values are denoted by a \texttt{Z} representing $\mathbb{Z}$. The same for \texttt{Q} and $\mathbb{Q}$. \\
+%	Also the range has to be given via \texttt{(x:y)}, where \texttt{x} and \texttt{y} either are numbers or \texttt{-oo}( or \texttt{oo}) to denote $\infty$.
+%	\item Size:\\
+%	The size of for example the input or the number of classes is denoted by a matrix like notation using \texttt{\^{}\{size\}}  . For the input image (line 1) the size \texttt{\^{}\{3,h,w\}} determines the input image to have 3 channels with an image width of \texttt{w} and image height of \texttt{h}.
+%	The others are just defined as 1$\times$10 or 1$\times$3 vectors/tensors.
+%	\item Naming:\\
+%	At the end of the line there has to be a name to identify the corresponding input/output.\\
+%	Also through the \texttt{[2]} behind the name \texttt{image} one can define it to be a fixed length array of images.
+%\end{itemize}
 
 %\subsection{Array handling}
 %An array, like in the example shown in \Cref{lst: general definitons CNNArchLang}, can be used either element wise:
@@ -105,17 +105,17 @@ However the possibility of using a cloud system is mentioned. But whether it is 
 	\item \textbf{Layers}:\\
 		A Layer as described in \Cref{sec: NN} and \Cref{sec:CNN}.
 \end{itemize}
-The whole model gets saved as a Google Protocol Buffer, which is a language-neutral structuration, with important key features like size-minimal and efficient serialization and efficient interfaces for C++ and Python. \cite{jia2014caffe} \cite{varda2008protocol}
+The whole model gets saved as a Google Protocol Buffer, which is a language-neutral structurization, with important key features like size-minimal and efficient serialization and efficient interfaces for C++ and Python. \cite{jia2014caffe} \cite{varda2008protocol}
 An example of a graph and its corresponding Protocol Buffer representation, written in prototxt, are given in \Cref{fig: Caffe Graph and Protobuf}.
 
 \input{src/tex/caffe-graph-and-protobuf-example}
 
 The biggest advantage of \caffe is the huge community providing a large set of presets, like layers or pre-trained nets and also a huge forum to ask other users about problems regarding ones project. This is such an advantage, because every module it is  guaranteed to pass a coverage test. \cite{jia2014caffe}
 
-\caffe is written using as plaintext named prototxt and therefore can be run via command line. One problem mentioned with that is that even though there are many nets already defined the creation of new nets often is highly verbose and repetitive. There are no shortenings. For example \cite{tim2018CNNArchLang} mentioned an example net written in \cnnarch with 36 lines and in \caffe with 6700 lines. This is also due to the fact that even if a layer can be constructed as a composition of existing layers one often has to define the forward-, backward and gradient-updates. %TODO ref
+\caffe is written using as plain text named prototxt and therefore can be run via command line. One problem mentioned with that is that even though there are many nets already defined the creation of new nets often is highly verbose and repetitive. There are no shortenings. For example \cite{tim2018CNNArchLang} mentioned an example net written in \cnnarch with 36 lines and in \caffe with 6700 lines. This is also due to the fact that even if a layer can be constructed as a composition of existing layers one often has to define the forward-, backward and gradient-updates. %TODO ref
 
 \section{Caffe2} \label{sec: Caffe2}
-The framework \caffetwo is the successor of \caffe. \caffetwo is developed by Facebook and its current main usage is the phrase-wise translation in social networks. Keeping the modulartiy of \caffe in mind \caffetwo is also designed so that it can be up-scaled as well as mobile deployed. Also \caffetwo is designed in such a fashion that it can easily adapt to drastic changes like quantized computing. \cite{Caffe2Homepage}
+The framework \caffetwo is the successor of \caffe. \caffetwo is developed by Facebook and its current main usage is the phrase-wise translation in social networks. Keeping the modularity of \caffe in mind \caffetwo is also designed so that it can be up-scaled as well as mobile deployed. Also \caffetwo is designed in such a fashion that it can easily adapt to drastic changes like quantized computing. \cite{Caffe2Homepage}
 
 Since the whole architecture is rewritten from scratch and regarding its now roughly one year of existence the library performs relatively well, but does not have the impact to outperform \caffe \cite{heise:Caffe2}.
 One upside of the rewriting is that \caffetwo has a Python binding, like most other frameworks. One downside of the rewriting is that huge parts of the framework are not sufficiently documented. \caffetwo tries to improve but still has large whole within the documentation. \cite{tim2018CNNArchLang}
@@ -130,14 +130,14 @@ The main difference between \caffe and \caffetwo in terms of designing a \nn is 
 
 An other framework often mentioned in research is the \mxnet. This deep learning framework is part of the Apache Software Foundation. Also it is said to be ``Amazons deep learning framework of choice'' \cite{infoworld} and featured to be a preset on the Amazon Web Services (AWS). \cite{chenmxnet}
 
-The \mxnet tries to combine the advantages of imperative frameworks like numpy or MatLab with the advantages of declarative frameworks like \caffe, \caffetwo or \tensorflow.
+The \mxnet tries to combine the advantages of imperative frameworks like numpy or MATLAB with the advantages of declarative frameworks like \caffe, \caffetwo or \tensorflow.
 
 The advantages of imperative and declarative approaches can best be understood using an example.
 Let the example be to compute: $a = b+c$
 \begin{itemize}
 	\item[] \textbf{imperative}:
 		\begin{itemize}
-			\setlength{\itemindent}{1.5cm}
+			\setlength{\itemindent}{1.5 cm}
 			\item[Procedure:] check the ability of $b$ and $c$ to be added. If so strictly compute the sum and declare $a$ as the same type as $b$ and $c$
 			\item[Advantage:] very straightforward, works well with typical structures, debugger and third party libraries
 			\item[Usefull for:] natural parameter updates and interactive debugging
@@ -153,7 +153,7 @@ Let the example be to compute: $a = b+c$
 
 By combining both approaches \mxnet is able to provide a superset programming interface compared to \caffe. \cite{chen2015mxnet}
 
-Also \mxnet is able to reduce memory to a minimum by performing everything they can in-place and free or reuse as fast as possible. Thus the memory usage of \mxnet is outperforming \caffe. \cite{chen2015mxnet} % and tensorflow
+Also \mxnet is able to reduce memory to a minimum by performing everything they can in-place and free or reuse as fast as possible. Thus the memory usage of \mxnet is outperforming \caffe. \cite{chen2015mxnet} % and Tensorflow
 A new benchmark with \caffetwo has not been done yet.
 
 An other very big upside of \mxnet is the possibility to use not only multiple GPUs in an SLI connection, but also multiple computers or even server to train a \nn simultaneously. This results in an outstanding scalability. \cite{chen2015mxnet}

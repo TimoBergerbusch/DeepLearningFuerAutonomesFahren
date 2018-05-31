@@ -1,10 +1,10 @@
 {\bf\Large Abstract} \\ [1em]
 The topic of autonomous driving using artificial intelligence increases in importance with the overwhelming amount of software usage within vehicles. For that \textit{Convolutional Neural Networks} (CNNs), which try to figure out the importance of special areas of a single picture, have been shown to be promising. \\
-In this paper we will give a general introduction to the topic of CNNs.
-We distinguish between the three main \textit{deep learning languages} (DLLs) currently used and researched for autonomous driving agents: mediated perception, behaviour reflex and direct perception.\\
-Further we will compare different languages, which can be used to implement the different DLLs, based on the factors of usability, scope of functionality and the integration on a subject.\\
-As a proof of concept we will train a CNN using the language \textit{CNNArch} on the famous KITTI dataset in order to create a trained model. This model will then be tested on a test set created using either the simulation tool \texttt{MontiSim} or the open source racing game TORCS, containing multiple different challenging scenarios the agent has to manage.\\
-Finally we evaluate the trained model on it's performance and try to reason, why it performed particularly good/bad, and give an overview based on the implemented test in order to state the similarities and differences of the languages.
+In this paper we will give a general introduction to the topic of \nns and then state the specialties defining a CNN.
+We distinguish between the three main paradigms currently used and researched for autonomous driving agents: mediated perception, behavior reflex and direct perception.\\
+Further we will compare different domain specific languages \cnnarch, \caffe, \caffetwo and \mxnet, based on the factors of usability, scope of functionality, also regarding training possibilities, and the integration on a subject.
 
-%TODO CHECK!
+We will analyze a CNN using the direct perception approach, in different languages, and compare it to state-of-the-art implementations of the other paradigms, training on a simulator \torcs or the \kitti database. Further we state scenarios probably causing problems for the direct perception approach. 
+
+Finally we create an overview over the mentioned languages with a table, which states the functionalities and properties in a nutshell.
 \cleardoublepage

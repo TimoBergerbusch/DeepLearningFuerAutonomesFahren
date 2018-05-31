@@ -2,16 +2,14 @@
 
 In this chapter we want to compare the \alexnet (c.f. \Cref{sec: AlexNet}) implemented using \cnnarch and \caffe. For both we take an in depth look at the predefined architecture by their respective language. We do that, since both implementations were done by language experts and build up to be as efficient and precise in the language as possible.
 
-Further we state the currently most used training databases and possible other ways to train the CNNs. 
-
-\todo{more explanation \\}
+Further we state the currently most used methods to train a autonomous driving agent. The important properties required are stated.
 
 \section{Implementation} \label{sec: Implementation}
 
 \subsection{\caffe} \label{subsec: Caffe Implementation}
 The implementation of the \alexnet using \caffe is given partly in \Cref{lst: Caffe AlexNet}. The whole net has a total number of 284 lines. Obviously the code written very verbosely. Every layer has to be explicitly specified even if they have a very similar structure to a previous layer.
 
-\newpage  %TODO restructure
+%\newpage  %TODO restructure
 For example comparing the pooling layer ``pool1'' from line 51 to 61 and the pooling layer ``pool2'' from line 99 to 109:
 \begin{figure}[H]
 	\centering
@@ -61,6 +59,6 @@ The possibility to collect any kind of data is what makes this game so popular i
 
 The disadvantage of the training via \torcs and training via \kitti is that \torcs only uses artificial images, other artificial agents and is completely exempt from any kind of data noise like rain disturbing sensor data or sunlight blending the camera. Also other cars behave different in a game than in real life. The \kitti includes some of those problems. To which extend is arguable. \cite{wymann2000torcs}
 
-\subsection{MontiSim} \label{subsec: MontiSim}
-
-TODO
+%\subsection{MontiSim} \label{subsec: MontiSim}
+%
+%TODO
