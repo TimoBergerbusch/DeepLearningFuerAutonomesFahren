@@ -1,0 +1,11 @@
+17:50:08.629 [main] DEBUG ModelingLanguageModelLoader - Start parsing model Location: file:/D:/Dokumente/GitHub/CNNArchLang/src/test/resources/valid_tests/CifarClassifierNetwork.cnna Package: CifarClassifierNetwork.cnna.
+17:50:11.553 [main] DEBUG ModelingLanguageModelLoader - Parsed model Location: file:/D:/Dokumente/GitHub/CNNArchLang/src/test/resources/valid_tests/CifarClassifierNetwork.cnna Package: CifarClassifierNetwork.cnna successfully.
+17:50:11.701 [main] DEBUG CNNArchModelLoader - Start creation of symbol table for model "CifarClassifierNetwork".
+17:50:11.701 [main] DEBUG CNNArchSymbolTableCreator - Building Symboltable for Script: CifarClassifierNetwork
+17:50:12.100 [main] DEBUG CNNArchModelLoader - Created symbol table for model "CifarClassifierNetwork".
+17:50:12.101 [main] DEBUG CommonScope - The symbol CifarClassifierNetwork has already been resolved.
+17:50:12.786 [main] ERROR ROOT - Freemarker could not find template CNNPredictor.ftl :
+Error on line 18, column 164, in template CNNPredictor.ftl
+Found has_next, expecting one of:  date,  is_directive,  parent,  js_string,  j_string,  replace,  uncap_first,  float,  right_pad,  is_transform,  number,  datetime,  node_type,  split,  is_hash,  trim,  children,  has_content,  is_sequence,  xml,  html,  ancestors,  new,  last,  byte,  double,  left_pad,  sort,  matches,  capitalize,  contains,  eval,  lower_case,  size,  web_safe,  is_date,  is_string,  word_list,  seq_last_index_of,  node_namespace,  string,  keys,  values,  seq_index_of,  chunk,  sort_by,  is_collection,  long,  starts_with,  substring,  index_of,  default,  root,  is_boolean,  last_index_of,  if_exists,  c,  chop_linebreak,  is_macro,  rtf,  upper_case,  length,  node_name,  is_indexable,  groups,  reverse,  cap_first,  is_node,  int,  url,  is_hash_ex,  ends_with,  is_enumerable,  interpret,  is_method,  namespace,  exists,  short,  seq_contains,  time,  first,  is_number
+
+Process finished with exit code 1
