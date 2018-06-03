@@ -1,0 +1,46 @@
+The paper of Alexander Hellwig deals with the problems of code generation in Component and Connector (C&C) models in automotive industry.
+
+At first he states why a good architecture and sufficient code generation is necessary.
+He also describes current ways of modelling Cyber-Physical Systems (CPSs) in industry. He mentiones the well known development process SMARDT by BMW and the often used SysML.
+
+To give an introduction to the topic he illustrates the abstraction used within software developement. He further introduces the middlewar components and domain specific languages he uses in order to create a running example of a trajectory system. He precisely explaines the syntax in a very easy to follow and udnerstandable way. Also he lists 6 requirements a multi-platform modelling approach should fulfill in order to create a sophisticated tool.
+
+The main part is about the usage of the previously mentioned compontents to implement the trajectory system. This is done by using multiple well structured diagrams.
+
+Finally he uses the simulation framework Gazebo to simulate the approach in action proving a video, showing the simulator executing the approach. 
+
+
+Major issues:
+1. Structure:
+You often write the whole chapter with a very few paragraphs or sections. This leads to huge blocks of text, which not only reduces the attention of the reader, but also reduces the understandability.
+
+2. Sentence length:
+Some of the sentences you wrote are perfect in terms of grammar, but are so long that they cover more than 7 lines of full width. Had to read them like 4 times to completely understand whats going on.
+Other sentences are not that long but have many subordinate clauses distracting and confusing me from time to time. 
+
+3. R1-R6:
+In chapter 4 you state 6 requirements that should be fulfilled by a sophisticated multi-platform modeling approach. But, except R1, you don't use them anywhere else. This leads to the question: why are we even stating those requirements, if they are not necessary for further usage?
+
+
+Minor issues:
+1. Figure 4.3->4.2:
+In chapter 4 you have the sentence: "...respective artifacts is provided in fig. 4.3", but I think you want to refer to fig. 4.2 instead since that os the overview you mentioned in the sentence.
+
+2. Commas:
+There are a few times you don't use a comma, where I intuitively would use one. If that is a mistake I made or not is not really clear to me. 
+
+3. Abstract:
+The abstract is missing any kind of headline. I don't know if it is meant to be that way, but it confused me a bit.
+
+Grammar/Typos:
+- chapter "Introduction": you state SysML, but wrote SyML.
+- chapter "Introduction": you write cyber-physical systems in uppercase but in teh abstract it is written in lowercase
+- chapter "Preliminaries": it says: "models such as Architecture Description Languages". It sounds like you say that the type of languages are models or something like that. Would maybe rephrase it
+
+(maybe write me an e-mail: timo-bergerbusch@rwth-aachen.de 
+I annotated the paper on-the-fly with all typos, commas or what-evers i've found. I think it's easier for both of us to share them that way)
+
+Otherwise you have a very good way of writing, great englisch language skills and really seem to understand your topic.
+
+Cheers,
+Timo Bergerbusch

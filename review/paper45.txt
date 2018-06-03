@@ -1,0 +1,46 @@
+The paper of Han Svejda deals with different Domain Specific Languages (DSLs) used in describing sceanrios for simulators.
+He starts by mentioning for what and why simulations are used overall. For that he then states 4 different languages. 
+Those languages differ from the currently most used like the Universal Robot Description Format to others like SimLang, which is still researched and developed.
+Throughout those introductions to the languages he states their way of writing, features provided and shortcommings, always on the background of the languages intetion of modelling.
+Also he introduces some simulators like Gazebo or MontiCar Simulator, for which the defined languages are used. 
+The main part is the comparison of those languages on the aspects of ease of use, documentation, compatibility with different OSs and expressivness in terms of features.
+Also here he keeps in mind that a general purpose language like URDF have other requirements implicitly stated than more specified languages like SimLang for automotive related simulations.
+He provides a chapter of examples using the different languages adn creating different scenarios for a language, which shows their main advantages.
+Finally he summerizes the results and mentions the importance of a sophisticated simulator.
+
+(@Jan: those "major" issues are still quite minor, since you did a very good job at writing this paper)
+Major issues:
+1. Chapter 3, Section 3.1:
+You include the documentation aspect in the ease of use. This is quite resonable, since a good documentation highly decreases the problems in usage, but I would maybe still give the documentation aspect its own section.
+
+2. Chapter 2:
+You start with SDF, which evolved from URDF. I would put them the other way around to create like a botton-up explanation. 
+Also I think this would increase the recognition of the extensions SDF does.
+
+3. Cite:
+Sometimes I wondered if you concluded results or properties of languages yourself, which would be very impressive, or if you took the information out of other papers, which is not bad at all.
+But in the second case I'm missing some citations or sources here and there. For example in section 2.2. There is not citation or source or whatsoever.
+
+
+(For the minor issues and typos I'm just writing rough things. I commented the pdf on the fly and if you write me an email (timo.bergerbusch@rwth-aachen.de) I'll send it to you. 
+I think it's more pleasant for both of us than writing them all down in this file)
+Minor issues:
+1. Syntax:
+Here and there you wrote some senteces, which confused me. I don't if my englisch skills are that minor than yours or if sometimes there are some words missing.
+
+2. Listing 2.2:
+Before you mentioned the "highlight" of macros, so it would be pleasing to have such a macro in the example.
+
+3. MontiCar:
+Maybe in section 4.2, where you talk about SimLang, you could slip in a little screenshot of this simulator running just to have it seen once
+(if the simulator doesn't run for some mystical way....I have the same problem :D)
+
+
+Typos:
+- Figure 4.2: isn't the town called Kohlscheid and not Kohlcheid? :P
+- (rest is easier to see in the pdf I would send to you)
+
+Otherwise you have a very good way of writing, impressive englisch skills and really seem to understand your topic.
+
+Cheers,
+Timo Bergerbusch
