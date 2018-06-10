@@ -69,11 +69,11 @@ p.2
 p.3
 + Partially -> Partial
 + These separationS into (those) receptive fields has also the advantage that iT reduces the effort to train a CNN.
-- stationary of statistics ???
-- abound
+(- stationary of statistics ???)
++ abound
  
 p.5
-- elaborately
+? elaborately
  
 p.6
 + arranging -> arrange
@@ -102,4 +102,4 @@ p.17
  
 p.18
 + a enormously -> an
-- a very disparate task -> different
+(- a very disparate task -> different)

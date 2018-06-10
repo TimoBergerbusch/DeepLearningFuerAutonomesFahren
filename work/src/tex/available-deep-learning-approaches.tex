@@ -2,7 +2,7 @@
 
 There are various approaches of autonomous driving agents making a variety of assumptions and differ in numerous options. But they can be mostly categorized into two major groups of approaches: mediated perception approaches and behavior reflex approaches. \cite{chen2015deepdriving}
 
-In this paper we further analyse a suggested third group, called direct perception, which can traced to \cite{gibson1979ecological} in the mid 50's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}. %TODO: fix 60's to be the first
+In this paper we further analyse a suggested third group, called direct perception, which can traced to \cite{gibson1979ecological} in the mid 50's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
 
 All these three groups differ in the way of interpreting the given sensor data and whether or not to create a some what bigger picture based on consequent data.
 
@@ -58,7 +58,7 @@ The CNN gets trained to make a reasonable assumption about the distance of other
 
 We further consider a design based on \cite{chen2015deepdriving} and their way of training.
 
-The original paper \cite{chen2015deepdriving} stated a total number of 13 indicators separated into two states to be sufficient for their design of a highway only autonomous agent. The states are: in line driving (following the lane) and on line driving (changing lanes). The values themselves can be categorized as: preceding car distances, distances to the lane markers and the steering angle. The indicators and their affiliation to the states can be seen in \Cref{lst: affordance indicators}.
+The original paper \cite{chen2015deepdriving} stated a total number of 13 indicators separated into two states to be sufficient for their design of a highway only autonomous agent. The states are: in line driving (following the lane) and on line driving (changing lanes). The values themselves can be categorized as: preceding car distances, distances to the lane markers and the steering angle. The indicators and their affiliation to the states are listed in \Cref{lst: affordance indicators} and visualized in \Cref{fig: behavior sketches}.
 
 \begin{figure}
 \centering
@@ -90,7 +90,7 @@ ii) "on marking system", when driving on the lane marking:
 Based on the current state, all affordance indicators of the other state are not used, since the other state is defined to be inactive.\\
 In order to identify the current state the host car is in, every state has their respective region, where they are active with an overlapping region for smooth transitioning.
 
-Training is done by feeding the CNN with images of a current driving scenario as input and give estimated values to the mentioned affordance indicators active in the current state. Those values get forwarded to a controller dealing with the car. In the original approach the training was done via the \torcs game further explained in TODO %TODO: ref
+Training is done by feeding the CNN with images of a current driving scenario as input and give estimated values to the mentioned affordance indicators active in the current state. Those values get forwarded to a controller dealing with the car. In the original approach the training was done via the \torcs game further explained in \Cref{subsec: TORCS}
 
 The controller is setup to take the affordance values and compute a decision from it in an imperative way. For example the steering can be computed as 
 	$$ steerCmd = C \cdot (angle-\frac{dist\_center}{road\_width})$$

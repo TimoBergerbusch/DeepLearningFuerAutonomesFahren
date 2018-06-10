@@ -16,49 +16,49 @@ In chapter 5 the direct perception approach is compared to the behavior reflex a
 The conclusion contains a table comparing the 4 DDLs in 16 data points.
  
 typos/grammar:
-[Further->Furthermore] we state scenarios
++ [Further->Furthermore] we state scenarios
  
-create an overview [over->of] the mentioned language
++ create an overview [over->of] the mentioned language
  
-from parking or lane keeping assistant [->to] fully autonomous
++ from parking or lane keeping assistant [->to] fully autonomous
  
-been proven to be powerful enough to handle [such many-> this amount of] training iterations with
++ been proven to be powerful enough to handle [such many-> this amount of] training iterations with
  
-Therefore we introduce in ?? the three main approaches of using a CNN.
++ Therefore we introduce in ?? the three main approaches of using a CNN.
 {missing reference}
  
-[SLI -> multiple GPUs]
++ [SLI -> multiple GPUs]
 {unnecessary or unexplained technical term}
  
-Therefore there is a need [of->for] specialized languages.
++ Therefore there is a need [of->for] specialized languages.
  
-Also one wants to have simple build presets[->.]
++ Also one wants to have simple build presets[->.]
  
-(The whole description is based on[TvWH17] and especially [Tim18]) {no parentheses needed}
++ (The whole description is based on[TvWH17] and especially [Tim18]) {no parentheses needed}
  
-[MontiCar->MontiCAR]
++ [MontiCar->MontiCAR]
  
-One [very huge->] advantage of CNNArchLang
++ One [very huge->] advantage of CNNArchLang
  
-and have less verbose [->syntax] than most other languages
++ and have less verbose [->syntax] than most other languages
  
-One important aspect
++ One important aspect
 {used two times in a row}
  
-Yangqing Jia during [hos->his] PhD at
++ Yangqing Jia during [hos->his] PhD at
  
-simple compared to the in ?? mentioned mediated {missing reference}
++ simple compared to the in ?? mentioned mediated {missing reference}
  
-explained in TODO
++ explained in TODO
 {open TODO}
  
-For autonomous driving the training has to be [very intensively done-> rigorous]
++ For autonomous driving the training has to be [very intensively done-> rigorous]
  
-the training is done using the KITTI dataset and also combine[s] two CNNs for near and far perception
++ the training is done using the KITTI dataset and also combine[s] two CNNs for near and far perception
  
-Overall the most important aspect[s->] of state-of-the-art deep learning frameworks [are->is] the efficiency.
++ Overall the most important aspect[s->] of state-of-the-art deep learning frameworks [are->is] the efficiency.
  
-There a fleet of 100 cars is analyzed,[to estimate/collect?] how much useful data is produces during 1 year.
++ There a fleet of 100 cars is analyzed,[to estimate/collect?] how much useful data is produces during 1 year.
 {meaning unclear}
  
  
@@ -66,7 +66,9 @@ There a fleet of 100 cars is analyzed,[to estimate/collect?] how much useful dat
 Minor problems:
 -Missing references
 -1 open TODO in text
--Figure 1.2: consider small paragraph instead of long label -Section 1.2 is hard to understand, Figure similar to the one in section 1.1 would help -Figure 3.4 is never mentioned/explained
+-Figure 1.2: consider small paragraph instead of long label 
+-Section 1.2 is hard to understand, Figure similar to the one in section 1.1 would help 
+-Figure 3.4 is never mentioned/explained
  
  
  

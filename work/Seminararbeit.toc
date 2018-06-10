@@ -1,7 +1,7 @@
 \contentsline {chapter}{\numberline {1}Preliminaries}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Neural Networks}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Convolutional Neural Network (CNN)}{2}{section.1.2}
-\contentsline {section}{\numberline {1.3}AlexNet}{3}{section.1.3}
+\contentsline {section}{\numberline {1.3}AlexNet}{4}{section.1.3}
 \contentsline {chapter}{\numberline {2}Deep Learning Languages}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}CNNArchLang}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Predefined Layers and Functions}{6}{subsection.2.1.1}
@@ -18,8 +18,9 @@
 \contentsline {subsection}{\numberline {4.1.2}CNNArchLang\xspace }{18}{subsection.4.1.2}
 \contentsline {section}{\numberline {4.2}Training}{18}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}KITTI Dataset}{18}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}TORCS}{18}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}TORCS}{19}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Comparison}{19}{subsection.4.2.3}
 \contentsline {chapter}{\numberline {5}Evaluation of Direct Perception}{21}{chapter.5}
 \contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}
 \contentsline {chapter}{\numberline {7}Appendix}{25}{chapter.7}
-\contentsline {chapter}{Literaturverzeichnis}{28}{figure.caption.14}
+\contentsline {chapter}{Literaturverzeichnis}{28}{figure.caption.17}

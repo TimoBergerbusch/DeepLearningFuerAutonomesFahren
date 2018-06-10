@@ -35,14 +35,14 @@ The lines first 3 and last 6 lines are completely similar. The other 2 lines are
 \subsection{\cnnarch} \label{subsec: CNNArch Implementation}
 
 The implementation of the \alexnet using \cnnarch can be seen in \Cref{lst: CNNArchLang AlexNet}. The complete script has 43 lines and defines the same net construction as the 284 line definition in \caffe. This shows the efficient language design used in the creation of \cnnarch (c.f. \Cref{sec: CNNArch}). \\
-The two pooling operations of \Cref{lst: pool1 and pool2} can be located in line 32 using the python like syntax of definition and the sequential connection \texttt{->} (c.f. \Cref{item: sequential connection}).
+The two pooling operations of \Cref{lst: pool1 and pool2} can be located in line 32 using the Python like syntax of definition and the sequential connection \texttt{->} (c.f. \Cref{item: sequential connection}).
 
 Using those techniques \cnnarch is able to write even complex \nn using few lines of code. This and the syntax itself create an easy to read program.
 
 \section{Training}
 
-In order to train a CNN, independent of the underlying approach (c.f. \Cref{chapter: DLL}), one has obtain a huge database of input images and the labels, i.e. actions the CNN should have computed. For autonomous driving the training has to be very intensively done. Otherwise the car driven by the agent will take damage by just slight changes of the circumstances.\\
-Also different scenarios have to be trained. Only training the driving on a road without others cars and simply following the lane is a very disparate task than overtaking a slower car.\\ %TODO: check disparate
+In order to train a CNN, independent of the underlying approach (c.f. \Cref{chapter: DLL}), one has obtain a huge database of input images and the labels, i.e. actions the CNN should have computed. For autonomous driving the training has to be rigorous. Otherwise the car driven by the agent will take damage by just slight changes of the circumstances.\\
+Also different scenarios have to be trained. Only training the driving on a road without others cars and simply following the lane is a very disparate task than overtaking a slower car.\\
 For that the following sources of such databases are currently state-of-the-art.
 
 \subsection{KITTI Dataset} \label{subsec: KITTI}

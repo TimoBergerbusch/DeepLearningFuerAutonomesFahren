@@ -1,21 +1,19 @@
 \chapter{Deep Learning Languages}\label{chapter: DLL}
 
-%TODO: elabortely <-/-> aufwendig, ausführlich
-Constructing a CNN from scratch in any typical language like Java, C++, or Python is very elaborately and has a high error potential. Even libraries in any such language often encounter the problem of over-complication due to their own style and syntactical and semantic architecture. Therefore there is a need of specialized languages.
+Constructing a CNN from scratch in any typical language like Java, C++, or Python is very elaborately and has a high error potential. Even libraries in any such language often encounter the problem of over-complication due to their own style and syntactical and semantic architecture. Therefore there is a need for specialized languages.
 
-The Deep Learning Languages (DLLs) are part of the Domain Specific Languages (DSL). Their main goal is to provide an easy to understand, as less verbose but as expressive as possible way of describing a CNN with its different layers and connections. Also one wants to have simple build presets
+The Deep Learning Languages (DLLs) are part of the Domain Specific Languages (DSL). Their main goal is to provide an easy to understand, as less verbose but as expressive as possible way of describing a CNN with its different layers and connections. Also one wants to have simple build presets.
 
 %SEE: maybe maintain the number
 For that we consider three deep learning languages and analyse them on the previously mentioned properties.
 
 \section{CNNArchLang}\label{sec: CNNArch}
 
-(The whole description is based on\cite{CNNArch} and especially \cite{tim2018CNNArchLang})
+The whole description is based on\cite{CNNArch} and especially \cite{tim2018CNNArchLang}
 
-One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering, especially Thomas Michael Timmermanns,  at the RWTH Aachen University and part of the MontiCar language family. The main purpose of its creation is the necessity of special properties not given by other CNN-languages: \textit{C\&C integration} and \textit{type-safe component interface}. Its basic structure is very similar to python to improve understanding, based on familiarity with Python, and have an equal non-typed syntax. 
+One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering, especially Thomas Michael Timmermanns,  at the RWTH Aachen University and part of the MontiCAR language family. The main purpose of its creation is the necessity of special properties not given by other CNN-languages: \textit{C\&C integration} and \textit{type-safe component interface}. Its basic structure is very similar to python to improve understanding, based on familiarity with Python, and have an equal non-typed syntax. 
 
-One very huge advantage of \cnnarch is that it's designed to be very simplistic and have less verbose %TODO: verbosity?
-than most other languages to model CNNs. It does so, by moving from defining a CNN by every single neuron to the definition via layers only used a specialized notation, explained in the next paragraph. For that specific purpose many layers are already defined (c.f. \Cref{subsec: CNNArchLang - predefines layers}). 
+One advantage of \cnnarch is that it's designed to be very simplistic and less verbose than most other languages, used to model CNNs. It does so, by moving from defining a CNN by every single neuron to the definition via layers only used a specialized notation, explained in the next paragraph. For that specific purpose many layers are already defined (c.f. \Cref{subsec: CNNArchLang - predefines layers}). 
 New layers can be constructed by combining predefined layers.\\
 This slightly reduces the expressiveness, since the possibility of performing computations on single tensors is lost. Such low-level operations are used extremely rarely and are not a drastic disadvantage.
 
@@ -114,7 +112,7 @@ An example of a graph and its corresponding Protocol Buffer representation, writ
 
 The biggest advantage of \caffe is the huge community providing a large set of presets, like layers or pre-trained nets and also a huge forum to ask other users about problems regarding ones project. This is such an advantage, because every module it is  guaranteed to pass a coverage test. \cite{jia2014caffe}
 
-\caffe is written using as plain text named prototxt and therefore can be run via command line. One problem mentioned with that is that even though there are many nets already defined the creation of new nets often is highly verbose and repetitive. There are no shortenings. For example \cite{tim2018CNNArchLang} mentioned an example net written in \cnnarch with 36 lines and in \caffe with 6700 lines. This is also due to the fact that even if a layer can be constructed as a composition of existing layers one often has to define the forward-, backward and gradient-updates. %TODO ref
+\caffe is written using as plain text named prototxt and therefore can be run via command line. One problem mentioned with that is that even though there are many nets already defined the creation of new nets often is highly verbose and repetitive. There are no shortenings. For example \cite{tim2018CNNArchLang} mentioned an example net written in \cnnarch with 36 lines and in \caffe with 6700 lines. This is also due to the fact that even if a layer can be constructed as a composition of existing layers one often has to define the forward-, backward and gradient-updates.
 
 \section{Caffe2} \label{sec: Caffe2}
 The framework \caffetwo is the successor of \caffe. \caffetwo is developed by Facebook and its current main usage is the phrase-wise translation in social networks. Keeping the modularity of \caffe in mind \caffetwo is also designed so that it can be up-scaled as well as mobile deployed. Also \caffetwo is designed in such a fashion that it can easily adapt to drastic changes like quantized computing. \cite{Caffe2Homepage}

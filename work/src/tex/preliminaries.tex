@@ -3,7 +3,7 @@
 The field of autonomous driving agents has rapidly become a key factor in modern car manufacturing. Current research topic rises the agents from parking or lane keeping assistant to fully autonomous driving agents obeying the traffic rules and having the ability to react to the volatile environment in a reasonable way.
 
 For that machine learning techniques have proven themselves as an essential part. But in order to fulfil the security standards and create a sophisticated agent it has to be trained on hundred-thousands of scenarios each having a large set of data attached, for example sensor and camera data.
-The approach of \textit{Convolutional Neural Networks} (CNNs) have been proven to be powerful enough to handle so many training iterations with a huge number of input variables, while maintaining a large learning capacity. \cite{krizhevsky2012imagenet}
+The approach of \textit{Convolutional Neural Networks} (CNNs) have been proven to be powerful enough to handle this amount of training iterations with a huge number of input variables, while maintaining a large learning capacity. \cite{krizhevsky2012imagenet}
 
 A CNN, as explained in \Cref{sec:CNN}, has a general structure, but can be altered to fit into the approach in various ways influencing the result. Therefore we introduce in \Cref{chapter: Deep Learning Approaches} the three main approaches of using a CNN.
 
@@ -48,27 +48,90 @@ Like most parts of \nns, also the CNNs are inspired by biological processes. It 
 %The partitioning into those rectangles can also have the advantage, that the size of the input image is not relevant. If there would be a direct correspondence of a pixel to one input value then a change of the size would infer null values or additional input values, where the weights are not directly well suited. But with partitioning it into sub-rectangles of the image the values can be unified by selecting these rectangles relative to the size.
 %This is only given, if there are no fully connected layers. Otherwise one has to perform other steps like cropping, scaling or padding. %TODO ref
 
-Using the so called pooling the net reduces the amount of inputs by mapping a number of values, for example the color values of a kernel, to one single value. One often used pooling type is the max pooling, which takes the maximal value of a property. Using pooling and relative sizes of kernels one can avoid the necessity of equally sized images. \cite{wiki:CNN} 
+%Using the so called pooling the net reduces the amount of inputs by mapping a number of values, for example the color values of a kernel, to one single value. One often used pooling type is the max pooling, which takes the maximal value of a property. Using pooling and relative sizes of kernels one can avoid the necessity of equally sized images. \cite{wiki:CNN} 
+The four basic layer types, which are mostly used for CNNs are:
+\begin{enumerate}
+\setlength{\itemindent}{-0.5cm}
+\item fully-connected layers:\\
+	equal to the fully connected layers described for \nns (c.f. \Cref{sec: NN})
+\item convolutional layers:\\
+	A convolutional layer compares the given image with a list of features the net things are key factors to indicate a certain item. In this context it could be an other car driving ahead of the host. Those features are learned by the CNN, and not not a-priori given. \\
+	It is simple to understand using an example:\\
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{|c|c|c|c|} \hline
+			7 & 6 & 5 & 5 \\\hline
+			6 & 9 & 1 & 3 \\\hline
+			4 & 1 & 2 & 8 \\\hline
+			2 & 9 & 3 & 1 \\\hline
+		\end{tabular}
+		$\oplus$
+		\begin{tabular}{|c|c|} \hline
+			-1 & 2 \\\hline
+			2 & 0 \\\hline
+		\end{tabular}
+		$=$
+		\begin{tabular}{|c|c|c|} \hline
+			17 & 22 & 7\\\hline
+			20 & -5 & 9\\\hline
+			2 & 21 & 20\\\hline
+		\end{tabular}
+	\end{figure}
+	The lost most is the input and the second one is the feature, also referred to as kernel. The result is computed as a simple dot product of both. So for example: $7\cdot(-1)+\cdot6\cdot2+\cdot6\cdot2+4\cdot0=17$\\
+	The number now represents the similarity or likelihood of the feature to be in that position. Edge detection can be applied easily using such a layer. \cite{hubel1968receptive}
+\item rectified linear units (ReLUs):\\
+	Those ReLUs perform a normalization step by applying the function $max(0,x)$ to every element $x$. So for the example:
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{|c|c|c|} \hline
+			17 & 22 & 7\\\hline
+			20 & -5 & 9\\\hline
+			2 & 21 & 20\\\hline
+		\end{tabular}
+		$\Rightarrow$
+		\begin{tabular}{|c|c|c|} \hline
+			17 & 22 & 7\\\hline
+			20 & 0 & 9\\\hline
+			2 & 21 & 20\\\hline
+		\end{tabular}
+	\end{figure}
+	The main purpose of such a ReLU is to be able to apply mathematical functions only accepting non-negative values. Often times researchers tend to use the function $ln(1+e^x)$ in order to have a differentiable approximation of ReLU. 
+\item pooling layers:\\
+	The pooling layer reduces the input by having a windows size, which is typically 2 or 3, and a stride, which is typically 2, and map the values within the window to one single value. In our example this is done using the maximum value.
+	\begin{figure}[H]
+		\centering
+		\begin{tabular}{|c|c|c|} \hline
+			17 & 22 & 7\\\hline
+			20 & 0 & 9\\\hline
+			2 & 21 & 20\\\hline
+		\end{tabular}
+		$\Rightarrow$
+		\begin{tabular}{|c|c|} \hline
+			22 & 9 \\\hline
+			21 & 20\\\hline
+		\end{tabular}
+	\end{figure}
+	The value 22 is the maximum of the window containing $\{17,22,20,0\}$. For the 9 we calculated the maximum of the window $\{7,9\}$ since through a stride of 2 the window in partially not contained in the input.
+\end{enumerate}
 
-These separations into receptive fields has also the advantage that it reduces the effort to train a CNN. The weights and biases of neurons of each receptive field are equal. This is reasonable since for example a speed limit road sign should be identified independent whether it is located next to the road, like on a normal road, or above the road, like on an highway. \cite{lecun2015lenet}
+The application, of convolution and pooling, has the advantage that it reduces the effort to train a CNN. The weights and biases of neurons of each receptive field are equal. This is reasonable since for example a speed limit road sign should be identified independent, whether it is located next to the road, like on a normal road, or above the road, like on an highway. \cite{lecun2015lenet}
 
-Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
+%Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
 
-\todo{what is a convolution?}
 \section{AlexNet} \label{sec: AlexNet}
 
 The \textit{\alexnet} was one of the best performing CNN architectures in 2012 and is still performing good enough to be used for various problems. It is trained on the ImageNet subsets of \texttt{ILSVRC-2010} and \texttt{ILSVRC-2012}\footnote{Further information: http://www.image-net.org/challenges/LSVRC/} and became famous because of its result being way ahead of all other competitors.
 
 A highly optimized GPU implementation of this architecture combined with innovative features is publicly available. Those features lead to improve performance and reduce training time.\cite{krizhevsky2012imagenet}
 
-An important note is that the original test is dated back to 2012 and therefore was used with an overall GPU memory of 6 GB, with which training took abound six days. With modern hardware like new GPUs, SLI usage or even clusters, the training can be done faster, or the model can be trained with more data to improve performance. The improvement cased only by hardware can be roughly grasped through \cite{sze2017hardware}.
+An important note is that the original test is dated back to 2012 and therefore was used with an overall GPU memory of 6 GB, with which training took about six days. With modern hardware like new GPUs, SLI usage (having multiple GPUs) or even clusters, the training can be done faster, or the model can be trained with more data to improve performance. The improvement cased only by hardware can be roughly grasped through \cite{sze2017hardware}.
 
 %\todo{maybe calc the possible speed up based on ``Hardware for Machine Learning''}
 
 \begin{figure}[ht]
-	\includegraphics[scale = 0.5]{src/pic/AlexNet-structure.PNG}
+	\centering
+	\includegraphics[scale = 0.45]{src/pic/AlexNet-structure.PNG}
 	\caption{The \alexnet-architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The possibly multiple GPUs only communicate between two layers, but never within a layer.\cite{krizhevsky2012imagenet}}
 	\label{pic: AlexNet}
-	%TODO
-%	\todo{Vereinfachen der Zeichnung\\}
+	%TODO redraw in simple
 \end{figure}
