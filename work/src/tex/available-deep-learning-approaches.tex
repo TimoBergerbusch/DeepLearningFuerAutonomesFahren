@@ -27,11 +27,11 @@ The approach of mediated perception is a reasonable and very sturdy way of handl
 
 \section{Behavior Reflex}\label{sec: Behavior Reflex}
 
-The behavior reflex approach of constructing a reliable autonomous driving agent can be dated back to 1989 , where researchers tried to directly map a single frame to a decision of a steering angle. For such approaches a quite simple \nn were created. \\
+The behavior reflex approach of constructing a reliable autonomous driving agent can be dated back to 1989 , where researchers tried to directly map a single frame to a decision of a steering angle. For such approaches a quite simple \nn was created. \\
 The network \alvinn consisted of a single hidden layer, used back-propagation and is fed by two cameras: a $30\times32$ pixel video and a $8\times32$ pixel range finder retina. The input neurons fired depending on the blue color band of its pixel, because it is believed to infer the highest contrast between road and non-road. The difference in color of road and non-road was fed back to the network. The bias (activation level) is proportional to the proximity of the corresponding area, based on the likelihood and importance of having road in particular fields of the image.\cite{pomerleau1989alvinn}\\
 For example having recognized that the road abruptly ends right in front of the car is more important than recognizing that there is a road in the top left corner.\\
 
-Such systems, even though they are simple compared to the in \Cref{subsec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
+Such systems, even though they are simple compared to the in \Cref{sec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
 
 The problem with behavior reflex approaches is, that they reach their limits very early when adding more complex scenarios. Having simple alternations to the trained scenarios, which enforce a different behavior, is very hard to train to such a \nn.\\
 For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: problematic behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an American highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn.
@@ -58,7 +58,7 @@ The CNN gets trained to make a reasonable assumption about the distance of other
 
 We further consider a design based on \cite{chen2015deepdriving} and their way of training.
 
-The original paper \cite{chen2015deepdriving} stated the a total number of 13 indicators separated in two states to be sufficient for their design of a highway only autonomous agent. The states are: in line driving (following the lane) and on line driving (changing lanes). The values themselves can be categorized as: preceding car distances, distances to the lane markers and the steering angle. The indicators and their affiliation to the states can be seen in \Cref{lst: affordance indicators}.
+The original paper \cite{chen2015deepdriving} stated a total number of 13 indicators separated into two states to be sufficient for their design of a highway only autonomous agent. The states are: in line driving (following the lane) and on line driving (changing lanes). The values themselves can be categorized as: preceding car distances, distances to the lane markers and the steering angle. The indicators and their affiliation to the states can be seen in \Cref{lst: affordance indicators}.
 
 \begin{figure}
 \centering
@@ -66,7 +66,7 @@ The original paper \cite{chen2015deepdriving} stated the a total number of 13 in
 \begin{lstlisting}[ basicstyle=\scriptsize]
 always:
   1) angle: angle between the car's heading and the tangent of the road
-"in lane system", when driving in the lane:
+i) "in lane system", when driving in the lane:
   2) toMarking LL: distance to the left lane marking of the left lane
   3) toMarking ML: distance to the left lane marking of the current lane
   4) toMarking MR: distance to the right lane marking of the current lane
@@ -74,7 +74,7 @@ always:
   6) dist LL: distance to the preceding car in the left lane
   7) dist MM: distance to the preceding car in the current lane
   8) dist RR: distance to the preceding car in the right lane
-"on marking system", when driving on the lane marking:
+ii) "on marking system", when driving on the lane marking:
   9) toMarking L: distance to the left lane marking
   10) toMarking M: distance to the central lane marking
   11) toMarking R: distance to the right lane marking

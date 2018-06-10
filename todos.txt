@@ -1,0 +1,3 @@
+- mention the limitness off small NNs
+- link implementation of direct perception using Caffe 
+- mention complexity of more input

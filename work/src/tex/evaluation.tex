@@ -1,6 +1,7 @@
 \chapter{Evaluation of Direct Perception}
 
-In this chapter we take a look back at the direct perception approach and evaluate its performance. For that we compare the, via \torcs (c.f. \Cref{subsec: TORCS}), trained version to a behavior reflex approach (c.f. \Cref{sec: Behavior Reflex}). In addition to that there is also a comparison of the direct perception approach, trained via \kitti (c.f. \Cref{subsec: KITTI}), to a mediated perception approach stated in \cite{geiger20143d}. \cite{DeepDriving}
+In this chapter we take a look back at the direct perception approach and evaluate its performance. For that we compare the, via \torcs (c.f. \Cref{subsec: TORCS}), trained version to a behavior reflex approach (c.f. \Cref{sec: Behavior Reflex}). In addition to that there is also a comparison of the direct perception approach, trained via \kitti (c.f. \Cref{subsec: KITTI}), to a mediated perception approach stated in \cite{geiger20143d}.\\
+We base the comparison on the running examples in \cite{DeepDriving}, which were written using \caffe.\\
 Finally we take a look at possible scenarios causing problems which may emerge. 
 
 The directed perception as stated in \cite{chen2015deepdriving} and discussed in \Cref{sec: Direct Perception} is designed to handle highway driving tasks, such as driving in a lane, overtaking slower cars, detecting the lane configuration and breaking to avoid a collision.
@@ -46,7 +47,7 @@ The directed perception as stated in \cite{chen2015deepdriving} and discussed in
 	\label{fig: behavior sketche complex scenario}
 \end{wrapfigure}
 
-The behavior reflex approach was able to follow empty lanes perfectly, but was completely unable to have a acceptable behavior considering other cars. Neither a sufficient speed regulation nor the task of staying in lane was observable. The agent left the track various times and had multiple collisions.
+The behavior reflex approach was able to follow empty lanes perfectly, but was completely unable to have a acceptable behavior considering other cars. Neither a sufficient speed regulation nor the task of staying in lane was observable. The agent left the track various times and had multiple collisions.\\
 On the other hand the direct perception approach manages to change lanes smoothly to avoid collisions and stay in lane. Due to the speed regulation in the controller, stated in \Cref{sec: Direct Perception}, the agent is able to perform an emergency brake if necessary. So considering those scenarios the direct perception outperforms the behavior reflex approach.
 
 In order to compare with the state-of-the-art mediated perception approach, the training is done using the \kitti dataset and also combine two CNNs for near and far perception, both using the direct perception approach. It shows that the direct perception approach is able to perform roughly as good, even though they restrict themselves to the cars closest to the host car. So the direct perception is sufficient for real world examples as well. \cite{DeepDriving} \cite{chen2015deepdriving}

@@ -1,22 +1,22 @@
 \chapter{Preliminaries}
 
-The field of autonomous driving agents has rapidly increased in modern car manufacturing. Current research topic rises the agents from parking or lane keeping assistant fully autonomous driving agents obeying the traffic rules and having the ability to react to the volatile environment in a reasonable way.
+The field of autonomous driving agents has rapidly become a key factor in modern car manufacturing. Current research topic rises the agents from parking or lane keeping assistant to fully autonomous driving agents obeying the traffic rules and having the ability to react to the volatile environment in a reasonable way.
 
 For that machine learning techniques have proven themselves as an essential part. But in order to fulfil the security standards and create a sophisticated agent it has to be trained on hundred-thousands of scenarios each having a large set of data attached, for example sensor and camera data.
-The approach of \textit{Convolutional Neural Networks} (CNNs) have been proven to be powerful enough to handle such many training iterations with a huge number of input variables, while maintaining the large learning capacity. \cite{krizhevsky2012imagenet}
+The approach of \textit{Convolutional Neural Networks} (CNNs) have been proven to be powerful enough to handle so many training iterations with a huge number of input variables, while maintaining a large learning capacity. \cite{krizhevsky2012imagenet}
 
-A CNN, as explained in \Cref{sec:CNN}, has a general structure, but can be altered to fit into the approach in various ways influencing the result. Therefore we introduce in \Cref{sec: Deep Learning Approaches} the three main approaches of using a CNN.
+A CNN, as explained in \Cref{sec:CNN}, has a general structure, but can be altered to fit into the approach in various ways influencing the result. Therefore we introduce in \Cref{chapter: Deep Learning Approaches} the three main approaches of using a CNN.
 
 Further in \Cref{chapter: DLL} we see that there is the need of specific languages for the design and implementation of such agents. Two languages will be discussed and compared based on their suitability regarding the \alexnet, stated in  \Cref{sec: AlexNet}.
 
 \section{Neural Networks}\label{sec: NN}
 
-The \nns are a construct adapted from biological processes. The general construct is very simple, but the expressiveness is very high but still not fully researched.
+The \nns are a construct adapted from biological processes. The general construct is very simple, but has  very high expressiveness. The complete spectrum of what can be modeled by \nns is currently not known.\\
 A neural net is made out of neurons and has one very basic function:
 It takes a fixed number $n \in \mathbb{N}$ of the incoming values $x_i$, where the vector $(x_0,\dots x_n)^T$ is called a tensor, and multiplies them each with a specific weight $w_i$, where $0 \le i \le n$.
 Also every neuron contains a bias $b$, which is a general value subtracted from the sum, so $\sum_{i=0}^{n} (x_i \cdot w_i) -b$. 
 
-Often one applies an activation function to fix the value between 0 and 1. Such a function would be for example the sigmoid function or the ReLu, which are both non-linear functions. Without using a non-linear one gets restricted to linear regression and therefore reducing the ability to model more complex functions.
+Often one applies an activation function to fix the value between 0 and 1. Such a function would be for example the sigmoid function, which is a non-linear functions. Without using a non-linear function one gets restricted to linear regression and therefore reduces their ability to model more complex functions.
 This non-linear normalized value gets forwarded to the neurons of the next layer.
 
 Those neurons are ordered in different groups often called layers, as seen in \Cref{fig: Simple NN}.
@@ -25,39 +25,39 @@ Those neurons are ordered in different groups often called layers, as seen in \C
 	This layer gets fed with the input values of the problem, which can be for example sensor data or pixel color values.
 	\item hidden layer (blue):\\\label{item hidden layer}
 	The hidden layer consists of neurons receiving the values from the previous layer, while not being obliged to have the same number of neurons (c.f. \Cref{fig: Simple NN}).
-	Different hidden layer architectures can be distinguished to be deep (c.f. \Cref{fig: Deep Neural Net}). This means, that there are multiple layers of neurons within the hidden layer itself.\\
-	Also a variation within the hidden layer is the possibility of fully connectivity (c.f. \Cref{fig: not fullyconnected Neural Net}). Thus some neurons don't forward their value to every neuron of the next layer.\\
-	There is no rule of how to construct the best hidden layer, considering number of sub-layers, neurons per layer or the connectivity.
-	\item output layer (yellow):\label{item output layer}
-	The output neurons contain the value the \nn produces. Depending on the \nns purpose it can be for example a confidence value of a classification, like recognizing a stop sign, or the value of changing the steering wheel angle. 
+	Different architectures can be distinguished to be deep (c.f. \Cref{fig: Deep Neural Net}). This means, that there are multiple hidden layers of neurons instead of just one. The number of neurons a layer contains is again independent of the previous layers.\\
+	Also for the hidden layers, it is possible to be fully connected (c.f. \Cref{fig: not fullyconnected Neural Net}). Thus some neurons don't forward their value to every neuron of the next layer.\\
+	There is no rule defining how to construct the best hidden layer, considering number of sub-layers, neurons per layer or the connectivity.
+	\item output layer (yellow):\\ \label{item output layer}
+	The output neurons produce the value of the \nn. Depending on the \nns purpose it can be for example a confidence value of a classification, like recognizing a stop sign, or the value of changing the steering wheel angle. 
 \end{enumerate}
 
-In order to train a \nn one has to define the behaviour the \nn should have. In an image classification example one should know what the correct class of a given image of a sign is, i.e. a speed limit sign.\\
-A \nn can then be trained by giving it values for the input layer and comparing the values of the output layer with the solutions it should have resulted in. The difference can then be checked. Such a difference can be simply \texttt{true}/\texttt{false} or a value indicating how big the difference is. In the example of signs a classification of a ``speed limit 70''-sign as ``speed limit 50''-sign is still wrong, but as bad as a classification as a ``stop''-sign.\\
-Using this difference value the \nn can use linear algebra algorithms to adjust the weights $w_i$ and biases $b$ to improve the output iteratively.
+In order to train a \nn one has to define the behavior the \nn should have. In an image classification example one should know what the correct class of a given image of a sign is, i.e. a speed limit sign.\\
+A \nn can then be trained by giving it values for the input layer and comparing the values of the output layer with the solutions it should have resulted in. The difference can then be checked. Such a difference can be simply \texttt{true}/\texttt{false} or a value indicating how big the difference is. In the example of signs a classification of a ``speed limit 70''-sign as ``speed limit 50''-sign is still wrong, but not as bad as  the classificating it as a``stop''-sign.\\
+Using this difference value the \nn can use backpropagation, which is applied linear algebra, to adjust the weights $w_i$ and biases $b$ to improve the output iteratively.
 
-Further information about the underlying training algorithms like gradient descend, newtons method, conjugate gradient or Levenberg-Marquardt algorithm is not given here in order to keep the paper in a justifiable length.  
+Further information about the underlying training algorithms like gradient descent, newtons method, conjugate gradient or Levenberg-Marquardt algorithm is not given here in order to keep the paper in a justifiable length.  
 
 \input{src/tex/neuralnets-tikz}
 \section{Convolutional Neural Network (CNN)}\label{sec:CNN}
 
-A CNN is a special class of deep feed-forward \nns. On of the main design goals of a CNN is that they require a minimal amount of preprocessing. This is an important aspect, because they are often fed with images. Preprocessing high resolution images is very costly in terms of computational time. In the context of autonomous driving the time is even more crucial, since the driving agent needs to be able to react to spontaneous events.
+A CNN is a special class of deep feed-forward \nns. One of the main design goals of a CNN is that they require a minimal amount of preprocessing. This is an important aspect, because they are often fed with images. Preprocessing high resolution images is very costly in terms of computational time. In the context of autonomous driving the time is even more crucial, since the driving agent needs to be able to react to spontaneous events.
 
-Like most parts of \nns, also the CNNs are inspired by biological processes. It is mainly based on the connectivity pattern of an animals visual cortex, where special neurons respond only to stimuli of their receptive field, represented as rectangles lying in the image. Partially overlapping guarantees a complete coverage of the field of view. Those rectangles are often called kernel or filters.\cite{matsugu2003subject}
+Like most parts of \nns, also the CNNs are inspired by biological processes. It is mainly based on the connectivity pattern of an animals visual cortex, where special neurons respond only to stimuli of their receptive field, represented as rectangles lying in the image. Partial overlapping guarantees a complete coverage of the field of view. Those rectangles are often called kernel or filters.\cite{matsugu2003subject}
 
 %The partitioning into those rectangles can also have the advantage, that the size of the input image is not relevant. If there would be a direct correspondence of a pixel to one input value then a change of the size would infer null values or additional input values, where the weights are not directly well suited. But with partitioning it into sub-rectangles of the image the values can be unified by selecting these rectangles relative to the size.
 %This is only given, if there are no fully connected layers. Otherwise one has to perform other steps like cropping, scaling or padding. %TODO ref
 
 Using the so called pooling the net reduces the amount of inputs by mapping a number of values, for example the color values of a kernel, to one single value. One often used pooling type is the max pooling, which takes the maximal value of a property. Using pooling and relative sizes of kernels one can avoid the necessity of equally sized images. \cite{wiki:CNN} 
 
-These separation into those receptive fields has also the advantage that is reduces the effort to train a CNN. The weights and biases of neurons of each receptive field are equal. This is reasonable since for example a speed limit road sign should be identified independent whether it is located next to the road, like on a normal road, or above the road, like on an highway. \cite{lecun2015lenet}
+These separations into receptive fields has also the advantage that it reduces the effort to train a CNN. The weights and biases of neurons of each receptive field are equal. This is reasonable since for example a speed limit road sign should be identified independent whether it is located next to the road, like on a normal road, or above the road, like on an highway. \cite{lecun2015lenet}
 
 Further CNNs make strong and mostly correct assumptions about the nature of images, like stationary of statistics and locality of pixel dependencies. This leads to fewer connections and parameters, compared to a normal feed-forward neural net with similar sized layers, and therefore reduces the time it takes to be trained, while being only slightly worse in their best-performance. \cite{krizhevsky2012imagenet}
 
-
+\todo{what is a convolution?}
 \section{AlexNet} \label{sec: AlexNet}
 
-The \textit{\alexnet} is one of the best performing CNN architectures currently known. It is trained on the ImageNet subsets of \texttt{ILSVRC-2010} and \texttt{ILSVRC-2012}\footnote{Further information: http://www.image-net.org/challenges/LSVRC/} and became famous because of its result being way ahead of all other competitors.
+The \textit{\alexnet} was one of the best performing CNN architectures in 2012 and is still performing good enough to be used for various problems. It is trained on the ImageNet subsets of \texttt{ILSVRC-2010} and \texttt{ILSVRC-2012}\footnote{Further information: http://www.image-net.org/challenges/LSVRC/} and became famous because of its result being way ahead of all other competitors.
 
 A highly optimized GPU implementation of this architecture combined with innovative features is publicly available. Those features lead to improve performance and reduce training time.\cite{krizhevsky2012imagenet}
 

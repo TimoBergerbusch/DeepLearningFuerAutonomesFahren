@@ -1,0 +1,105 @@
+----------------------- REVIEW 1 ---------------------
+PAPER: 32
+TITLE: Comparison of Deep Learning Architectures on Simulated Environments
+AUTHORS: Timo Bergerbusch
+ 
+Overall evaluation: -1 (weak reject)
+ 
+----------- Overall evaluation -----------
+Deep learning (DL) came into the foreground of research after some stunning breakthroughs. Especially in image-recognition with novel CNN architectures, which made training 
+on millions of images feasible on off-the-shelf GPUs. These advances are of high relevance to autonomous driving since much of the information for driving is visual. 
+A multitude of frameworks and libraries has been created for DL using all kinds of languages. In case of neural network (NN) architectures, it is beneficial to take advantage 
+of domain-specific languages (DSLs), to facilitate the development of new NNs. One such DSL for CNNs is CNNArchLang with roots at RWTH Aachen. The language itself is rather simple 
+and straightforward, takes some parts from Python and is conveniently concise. For building the NN's architecture, it uses serial connections, a parallelization operator and a 
+number of predefined layers and activation functions. Following is the language Caffe - a fast DL framework, which uses cuDNN for optimized GPU computations and defines the 
+architecture with basic elements like blobs and layers. Facebook followed in the footsteps of Caffe and created its successor Caffe2, whose goal is to be scalable and even
+mobile-friendly. Last but not least, MxNet, supported by Amazon, strives to combine advantages of the of the imperative and declarative worlds, is memory-efficient and scalable 
+(capable of running in SLI and also in a distributed fashion).
+ 
+The paper discusses three DL approaches for autonomous driving. Mediated perception, whose idea is to classify objects in a picture and recreate a 3D environment which gets 
+fed into a decision-making system to acquire the next action. Then, behaviour reflex is a simpler approach, that maps single frames directly to a decision. As described by the 
+author, this can be rather limited. Lastly, direct perception represents something of a middle road between the former two. Essentially, a CNN is trained to infer properties of 
+objects, e.g. velocity, distance etc., from (in case of highway driving for which it was tested) an input of 13 various indicators. These are subsequently consumed by a car controller
+ which steers the car. This system proved to perform well while maintaining speed, however, for road situations with other cars caused accidents.
+ 
+In the end, the paper points out the verbosity of Caffe and emphasizes CNNArchLang as a viable language for CNNs. It could potentially become very successful because it generates MxNet
+code and can take advantage of its extensive scaling capabilities -- a must for the future of DL.
+ 
+# Major issues
+p.2 + 'Different hidden layer architectures can be distinguished to be deep (c.f. Figure 1.1b).
+This means, that there are multiple layers of neurons within the hidden layer itself.' - wrong, a NN is called deep when it has many (tens, hundreds...) layers. Hidden layers are all those that are not an input or output layer.
++ I have not the impression the author understands neural networks.
+? Abstract is not an Introduction. I believe abstract is lacking and what in the paper is 'Abstract', should be an Introduction.
+- Wikipedia is not a literature source.
+- Many typographical issues - e.g. inconsistent paragraphs, citing, table in chapter 6 goes beyond paragraph etc.
+- Comparison of Caffe and CNNArchLang limited to just verbosity. Section 'Training' is not comparing anything.
+- The text contains many grammatical/type errors and unclear, almost incomprehensible, sentences.
+ 
+# Minor issues
+p.1 - "but the expressiveness is very high but still not fully researched" -- not true.
+    + ReLU does not fix the value in 0-1, but anything non-negative
+p.2 - Typography of the list.
+    + "Also a variation within the hidden layer is the possibility of fully connectivity" - not understandable.
+    + "contain the value the neural" -> produce the value of the neural network.
+    +  "use linear algebra algorithms" - a bit weird way to put it this way. The algorithm is called Backpropagation.
+    - Did not mention what a convolution is in preliminaries about CNNs.
+p.3 ? "...their best-performance." - Actually much better performance since it is not feasible to train such a large feed-forward NN...you get all kinds of training problems.
+    + "The AlexNet is one of the best performing CNN architectures currently known." - certainly not now, that was in 2012
+p.5 - "It does so, by moving from defining a CNN by every single neuron to the definition via layers only." - that is a standard way of doing it 
+		so what?
+    + fig 3.4 - no green arrows even though mentioned in the caption
+ 
+- why use 'we', when the paper is a work of one author? Also, sometimes 'I' is mixed in with it. Decide on a style and stick to it.
+ 
+Type errors:
+Punctuation!!!
+p.1
++ field does not 'increase'
++ rises agents from?
++ to handle such many  -> so many
++ the large learning -> a large...
++ missing reference ('we introduce in...')
+? reducing the ability -> reduces
+p.2
++ There is no rule of how -> no rule to how...
++ but as bad as a classification as -> but not as bad as a classification of
++ descend -> descent
++ On of the main ->  One of the main
+ 
+p.3
++ Partially -> Partial
++ These separationS into (those) receptive fields has also the advantage that iT reduces the effort to train a CNN.
+- stationary of statistics ???
+- abound
+ 
+p.5
+- elaborately
+ 
+p.6
++ arranging -> arrange
++ One important aspect is that -> it is being used twice after one another
++ hos
++ python -> Python
+ 
+p.8
++ has large whole -> holes?
++ An other -> Another
+ 
+p.12
++ neural network ->  neural networks
++ bad reference: simple compared to the in ?? mentioned
+ 
+p.13
++ ... the a total number
+ 
+p.15
++ In addition i) (ii)) denotes the active -> cannot understand
+ 
+p.17
++ build up to -> built
++ to train a autonomous -> an
++ Obviously the code written very verbosely -> was written?
+ 
+p.18
++ a enormously -> an
+- a very disparate task -> different
