@@ -90,6 +90,12 @@ David~H Hubel and Torsten~N Wiesel.
   cortex.
 \newblock {\em The Journal of physiology}, 195(1):215--243, 1968.
 
+\bibitem[HZCZ17]{han2017pre}
+Xiaobing Han, Yanfei Zhong, Liqin Cao, and Liangpei Zhang.
+\newblock Pre-trained alexnet architecture with pyramid pooling and supervision
+  for high spatial resolution remote sensing image scene classification.
+\newblock {\em Remote Sensing}, 9(8):848, 2017.
+
 \bibitem[JSD{\etalchar{+}}14]{jia2014caffe}
 Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
   Girshick, Sergio Guadarrama, and Trevor Darrell.

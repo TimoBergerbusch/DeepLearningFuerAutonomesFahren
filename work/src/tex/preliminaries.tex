@@ -142,7 +142,7 @@ The application of convolution and pooling has the advantage that it reduces the
 
 \section{AlexNet} \label{sec: AlexNet}
 
-The \textit{\alexnet} was one of the best performing CNN architectures in 2012 and is still performing good enough to be used for various problems. It was originally trained on the ImageNet subsets of \texttt{ILSVRC-2010} and \texttt{ILSVRC-2012}\footnote{Further information: http://www.image-net.org/challenges/LSVRC/} and became famous, because of its result being way ahead of all other competitors.
+The \textit{\alexnet} was one of the best performing CNN architectures in 2012 and is still performing good enough to be used for various problems. It was originally trained on the ImageNet subsets of \texttt{ILSVRC-2010} and \texttt{ILSVRC-2012} \footnote{Further information: http://www.image-net.org/challenges/LSVRC/} and became famous, because of its result being way ahead of all other competitors.
 
 A highly optimized GPU implementation of this architecture combined with innovative features is publicly available. Those features lead to improve performance and reduce training time.\cite{krizhevsky2012imagenet}
 
@@ -152,9 +152,9 @@ An important note is that the original test is dated back to 2012 and therefore 
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale = 0.45]{src/pic/AlexNet-structure.PNG}
-	\caption{The \alexnet-architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). 
-%		The possibly multiple GPUs only communicate between two layers, but never within a layer.
+%	\includegraphics[scale = 0.45]{src/pic/AlexNet-structure.PNG}
+	\includegraphics[scale = 1.3]{src/pic/AlexNet-structure-simple.PNG}
+	\caption{The \alexnet-architecture. It consists of 5 convolutional layers (at the beginning), and three fully-connected layers (at the end). \cite{han2017pre}
 	\cite{krizhevsky2012imagenet}}
 	\label{pic: AlexNet}
 	%TODO redraw in simple
