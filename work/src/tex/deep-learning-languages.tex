@@ -1,23 +1,23 @@
 \chapter{Deep Learning Languages}\label{chapter: DLL}
 
-Constructing a CNN from scratch in any typical language like Java, C++, or Python is very elaborately and has a high error potential. Even libraries in any such language often encounter the problem of over-complication due to their own style and syntactical and semantic architecture. Therefore there is a need for specialized languages.
+Constructing a CNN from scratch in any typical language like Java, C++, or Python is very elaborately and has a high error potential. Even libraries in any such language often encounter the problem of over-complication due to their own style, syntactical and semantic architecture. Therefore there is a need for specialized languages.
 
-The Deep Learning Languages (DLLs) are part of the Domain Specific Languages (DSL). Their main goal is to provide an easy to understand, as less verbose but as expressive as possible way of describing a CNN with its different layers and connections. Also one wants to have simple build presets.
+The Deep Learning Languages (DLLs) are part of the Domain Specific Languages (DSL). Their main goal is to provide an easy to understand, as less verbose but as expressive as possible way of describing a CNN with its different layers and connections. Also one wants to have simple build presets, maybe even already trained.
 
 %SEE: maybe maintain the number
-For that we consider three deep learning languages and analyse them on the previously mentioned properties.
+For that we consider four deep learning languages and analyse them on the previously mentioned properties.
 
 \section{CNNArchLang}\label{sec: CNNArch}
 
 The whole description is based on\cite{CNNArch} and especially \cite{tim2018CNNArchLang}
 
-One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering, especially Thomas Michael Timmermanns,  at the RWTH Aachen University and part of the MontiCAR language family. The main purpose of its creation is the necessity of special properties not given by other CNN-languages: \textit{C\&C integration} and \textit{type-safe component interface}. Its basic structure is very similar to python to improve understanding, based on familiarity with Python, and have an equal non-typed syntax. 
+One language for modeling CNNs is CNNArchLang. This language is developed at the Chair of Software Engineering, especially Thomas Michael Timmermanns,  at the RWTH Aachen University and part of the MontiCAR language family. The main purpose of its creation is the necessity of special properties not given by other CNN-languages: \textit{C\&C integration} and \textit{type-safe component interface}. Its basic structure is very similar to Python to improve understanding, based on familiarity, and have an equal non-typed syntax. 
 
-One advantage of \cnnarch is that it's designed to be very simplistic and less verbose than most other languages, used to model CNNs. It does so, by moving from defining a CNN by every single neuron to the definition via layers only used a specialized notation, explained in the next paragraph. For that specific purpose many layers are already defined (c.f. \Cref{subsec: CNNArchLang - predefines layers}). 
+One advantage of \cnnarch is that it is designed to be very simplistic and less verbose than most other CNN-languages. It does so, by moving from defining a CNN by every single neuron to the definition via layers only used a specialized notation, explained in the next paragraph. For that specific purpose many layers are already defined (c.f. \Cref{subsec: CNNArchLang - predefines layers}). 
 New layers can be constructed by combining predefined layers.\\
 This slightly reduces the expressiveness, since the possibility of performing computations on single tensors is lost. Such low-level operations are used extremely rarely and are not a drastic disadvantage.
 
-In contrast to other languages for deep learning \cnnarch does not denote the connections of layers directly, but tries to model the data flow through the network. For that specific task it contains two main operators:
+In contrast to other languages for deep learning, \cnnarch does not denote the connections of layers directly, but tries to model the data flow through the network. For that specific task it contains two main operators:
 \begin{itemize}
 	\item[-$>$:] Serial Connection:\label{item: sequential connection}\\
 	This orders two elements sequentially. This means it denotes the first elements output as the second elements input. 
@@ -76,9 +76,9 @@ Since serial connection has the higher precedence one has to use brackets. Also 
 
 \subsection{Predefined Layers and Functions} \label{subsec: CNNArchLang - predefines layers}
 Different CNNs often use a similar basic set of layers, but arrange them differently. For that purpose there are some layers already defined by \cnnarch to simplify the usage.
-There is for example the \texttt{FullyConnected}-layer with parameters for the number of units within and whether they should use a bias value (c.f. \Cref{sec: NN}), the \texttt{Convolutional}-2D-layer with parameters for the kernel (rectangle) size, number of filters, the stride defining the distance of two rectangles, padding and the usage of biases. Further information on any of these parameters or other predefined layers can be found in \cite{CNNArch}.
+There is for example the \texttt{FullyConnected}-layer with parameters for the number of units within and whether they should use a bias value (c.f. \Cref{sec: NN}), the \texttt{Convolutional}-2D-layer with parameters for the kernel size, number of filters, the stride, padding and the usage of biases. Further information on any of these parameters or other predefined layers can be found in \Cref{sec:CNN} and \cite{CNNArch}.
 
-Also there are already defined functions like the \texttt{Sigmoid}, \texttt{Softmax}, \texttt{Tanh} or \texttt{ReLu}. 
+Also there are already defined functions like the \texttt{Sigmoid}, \texttt{Softmax}, \texttt{Tanh} or \texttt{ReLU}. 
 One important aspect is that every argument has to be named. 
 
 The distinction, that \cnnarch is not a framework itself, is very important. It is used to create the code to function in the \mxnet (see \Cref{sec: MxNet}).
@@ -93,32 +93,33 @@ The distinction, that \cnnarch is not a framework itself, is very important. It 
 
 %information based on \cite{jia2014caffe}
 
-\caffe is a full deep learning framework, created by Yangqing Jia during his PhD at UC Berkeley. It is a framework specially build to deal with multimedia input formats using state-of-the-art deep learning techniques. It comes as a BSD-license C++ library offering Python and MATLAB bindings. One of its reasons why it's so well known and frequently used is because of its design based on expressiveness, speed and modularity.
+\caffe is a full deep learning framework, created by Yangqing Jia during his PhD at UC Berkeley. It is a framework specially build to deal with multimedia input formats using state-of-the-art deep learning techniques. It comes as a BSD-licensed C++ library offering Python and MATLAB bindings. One of the reasons, why it's so well known and frequently used, is because of its design based on expressiveness, speed and modularity.
 
-Using Nvidias Deep Neural Network library cuDNN as a wrapper of the CUDA functionality, \caffe can use the GPU in order to process even faster and learn in a rate of 40 million pictures per day. The possibility of using multiple GPUs in SLI is not stated and therefore not taken into account. \cite{wiki:Caffe}
-However the possibility of using a cloud system is mentioned. But whether it is a simple decentralization or the possibility to train the network using the combined power of multiple computers to train is not mentioned. \cite{jia2014caffe}
+Using Nvidias Deep Neural Network library cuDNN as a wrapper of the CUDA functionality, \caffe can use the GPU in order to process even faster and learn in a rate of 40 million pictures per day. The possibility of using multiple GPUs in SLI is not stated and therefore not taken into account. \cite{CaffeAndcuDNN}\\
+However the possibility of using a cloud system is mentioned. But whether it is a simple decentralization, or the possibility to train the network using the combined power of multiple computers to train, is not mentioned. \cite{jia2014caffe}
 
-\caffe tries to improve its readability by abstracting from the actual implementation using a graph-oriented way of network defining. For that \caffe uses two elements to represent the network:
+\caffe tries to improve its readability by abstracting from the actual implementation using a graph-oriented way of network definition. For that \caffe uses two elements to represent the network:
 \begin{itemize}
 	\item \textbf{Blob}:\\
 		A 4-dimensional array storing data, like images, parameters or parameter updates. These blob are the communication between layers.
 	\item \textbf{Layers}:\\
 		A Layer as described in \Cref{sec: NN} and \Cref{sec:CNN}.
 \end{itemize}
-The whole model gets saved as a Google Protocol Buffer, which is a language-neutral structurization, with important key features like size-minimal and efficient serialization and efficient interfaces for C++ and Python. \cite{jia2014caffe} \cite{varda2008protocol}
+The whole model gets saved as a Google Protocol Buffer, which is a language-neutral structurization, with important key features, like size-minimal and efficient serialization, and efficient interfaces for C++ and Python. \cite{jia2014caffe} \cite{varda2008protocol}
 An example of a graph and its corresponding Protocol Buffer representation, written in prototxt, are given in \Cref{fig: Caffe Graph and Protobuf}.
 
 \input{src/tex/caffe-graph-and-protobuf-example}
 
-The biggest advantage of \caffe is the huge community providing a large set of presets, like layers or pre-trained nets and also a huge forum to ask other users about problems regarding ones project. This is such an advantage, because every module it is  guaranteed to pass a coverage test. \cite{jia2014caffe}
+The biggest advantage of \caffe is the huge community providing a large set of presets, like layers or pre-trained nets, and also a huge forum to ask other users about problems regarding ones project. This is such an advantage, because for every module it is  guaranteed to pass a coverage test. \cite{jia2014caffe}
 
-\caffe is written using as plain text named prototxt and therefore can be run via command line. One problem mentioned with that is that even though there are many nets already defined the creation of new nets often is highly verbose and repetitive. There are no shortenings. For example \cite{tim2018CNNArchLang} mentioned an example net written in \cnnarch with 36 lines and in \caffe with 6700 lines. This is also due to the fact that even if a layer can be constructed as a composition of existing layers one often has to define the forward-, backward and gradient-updates.
+\caffe is written using as plain text named prototxt and therefore can be run via command line. One problem mentioned with that is that, even though there are many nets already defined, the creation of new nets often is highly verbose and repetitive. There are no shortenings. For example \cite{tim2018CNNArchLang} mentioned an example net written in \cnnarch with 36 lines and in \caffe with 6700 lines. This is also due to the fact that, even if a layer can be constructed as a composition of existing layers, one often has to define the forward-, backward-propagation and gradient-updates.
 
 \section{Caffe2} \label{sec: Caffe2}
-The framework \caffetwo is the successor of \caffe. \caffetwo is developed by Facebook and its current main usage is the phrase-wise translation in social networks. Keeping the modularity of \caffe in mind \caffetwo is also designed so that it can be up-scaled as well as mobile deployed. Also \caffetwo is designed in such a fashion that it can easily adapt to drastic changes like quantized computing. \cite{Caffe2Homepage}
+The framework \caffetwo is the successor of \caffe. \caffetwo is developed by Facebook and its current main usage is the phrase-wise translation in social networks. Keeping the modularity of \caffe in mind, \caffetwo is also designed so that it can be up-scaled as well as mobile deployed. Also \caffetwo is designed in such a fashion that it can easily adapt to drastic changes like quantized computing. \cite{Caffe2Homepage}
 
 Since the whole architecture is rewritten from scratch and regarding its now roughly one year of existence the library performs relatively well, but does not have the impact to outperform \caffe \cite{heise:Caffe2}.
-One upside of the rewriting is that \caffetwo has a Python binding, like most other frameworks. One downside of the rewriting is that huge parts of the framework are not sufficiently documented. \caffetwo tries to improve but still has large holes within the documentation. \cite{tim2018CNNArchLang}
+%One upside of the rewriting is that \caffetwo has a Python binding, like most other frameworks.
+One downside of the rewriting is that huge parts of the framework are not sufficiently documented. \caffetwo tries to improve, but still has large holes within the documentation. \cite{tim2018CNNArchLang}
 
 \caffetwo offers programs, which allow the user to convert \caffe and PyTorch models to \caffetwo. This makes the switching to \caffetwo much easier, since the users don't have to rewrite their models. \cite{Caffe2Homepage}
 
@@ -130,7 +131,7 @@ The main difference between \caffe and \caffetwo in terms of designing a \nn is 
 
 Another framework often mentioned in research is the \mxnet. This deep learning framework is part of the Apache Software Foundation. Also it is said to be ``Amazons deep learning framework of choice'' \cite{infoworld} and featured to be a preset on the Amazon Web Services (AWS). \cite{chenmxnet}
 
-The \mxnet tries to combine the advantages of imperative frameworks like numpy or MATLAB with the advantages of declarative frameworks like \caffe, \caffetwo or \tensorflow.
+\mxnet tries to combine the advantages of imperative frameworks like numpy or MATLAB with the advantages of declarative frameworks like \caffe, \caffetwo or \tensorflow.
 
 The advantages of imperative and declarative approaches can best be understood using an example.
 Let the example be to compute: $a = b+c$
@@ -153,11 +154,11 @@ Let the example be to compute: $a = b+c$
 
 By combining both approaches \mxnet is able to provide a superset programming interface compared to \caffe. \cite{chen2015mxnet}
 
-Also \mxnet is able to reduce memory to a minimum by performing everything they can in-place and free or reuse as fast as possible. Thus the memory usage of \mxnet is outperforming \caffe. \cite{chen2015mxnet} % and Tensorflow
+Also \mxnet is able to reduce memory to a minimum by performing everything they can in-place, and free or reuse as fast as possible. Thus the memory usage of \mxnet is outperforming \caffe. \cite{chen2015mxnet} % and Tensorflow
 A new benchmark with \caffetwo has not been done yet.
 
-An other very big upside of \mxnet is the possibility to use not only multiple GPUs in an SLI connection, but also multiple computers or even server to train a \nn simultaneously. This results in an outstanding scalability. \cite{chen2015mxnet}
+An other very big upside of \mxnet is the possibility to use not only multiple GPUs in an SLI connection, but also multiple computers or even servers to train a \nn simultaneously. This results in an outstanding scalability. \cite{chen2015mxnet}
 
 Similar to \caffetwo, \mxnet also allows the deployment of trained models to low-end devices using Amalgamation (c.f. \cite{MxNetHomepage}) or the AWS.
 
-Due to the fact that \mxnet has found its way into Apache Incubator and therefore it is an Open-Source project, the creation of additional functions and nets is quite simple and is not bound to a given preset. Thanks to the community also a variety of nets constructed and some already pre-trained are free to use. \cite{MxNetGithubModelGallery}
+Due to the fact that \mxnet has found its way into Apache Incubator, and therefore it is an Open-Source project, the creation of additional functions and nets is quite simple and is not bound to a given preset. Thanks to the community, also a variety of nets constructed, form which some are already pre-trained, are free to use. \cite{MxNetGithubModelGallery}

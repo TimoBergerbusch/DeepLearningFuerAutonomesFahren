@@ -1,14 +1,14 @@
 \chapter{Available Deep Learning Approaches}\label{chapter: Deep Learning Approaches}
 
-There are various approaches of autonomous driving agents making a variety of assumptions and differ in numerous options. But they can be mostly categorized into two major groups of approaches: mediated perception approaches and behavior reflex approaches. \cite{chen2015deepdriving}
+There are various approaches of autonomous driving agents, making a variety of assumptions and differ in numerous options. But they can be mostly categorized into two major groups of approaches: mediated perception approaches and behavior reflex approaches. \cite{chen2015deepdriving}
 
-In this paper we further analyse a suggested third group, called direct perception, which can traced to \cite{gibson1979ecological} in the mid 50's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
+In this paper we further analyse a suggested third group, called direct perception, which can be traced to \cite{gibson1979ecological} in the mid 50's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
 
 All these three groups differ in the way of interpreting the given sensor data and whether or not to create a some what bigger picture based on consequent data.
 
 \section{Mediated Perception} \label{sec: Mediated Perception}
 
-The mediated perception approach is a multi-component continuous process. Every component recognizes specific aspects for driving. For example traffic signs, lanes, other cars. Those components are then combined into one single world state representing the cars surrounding based on the sensor data. \cite{KITTI}\\
+The mediated perception approach is a multi-component continuous process. Every component recognizes specific aspects for driving. For example traffic signs, lanes and other cars. Those components are then combined into one single world state representing the cars surrounding, based on the sensor data. \cite{KITTI}\\
 These world states are 3D models of the current world. Cars are identified using a classifier and then often surrounded by a 3D bounding box. An example can be seen in \Cref{pic: 3D Bounding Box}. By comparing different frames generated one can estimate the speed and distance to those objects and derive an A.I. based precedence behavior. \cite{KITTI}\cite{chen2015deepdriving}
 
 The often stated problems with such approaches are, that computing such a scene is costly in terms of computation time. Some information is irrelevant, redundant or even misleading due to inaccuracy of sensors. To perform a right turn the sensor information of the distance to a car left behind me is irrelevant, but becomes very important when taking a left turn.\\
@@ -31,9 +31,9 @@ The behavior reflex approach of constructing a reliable autonomous driving agent
 The network \alvinn consisted of a single hidden layer, used back-propagation and is fed by two cameras: a $30\times32$ pixel video and a $8\times32$ pixel range finder retina. The input neurons fired depending on the blue color band of its pixel, because it is believed to infer the highest contrast between road and non-road. The difference in color of road and non-road was fed back to the network. The bias (activation level) is proportional to the proximity of the corresponding area, based on the likelihood and importance of having road in particular fields of the image.\cite{pomerleau1989alvinn}\\
 For example having recognized that the road abruptly ends right in front of the car is more important than recognizing that there is a road in the top left corner.\\
 
-Such systems, even though they are simple compared to the in \Cref{sec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
+Such systems, even though they are simple compared to the in \Cref{sec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks, like lane keeping perfectly. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
 
-The problem with behavior reflex approaches is, that they reach their limits very early when adding more complex scenarios. Having simple alternations to the trained scenarios, which enforce a different behavior, is very hard to train to such a \nn.\\
+The problem with behavior reflex approaches is, that they reach their limits very early, when adding more complex scenarios. Having simple alternations to the trained scenarios, which enforce a different behavior, is very hard to train to such a \nn.\\
 For example comparing a simple straight 3 lane road with the car in the middle, as sketched in \Cref{fig: problematic behavior sketches}. The system is confidently able to hold the angle and make small adjustments to stay in the lane (\Cref{fig: behavior sketches: free lane}). But what if on the same road there is an other car in the middle lane in front of the agent, which is slower? Having quite the same input the system would have to overtake the car left or right (considering an American highway) (\Cref{fig: behavior sketches: blocked lane}). Now also considering a car in front, which has the same speed. One can simple stay in the lane (\Cref{fig: behavior sketches: shared lane}). This maneuver is very hard to train to a simple \nn like \alvinn.
 
 %\todo{noch mehr?\\}
@@ -90,13 +90,13 @@ ii) "on marking system", when driving on the lane marking:
 Based on the current state, all affordance indicators of the other state are not used, since the other state is defined to be inactive.\\
 In order to identify the current state the host car is in, every state has their respective region, where they are active with an overlapping region for smooth transitioning.
 
-Training is done by feeding the CNN with images of a current driving scenario as input and give estimated values to the mentioned affordance indicators active in the current state. Those values get forwarded to a controller dealing with the car. In the original approach the training was done via the \torcs game further explained in \Cref{subsec: TORCS}
+Training is done by feeding the CNN with images of a current driving scenario as input and give estimated values to the mentioned affordance indicators active in the current state. Those values get forwarded to a controller dealing with the car. In the original approach the training was done via \torcs (c.f. \Cref{subsec: TORCS}).
 
 The controller is setup to take the affordance values and compute a decision from it in an imperative way. For example the steering can be computed as 
 	$$ steerCmd = C \cdot (angle-\frac{dist\_center}{road\_width})$$
-where $dist\_center$ is the center of the current state (line we are on or middle of the lane), a coefficient $C$ suited for the current conditions, like weather or speed, and $angle\in [-\pi, \pi]$ as the affordance indicator.
+where $dist\_center$ is the center of the current state (line we are on, or middle of the lane), a coefficient $C$ suited for the current conditions, like weather or speed, and $angle\in [-\pi, \pi]$ as the affordance indicator.
 
-Also using the controller to compute the accelerating and braking one can adjust the desired speed ($desired\_speed$) based on the affordance indicators. The $desired\_speed$ is set to the speed the agent wants to drive and can drop if a drastic steering motion is considered or accelerate to overtake a slower car.\\
+Also using the controller to compute the accelerating and braking one can adjust the desired speed ($desired\_speed$) based on the affordance indicators. The $desired\_speed$ is set to the speed the agent wants to drive and can drop, if a drastic steering motion is considered or accelerate to overtake a slower car.\\
 In a one lane scenario with a  preceding car driving slower than the $desired\_speed$ there is no space to overtake. For that the controller has the velocity control car-following model:
 	$$ v(t) = v_{max}(1-e^{-\frac{c\cdot dist(t)}{v_{max}} -d})$$ 
 where $v_{max}$ is the maximal speed the agent is allowed to drive, $c$ and $d$ are coefficients specific to external conditions, like a wet lane or the cars potential of accelerating and braking, and $dist(t)$ is the distance to the preceding car. This distance is given through the trained CNN.

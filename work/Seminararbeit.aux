@@ -18,12 +18,16 @@
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \providecommand \@process@fftn@mark [3]{}
 \citation{krizhevsky2012imagenet}
+\citation{glorot2010understanding}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Preliminaries}{1}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Neural Networks}{1}{section.1.1}}
 \newlabel{sec: NN}{{1.1}{1}{Neural Networks}{section.1.1}{}}
 \newlabel{sec: NN@cref}{{[section][1][1]1.1}{1}}
+\newlabel{item input layer}{{1}{1}{Neural Networks}{Item.1}{}}
+\newlabel{item input layer@cref}{{[enumi][1][]1}{1}}
+\citation{matsugu2003subject}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig: Simple NN}{{1.1a}{2}{\relax }{figure.caption.3}{}}
 \newlabel{fig: Simple NN@cref}{{[subfigure][1][1,1]1.1a}{2}}
@@ -37,8 +41,6 @@
 \newlabel{fig: not fullyconnected Neural Net@cref}{{[subfigure][3][1,1]1.1c}{2}}
 \newlabel{sub@fig: not fullyconnected Neural Net}{{c}{2}{\relax }{figure.caption.3}{}}
 \newlabel{sub@fig: not fullyconnected Neural Net@cref}{{[subfigure][3][1,1]1.1c}{2}}
-\newlabel{item input layer}{{1}{2}{Neural Networks}{Item.1}{}}
-\newlabel{item input layer@cref}{{[enumi][1][]1}{2}}
 \newlabel{item hidden layer}{{2}{2}{Neural Networks}{Item.2}{}}
 \newlabel{item hidden layer@cref}{{[enumi][2][]2}{2}}
 \newlabel{item output layer}{{3}{2}{Neural Networks}{Item.3}{}}
@@ -46,7 +48,6 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Convolutional Neural Network (CNN)}{2}{section.1.2}}
 \newlabel{sec:CNN}{{1.2}{2}{Convolutional Neural Network (CNN)}{section.1.2}{}}
 \newlabel{sec:CNN@cref}{{[section][2][1]1.2}{2}}
-\citation{matsugu2003subject}
 \citation{hubel1968receptive}
 \citation{lecun2015lenet}
 \citation{krizhevsky2012imagenet}
@@ -56,8 +57,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}AlexNet}{4}{section.1.3}}
 \newlabel{sec: AlexNet}{{1.3}{4}{AlexNet}{section.1.3}{}}
 \newlabel{sec: AlexNet@cref}{{[section][3][1]1.3}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces The AlexNet\xspace  -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The possibly multiple GPUs only communicate between two layers, but never within a layer.\cite  {krizhevsky2012imagenet}\relax }}{4}{figure.caption.7}}
-\newlabel{pic: AlexNet}{{1.2}{4}{The \alexnet -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). The possibly multiple GPUs only communicate between two layers, but never within a layer.\cite {krizhevsky2012imagenet}\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces The AlexNet\xspace  -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). \cite  {krizhevsky2012imagenet}\relax }}{4}{figure.caption.7}}
+\newlabel{pic: AlexNet}{{1.2}{4}{The \alexnet -architecture for two GPUs. It consists of 5 convolutional layers (at the beginning) and three fully-connected layers (at the end). \cite {krizhevsky2012imagenet}\relax }{figure.caption.7}{}}
 \newlabel{pic: AlexNet@cref}{{[figure][2][1]1.2}{4}}
 \citation{CNNArch}
 \citation{tim2018CNNArchLang}
@@ -70,7 +71,7 @@
 \newlabel{sec: CNNArch}{{2.1}{5}{CNNArchLang}{section.2.1}{}}
 \newlabel{sec: CNNArch@cref}{{[section][1][2]2.1}{5}}
 \citation{CNNArch}
-\citation{wiki:Caffe}
+\citation{CaffeAndcuDNN}
 \citation{jia2014caffe}
 \newlabel{item: sequential connection}{{2.1}{6}{CNNArchLang}{section.2.1}{}}
 \newlabel{item: sequential connection@cref}{{[section][1][2]2.1}{6}}
@@ -95,8 +96,8 @@
 \newlabel{fig: Caffe Graph Example@cref}{{[subfigure][2][2,1]2.1b}{7}}
 \newlabel{sub@fig: Caffe Graph Example}{{b}{7}{\relax }{figure.caption.8}{}}
 \newlabel{sub@fig: Caffe Graph Example@cref}{{[subfigure][2][2,1]2.1b}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces An example of a Softmax loss network. blue boxes are the different layers and the yellow boxes are the blobs. Note that in (a) the parameters are not mentioned since they don't add value for this example. There are things defined like kernel size, image scaling or image origin.\relax }}{7}{figure.caption.8}}
-\newlabel{fig: Caffe Graph and Protobuf}{{2.1}{7}{An example of a Softmax loss network. blue boxes are the different layers and the yellow boxes are the blobs. Note that in (a) the parameters are not mentioned since they don't add value for this example. There are things defined like kernel size, image scaling or image origin.\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces An example of a Softmax loss network. Blue boxes are the different layers and the yellow boxes are the blobs. Note that in (a) the parameters are not mentioned since they don't add value to this example. There are things defined like kernel size, image scaling or image origin.\relax }}{7}{figure.caption.8}}
+\newlabel{fig: Caffe Graph and Protobuf}{{2.1}{7}{An example of a Softmax loss network. Blue boxes are the different layers and the yellow boxes are the blobs. Note that in (a) the parameters are not mentioned since they don't add value to this example. There are things defined like kernel size, image scaling or image origin.\relax }{figure.caption.8}{}}
 \newlabel{fig: Caffe Graph and Protobuf@cref}{{[figure][1][2]2.1}{7}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Caffe2}{7}{section.2.3}}
 \newlabel{sec: Caffe2}{{2.3}{7}{Caffe2}{section.2.3}{}}
@@ -113,6 +114,43 @@
 \newlabel{sec: MxNet@cref}{{[section][4][2]2.4}{8}}
 \citation{MxNetHomepage}
 \citation{MxNetGithubModelGallery}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Comparison: CNNArchLang\xspace  \& Caffe\xspace  }{11}{chapter.3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chapter: Comparison}{{3}{11}{Comparison: \cnnarch \& \caffe }{chapter.3}{}}
+\newlabel{chapter: Comparison@cref}{{[chapter][3][]3}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Implementation}{11}{section.3.1}}
+\newlabel{sec: Implementation}{{3.1}{11}{Implementation}{section.3.1}{}}
+\newlabel{sec: Implementation@cref}{{[section][1][3]3.1}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Caffe\xspace  }{11}{subsection.3.1.1}}
+\newlabel{subsec: Caffe Implementation}{{3.1.1}{11}{\caffe }{subsection.3.1.1}{}}
+\newlabel{subsec: Caffe Implementation@cref}{{[subsection][1][3,1]3.1.1}{11}}
+\@writefile{lol}{\contentsline {lstlisting}{src/listing/alexnet.prototxt}{12}{lstlisting.3.-2}}
+\newlabel{lst: pool1}{{3.1a}{12}{``pool1''\relax }{figure.caption.9}{}}
+\newlabel{lst: pool1@cref}{{[subfigure][1][3,1]3.1a}{12}}
+\newlabel{sub@lst: pool1}{{a}{12}{``pool1''\relax }{figure.caption.9}{}}
+\newlabel{sub@lst: pool1@cref}{{[subfigure][1][3,1]3.1a}{12}}
+\@writefile{lol}{\contentsline {lstlisting}{src/listing/alexnet.prototxt}{12}{lstlisting.3.-3}}
+\newlabel{lst: pool2}{{3.1b}{12}{``pool2''\relax }{figure.caption.9}{}}
+\newlabel{lst: pool2@cref}{{[subfigure][2][3,1]3.1b}{12}}
+\newlabel{sub@lst: pool2}{{b}{12}{``pool2''\relax }{figure.caption.9}{}}
+\newlabel{sub@lst: pool2@cref}{{[subfigure][2][3,1]3.1b}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces \relax }}{12}{figure.caption.9}}
+\newlabel{lst: pool1 and pool2}{{3.1}{12}{\relax }{figure.caption.9}{}}
+\newlabel{lst: pool1 and pool2@cref}{{[figure][1][3]3.1}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}CNNArchLang\xspace  }{12}{subsection.3.1.2}}
+\newlabel{subsec: CNNArch Implementation}{{3.1.2}{12}{\cnnarch }{subsection.3.1.2}{}}
+\newlabel{subsec: CNNArch Implementation@cref}{{[subsection][2][3,1]3.1.2}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Comparison}{12}{subsection.3.1.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Training}{12}{section.3.2}}
+\citation{KITTI}
+\citation{wymann2000torcs}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}KITTI Dataset}{13}{subsection.3.2.1}}
+\newlabel{subsec: KITTI}{{3.2.1}{13}{KITTI Dataset}{subsection.3.2.1}{}}
+\newlabel{subsec: KITTI@cref}{{[subsection][1][3,2]3.2.1}{13}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}TORCS}{13}{subsection.3.2.2}}
+\newlabel{subsec: TORCS}{{3.2.2}{13}{TORCS}{subsection.3.2.2}{}}
+\newlabel{subsec: TORCS@cref}{{[subsection][2][3,2]3.2.2}{13}}
 \citation{chen2015deepdriving}
 \citation{gibson1979ecological}
 \citation{ullman1980against}
@@ -120,109 +158,74 @@
 \citation{KITTI}
 \citation{chen2015deepdriving}
 \citation{aly2008real}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Available Deep Learning Approaches}{11}{chapter.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Available Deep Learning Approaches}{15}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{chapter: Deep Learning Approaches}{{3}{11}{Available Deep Learning Approaches}{chapter.3}{}}
-\newlabel{chapter: Deep Learning Approaches@cref}{{[chapter][3][]3}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Mediated Perception}{11}{section.3.1}}
-\newlabel{sec: Mediated Perception}{{3.1}{11}{Mediated Perception}{section.3.1}{}}
-\newlabel{sec: Mediated Perception@cref}{{[section][1][3]3.1}{11}}
+\newlabel{chapter: Deep Learning Approaches}{{4}{15}{Available Deep Learning Approaches}{chapter.4}{}}
+\newlabel{chapter: Deep Learning Approaches@cref}{{[chapter][4][]4}{15}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Mediated Perception}{15}{section.4.1}}
+\newlabel{sec: Mediated Perception}{{4.1}{15}{Mediated Perception}{section.4.1}{}}
+\newlabel{sec: Mediated Perception@cref}{{[section][1][4]4.1}{15}}
 \citation{pomerleau1989alvinn}
 \citation{chen2015deepdriving}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An example of a scene using 3D bounding boxes and path prediction.\relax }}{12}{figure.caption.9}}
-\newlabel{pic: 3D Bounding Box}{{3.1}{12}{An example of a scene using 3D bounding boxes and path prediction.\relax }{figure.caption.9}{}}
-\newlabel{pic: 3D Bounding Box@cref}{{[figure][1][3]3.1}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Behavior Reflex}{12}{section.3.2}}
-\newlabel{sec: Behavior Reflex}{{3.2}{12}{Behavior Reflex}{section.3.2}{}}
-\newlabel{sec: Behavior Reflex@cref}{{[section][2][3]3.2}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An example of a scene using 3D bounding boxes and path prediction.\relax }}{16}{figure.caption.10}}
+\newlabel{pic: 3D Bounding Box}{{4.1}{16}{An example of a scene using 3D bounding boxes and path prediction.\relax }{figure.caption.10}{}}
+\newlabel{pic: 3D Bounding Box@cref}{{[figure][1][4]4.1}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Behavior Reflex}{16}{section.4.2}}
+\newlabel{sec: Behavior Reflex}{{4.2}{16}{Behavior Reflex}{section.4.2}{}}
+\newlabel{sec: Behavior Reflex@cref}{{[section][2][4]4.2}{16}}
 \citation{gibson1954theory}
 \citation{chen2015deepdriving}
 \citation{chen2015deepdriving}
 \citation{chen2015deepdriving}
-\newlabel{fig: behavior sketches: free lane}{{3.2a}{13}{free lane\relax }{figure.caption.10}{}}
-\newlabel{fig: behavior sketches: free lane@cref}{{[subfigure][1][3,2]3.2a}{13}}
-\newlabel{sub@fig: behavior sketches: free lane}{{a}{13}{free lane\relax }{figure.caption.10}{}}
-\newlabel{sub@fig: behavior sketches: free lane@cref}{{[subfigure][1][3,2]3.2a}{13}}
-\newlabel{fig: behavior sketches: blocked lane}{{3.2b}{13}{slower car in the same lane\relax }{figure.caption.10}{}}
-\newlabel{fig: behavior sketches: blocked lane@cref}{{[subfigure][2][3,2]3.2b}{13}}
-\newlabel{sub@fig: behavior sketches: blocked lane}{{b}{13}{slower car in the same lane\relax }{figure.caption.10}{}}
-\newlabel{sub@fig: behavior sketches: blocked lane@cref}{{[subfigure][2][3,2]3.2b}{13}}
-\newlabel{fig: behavior sketches: shared lane}{{3.2c}{13}{equal fast car in same lane\relax }{figure.caption.10}{}}
-\newlabel{fig: behavior sketches: shared lane@cref}{{[subfigure][3][3,2]3.2c}{13}}
-\newlabel{sub@fig: behavior sketches: shared lane}{{c}{13}{equal fast car in same lane\relax }{figure.caption.10}{}}
-\newlabel{sub@fig: behavior sketches: shared lane@cref}{{[subfigure][3][3,2]3.2c}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.\relax }}{13}{figure.caption.10}}
-\newlabel{fig: problematic behavior sketches}{{3.2}{13}{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.\relax }{figure.caption.10}{}}
-\newlabel{fig: problematic behavior sketches@cref}{{[figure][2][3]3.2}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Direct Perception}{13}{section.3.3}}
-\newlabel{sec: Direct Perception}{{3.3}{13}{Direct Perception}{section.3.3}{}}
-\newlabel{sec: Direct Perception@cref}{{[section][3][3]3.3}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces The affordance indicators and their affiliation states\relax }}{14}{figure.caption.11}}
-\newlabel{lst: affordance indicators}{{3.3}{14}{The affordance indicators and their affiliation states\relax }{figure.caption.11}{}}
-\newlabel{lst: affordance indicators@cref}{{[figure][3][3]3.3}{14}}
-\newlabel{fig: affordance indicators: in lane - lines}{{3.4a}{15}{\relax }{figure.caption.12}{}}
-\newlabel{fig: affordance indicators: in lane - lines@cref}{{[subfigure][1][3,4]3.4a}{15}}
-\newlabel{sub@fig: affordance indicators: in lane - lines}{{a}{15}{\relax }{figure.caption.12}{}}
-\newlabel{sub@fig: affordance indicators: in lane - lines@cref}{{[subfigure][1][3,4]3.4a}{15}}
-\newlabel{fig: affordance indicators: in lane - cars}{{3.4b}{15}{\relax }{figure.caption.12}{}}
-\newlabel{fig: affordance indicators: in lane - cars@cref}{{[subfigure][2][3,4]3.4b}{15}}
-\newlabel{sub@fig: affordance indicators: in lane - cars}{{b}{15}{\relax }{figure.caption.12}{}}
-\newlabel{sub@fig: affordance indicators: in lane - cars@cref}{{[subfigure][2][3,4]3.4b}{15}}
-\newlabel{fig: affordance indicators: angle}{{3.4c}{15}{\relax }{figure.caption.12}{}}
-\newlabel{fig: affordance indicators: angle@cref}{{[subfigure][3][3,4]3.4c}{15}}
-\newlabel{sub@fig: affordance indicators: angle}{{c}{15}{\relax }{figure.caption.12}{}}
-\newlabel{sub@fig: affordance indicators: angle@cref}{{[subfigure][3][3,4]3.4c}{15}}
-\newlabel{fig: affordance indicators: on lane - lines}{{3.4d}{15}{\relax }{figure.caption.12}{}}
-\newlabel{fig: affordance indicators: on lane - lines@cref}{{[subfigure][4][3,4]3.4d}{15}}
-\newlabel{sub@fig: affordance indicators: on lane - lines}{{d}{15}{\relax }{figure.caption.12}{}}
-\newlabel{sub@fig: affordance indicators: on lane - lines@cref}{{[subfigure][4][3,4]3.4d}{15}}
-\newlabel{fig: affordance indicators: on lane - cars}{{3.4e}{15}{\relax }{figure.caption.12}{}}
-\newlabel{fig: affordance indicators: on lane - cars@cref}{{[subfigure][5][3,4]3.4e}{15}}
-\newlabel{sub@fig: affordance indicators: on lane - cars}{{e}{15}{\relax }{figure.caption.12}{}}
-\newlabel{sub@fig: affordance indicators: on lane - cars@cref}{{[subfigure][5][3,4]3.4e}{15}}
-\newlabel{fig: affordance indicators: overlapping areas}{{3.4f}{15}{\relax }{figure.caption.12}{}}
-\newlabel{fig: affordance indicators: overlapping areas@cref}{{[subfigure][6][3,4]3.4f}{15}}
-\newlabel{sub@fig: affordance indicators: overlapping areas}{{f}{15}{\relax }{figure.caption.12}{}}
-\newlabel{sub@fig: affordance indicators: overlapping areas@cref}{{[subfigure][6][3,4]3.4f}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Visualization of the affordance indicators listed in \Cref  {lst: affordance indicators}. The red block is the agent, the orange blocks are other cars and the white arrows indicate the velocity. Gray cars are neglected, because of the currently active system.\relax }}{15}{figure.caption.12}}
-\newlabel{fig: behavior sketches}{{3.4}{15}{Visualization of the affordance indicators listed in \Cref {lst: affordance indicators}. The red block is the agent, the orange blocks are other cars and the white arrows indicate the velocity. Gray cars are neglected, because of the currently active system.\relax }{figure.caption.12}{}}
-\newlabel{fig: behavior sketches@cref}{{[figure][4][3]3.4}{15}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Comparison: CNNArchLang\xspace  \& Caffe\xspace  }{17}{chapter.4}}
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Implementation}{17}{section.4.1}}
-\newlabel{sec: Implementation}{{4.1}{17}{Implementation}{section.4.1}{}}
-\newlabel{sec: Implementation@cref}{{[section][1][4]4.1}{17}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Caffe\xspace  }{17}{subsection.4.1.1}}
-\newlabel{subsec: Caffe Implementation}{{4.1.1}{17}{\caffe }{subsection.4.1.1}{}}
-\newlabel{subsec: Caffe Implementation@cref}{{[subsection][1][4,1]4.1.1}{17}}
-\citation{KITTI}
-\@writefile{lol}{\contentsline {lstlisting}{src/listing/alexnet.prototxt}{18}{lstlisting.4.-3}}
-\newlabel{lst: pool1}{{4.1a}{18}{``pool1''\relax }{figure.caption.13}{}}
-\newlabel{lst: pool1@cref}{{[subfigure][1][4,1]4.1a}{18}}
-\newlabel{sub@lst: pool1}{{a}{18}{``pool1''\relax }{figure.caption.13}{}}
-\newlabel{sub@lst: pool1@cref}{{[subfigure][1][4,1]4.1a}{18}}
-\@writefile{lol}{\contentsline {lstlisting}{src/listing/alexnet.prototxt}{18}{lstlisting.4.-4}}
-\newlabel{lst: pool2}{{4.1b}{18}{``pool2''\relax }{figure.caption.13}{}}
-\newlabel{lst: pool2@cref}{{[subfigure][2][4,1]4.1b}{18}}
-\newlabel{sub@lst: pool2}{{b}{18}{``pool2''\relax }{figure.caption.13}{}}
-\newlabel{sub@lst: pool2@cref}{{[subfigure][2][4,1]4.1b}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces \relax }}{18}{figure.caption.13}}
-\newlabel{lst: pool1 and pool2}{{4.1}{18}{\relax }{figure.caption.13}{}}
-\newlabel{lst: pool1 and pool2@cref}{{[figure][1][4]4.1}{18}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}CNNArchLang\xspace  }{18}{subsection.4.1.2}}
-\newlabel{subsec: CNNArch Implementation}{{4.1.2}{18}{\cnnarch }{subsection.4.1.2}{}}
-\newlabel{subsec: CNNArch Implementation@cref}{{[subsection][2][4,1]4.1.2}{18}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Training}{18}{section.4.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}KITTI Dataset}{18}{subsection.4.2.1}}
-\newlabel{subsec: KITTI}{{4.2.1}{18}{KITTI Dataset}{subsection.4.2.1}{}}
-\newlabel{subsec: KITTI@cref}{{[subsection][1][4,2]4.2.1}{18}}
-\citation{wymann2000torcs}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}TORCS}{19}{subsection.4.2.2}}
-\newlabel{subsec: TORCS}{{4.2.2}{19}{TORCS}{subsection.4.2.2}{}}
-\newlabel{subsec: TORCS@cref}{{[subsection][2][4,2]4.2.2}{19}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Comparison}{19}{subsection.4.2.3}}
+\newlabel{fig: behavior sketches: free lane}{{4.2a}{17}{free lane\relax }{figure.caption.11}{}}
+\newlabel{fig: behavior sketches: free lane@cref}{{[subfigure][1][4,2]4.2a}{17}}
+\newlabel{sub@fig: behavior sketches: free lane}{{a}{17}{free lane\relax }{figure.caption.11}{}}
+\newlabel{sub@fig: behavior sketches: free lane@cref}{{[subfigure][1][4,2]4.2a}{17}}
+\newlabel{fig: behavior sketches: blocked lane}{{4.2b}{17}{slower car in the same lane\relax }{figure.caption.11}{}}
+\newlabel{fig: behavior sketches: blocked lane@cref}{{[subfigure][2][4,2]4.2b}{17}}
+\newlabel{sub@fig: behavior sketches: blocked lane}{{b}{17}{slower car in the same lane\relax }{figure.caption.11}{}}
+\newlabel{sub@fig: behavior sketches: blocked lane@cref}{{[subfigure][2][4,2]4.2b}{17}}
+\newlabel{fig: behavior sketches: shared lane}{{4.2c}{17}{equal fast car in same lane\relax }{figure.caption.11}{}}
+\newlabel{fig: behavior sketches: shared lane@cref}{{[subfigure][3][4,2]4.2c}{17}}
+\newlabel{sub@fig: behavior sketches: shared lane}{{c}{17}{equal fast car in same lane\relax }{figure.caption.11}{}}
+\newlabel{sub@fig: behavior sketches: shared lane@cref}{{[subfigure][3][4,2]4.2c}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.\relax }}{17}{figure.caption.11}}
+\newlabel{fig: problematic behavior sketches}{{4.2}{17}{The 3 scenarios causing problems with behavior reflex approaches. The red block is the agent, the orange block the other car, the white arrows indicate the velocity and the green arrows the logically deduced behaviors.\relax }{figure.caption.11}{}}
+\newlabel{fig: problematic behavior sketches@cref}{{[figure][2][4]4.2}{17}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Direct Perception}{17}{section.4.3}}
+\newlabel{sec: Direct Perception}{{4.3}{17}{Direct Perception}{section.4.3}{}}
+\newlabel{sec: Direct Perception@cref}{{[section][3][4]4.3}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces The affordance indicators and their affiliation states\relax }}{18}{figure.caption.12}}
+\newlabel{lst: affordance indicators}{{4.3}{18}{The affordance indicators and their affiliation states\relax }{figure.caption.12}{}}
+\newlabel{lst: affordance indicators@cref}{{[figure][3][4]4.3}{18}}
+\newlabel{fig: affordance indicators: in lane - lines}{{4.4a}{19}{\relax }{figure.caption.13}{}}
+\newlabel{fig: affordance indicators: in lane - lines@cref}{{[subfigure][1][4,4]4.4a}{19}}
+\newlabel{sub@fig: affordance indicators: in lane - lines}{{a}{19}{\relax }{figure.caption.13}{}}
+\newlabel{sub@fig: affordance indicators: in lane - lines@cref}{{[subfigure][1][4,4]4.4a}{19}}
+\newlabel{fig: affordance indicators: in lane - cars}{{4.4b}{19}{\relax }{figure.caption.13}{}}
+\newlabel{fig: affordance indicators: in lane - cars@cref}{{[subfigure][2][4,4]4.4b}{19}}
+\newlabel{sub@fig: affordance indicators: in lane - cars}{{b}{19}{\relax }{figure.caption.13}{}}
+\newlabel{sub@fig: affordance indicators: in lane - cars@cref}{{[subfigure][2][4,4]4.4b}{19}}
+\newlabel{fig: affordance indicators: angle}{{4.4c}{19}{\relax }{figure.caption.13}{}}
+\newlabel{fig: affordance indicators: angle@cref}{{[subfigure][3][4,4]4.4c}{19}}
+\newlabel{sub@fig: affordance indicators: angle}{{c}{19}{\relax }{figure.caption.13}{}}
+\newlabel{sub@fig: affordance indicators: angle@cref}{{[subfigure][3][4,4]4.4c}{19}}
+\newlabel{fig: affordance indicators: on lane - lines}{{4.4d}{19}{\relax }{figure.caption.13}{}}
+\newlabel{fig: affordance indicators: on lane - lines@cref}{{[subfigure][4][4,4]4.4d}{19}}
+\newlabel{sub@fig: affordance indicators: on lane - lines}{{d}{19}{\relax }{figure.caption.13}{}}
+\newlabel{sub@fig: affordance indicators: on lane - lines@cref}{{[subfigure][4][4,4]4.4d}{19}}
+\newlabel{fig: affordance indicators: on lane - cars}{{4.4e}{19}{\relax }{figure.caption.13}{}}
+\newlabel{fig: affordance indicators: on lane - cars@cref}{{[subfigure][5][4,4]4.4e}{19}}
+\newlabel{sub@fig: affordance indicators: on lane - cars}{{e}{19}{\relax }{figure.caption.13}{}}
+\newlabel{sub@fig: affordance indicators: on lane - cars@cref}{{[subfigure][5][4,4]4.4e}{19}}
+\newlabel{fig: affordance indicators: overlapping areas}{{4.4f}{19}{\relax }{figure.caption.13}{}}
+\newlabel{fig: affordance indicators: overlapping areas@cref}{{[subfigure][6][4,4]4.4f}{19}}
+\newlabel{sub@fig: affordance indicators: overlapping areas}{{f}{19}{\relax }{figure.caption.13}{}}
+\newlabel{sub@fig: affordance indicators: overlapping areas@cref}{{[subfigure][6][4,4]4.4f}{19}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Visualization of the affordance indicators listed in \Cref  {lst: affordance indicators}. The red block is the agent, the orange blocks are other cars and the white arrows indicate the velocity. Gray cars are neglected, because of the currently active system.\relax }}{19}{figure.caption.13}}
+\newlabel{fig: behavior sketches}{{4.4}{19}{Visualization of the affordance indicators listed in \Cref {lst: affordance indicators}. The red block is the agent, the orange blocks are other cars and the white arrows indicate the velocity. Gray cars are neglected, because of the currently active system.\relax }{figure.caption.13}{}}
+\newlabel{fig: behavior sketches@cref}{{[figure][4][4]4.4}{19}}
 \citation{geiger20143d}
 \citation{DeepDriving}
 \citation{chen2015deepdriving}
@@ -235,12 +238,12 @@
 \newlabel{fig: behavior sketche complex scenario}{{5.1}{21}{A scenario that has to be considered to create a full autonomous driving agent\relax }{figure.caption.14}{}}
 \newlabel{fig: behavior sketche complex scenario@cref}{{[figure][1][5]5.1}{21}}
 \citation{CaffeOnSpark}
-\citation{grzywaczewski2017training}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{23}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \newlabel{chapter: conclusion}{{6}{23}{Conclusion}{chapter.6}{}}
 \newlabel{chapter: conclusion@cref}{{[chapter][6][]6}{23}}
+\citation{grzywaczewski2017training}
 \citation{CaffeAlexNetGithub}
 \citation{CaffeAlexNetGithub}
 \@writefile{toc}{\contentsline {chapter}{\numberline {7}Appendix}{25}{chapter.7}}
@@ -268,6 +271,7 @@
 \bibcite{chen2015mxnet}{CLL{$^{+}$}15}
 \bibcite{chen2015deepdriving}{CSKX15}
 \bibcite{DeepDriving}{CSKX18}
+\bibcite{glorot2010understanding}{GB10}
 \bibcite{gibson1954theory}{Gib54}
 \bibcite{gibson1979ecological}{Gib79}
 \bibcite{KITTI}{GLSU13}
@@ -283,11 +287,11 @@
 \bibcite{MxNetGithubModelGallery}{MxNb}
 \bibcite{pomerleau1989alvinn}{Pom89}
 \bibcite{sze2017hardware}{SCE{$^{+}$}17}
+\bibcite{CaffeAndcuDNN}{She14}
 \bibcite{tim2018CNNArchLang}{Tim18}
 \bibcite{CaffeOnSpark}{TM16}
 \bibcite{CNNArch}{TvWH17}
 \bibcite{ullman1980against}{Ull80}
 \bibcite{varda2008protocol}{Var08}
 \bibcite{wymann2000torcs}{WEG{$^{+}$}00}
-\bibcite{wiki:Caffe}{{Wik}18}
 \bibcite{infoworld}{Yeg16}

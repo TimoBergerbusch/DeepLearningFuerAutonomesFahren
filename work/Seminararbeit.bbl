@@ -42,6 +42,13 @@ Chenyi Chen, Ari Seff, Alain Kornhauser, and Jianxiong Xiao.
   driving.
 \newblock http://deepdriving.cs.princeton.edu/, 2018.
 
+\bibitem[GB10]{glorot2010understanding}
+Xavier Glorot and Yoshua Bengio.
+\newblock Understanding the difficulty of training deep feedforward neural
+  networks.
+\newblock In {\em Proceedings of the thirteenth international conference on
+  artificial intelligence and statistics}, pages 249--256, 2010.
+
 \bibitem[Gib54]{gibson1954theory}
 James~J Gibson.
 \newblock A theory of pictorial perception.
@@ -128,6 +135,12 @@ Vivienne Sze, Yu-Hsin Chen, Joel Einer, Amr Suleiman, and Zhengdong Zhang.
 \newblock In {\em Custom Integrated Circuits Conference (CICC), 2017 IEEE},
   pages 1--8. IEEE, 2017.
 
+\bibitem[She14]{CaffeAndcuDNN}
+Evan Shelhamer.
+\newblock Deep learning for computer vision with caffe and cudnn.
+\newblock
+  https://devblogs.nvidia.com/deep-learning-computer-vision-caffe-cudnn/, 2014.
+
 \bibitem[Tim18]{tim2018CNNArchLang}
 Thomas Timmermanns.
 \newblock Modelling languages for deep learning based cyber-physical systems.
@@ -161,11 +174,6 @@ Bernhard Wymann, Eric Espi{\'e}, Christophe Guionneau, Christos Dimitrakakis,
   R{\'e}mi Coulom, and Andrew Sumner.
 \newblock Torcs, the open racing car simulator.
 \newblock {\em Software available at http://torcs. sourceforge. net}, 4, 2000.
-
-\bibitem[{Wik}18]{wiki:Caffe}
-{Wikipedia contributors}.
-\newblock Caffe --- {W}ikipedia{,} the free encyclopedia, 2018.
-\newblock [Online; accessed 11-May-2018].
 
 \bibitem[Yeg16]{infoworld}
 Serdar Yegulalp.

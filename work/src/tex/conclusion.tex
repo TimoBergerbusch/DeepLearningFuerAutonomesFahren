@@ -6,8 +6,8 @@ In this final chapter we want to recap the languages and frameworks about their 
 	Property 						& \cnnarch 		& \caffe 		& \caffetwo 		& \mxnet \\ \hline
 					\multicolumn{5}{c}{General Information}\\\hline
 	is full framework  				& \xmark		& \cmark		& \cmark			& \cmark \\
-	SLI usage						& -- 			& \xmark$^1$ 	& \xmark$^1$ 		& \cmark \\
-	mult. computers 				& -- 			& \cmark		& \cmark			& \cmark \\	
+	SLI usage						& (\cmark)$^5$	& \xmark$^1$ 	& \xmark$^1$ 		& \cmark \\
+	mult. computers 				& (\cmark)$^5$	& \cmark		& \cmark			& \cmark \\	
 	\hline
 					\multicolumn{5}{c}{Nets Supported}\\ \hline
 	typical CNNs					& \cmark		& \cmark		& \cmark			& \cmark \\
@@ -41,16 +41,17 @@ In this final chapter we want to recap the languages and frameworks about their 
 	\begin{itemize}
 		\item[$^1$] CUDA does not generally support SLI
 		\item[$^2$] not clearly stated, but also not denied
-		\item[$^3$] nets written in prototxt (c.f. \Cref{sec: Caffe})
+		\item[$^3$] nets still written in prototxt (c.f. \Cref{sec: Caffe})
 		\item[$^4$] made by a third party\cite{CaffeOnSpark}
+		\item[$^5$] through the usage of \mxnet
 	\end{itemize}
 	\end{multicols}
 \end{figure}
 
-Overall we can conclude that \cnnarch has the potential to become a recognized domain specific language for deep learning. The python like syntax and simplistic way of defining a net is superior to the protocol buffer approach of \caffe. Since \cnnarch is not a full framework but compiles its code to \mxnet code it benefits from MxNets ability of SLI and even cluster usage. The possibility to define recurrent \nns is still up to be implemented and a library of pre-trained models would also increase its potential.
+Overall we can conclude that \cnnarch has the potential to become a recognized domain specific language for deep learning. The python like syntax and simplistic way of defining a net is superior to the protocol buffer approach of \caffe. Since \cnnarch is not a full framework, but compiles its code to \mxnet code, it benefits from MxNets ability of SLI and even cluster usage. The possibility to define recurrent \nns is still up to be implemented and a library of pre-trained models would also increase its potential.
 
-Summarizing the most important aspect of state-of-the-art deep learning frameworks is the efficiency. Through various methods and researches like \kitti and \torcs the data to train a network is available.
-Also to mention is the data estimation mentioned in \cite{grzywaczewski2017training}. There, a fleet of 100 cars is analyzed based on how much useful data is produced during 1 year. After conservative preprocessing this leads to 104 TB of data, which would take an \alexnet roughly $1.2$ years to train, if only a single GPU is used. The possibility of using multiple machines is a key element. Using 18 DGX-1 Volta systems the same effort of training can be done within 7 days.
+Summarizing, the most important aspect of state-of-the-art deep learning frameworks is the efficiency. Through various methods and researches like \kitti and \torcs the data to train a network is available.\\
+Also to mention is the data estimation in \cite{grzywaczewski2017training}. There, a fleet of 100 cars is analyzed based on how much useful data is produced during 1 year. After conservative preprocessing this leads to 104 TB of data, which would take an \alexnet roughly $1.2$ years to train, if only a single GPU is used. The possibility of using multiple machines is a key element. Using 18 DGX-1 Volta systems the same effort of training can be done within 7 days.
 
 So \cnnarch is on the right path using \mxnet in order to have the cluster computing ability.
 
