@@ -102,6 +102,11 @@ Yangqing Jia, Evan Shelhamer, Jeff Donahue, Sergey Karayev, Jonathan Long, Ross
 \newblock Caffe: Convolutional architecture for fast feature embedding.
 \newblock {\em arXiv preprint arXiv:1408.5093}, 2014.
 
+\bibitem[Kin94]{kinnebrock1994neuronale}
+Werner Kinnebrock.
+\newblock {\em Neuronale Netze: Grundlagen, Anwendungen, Beispiele}.
+\newblock Oldenbourg, 1994.
+
 \bibitem[KSH12]{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
@@ -134,6 +139,12 @@ Dean~A Pomerleau.
 \newblock Alvinn: An autonomous land vehicle in a neural network.
 \newblock In {\em Advances in neural information processing systems}, pages
   305--313, 1989.
+
+\bibitem[Roj13]{rojas2013theorie}
+Raul Rojas.
+\newblock {\em Theorie der neuronalen Netze: eine systematische
+  Einf{\"u}hrung}.
+\newblock Springer-Verlag, 2013.
 
 \bibitem[SCE{\etalchar{+}}17]{sze2017hardware}
 Vivienne Sze, Yu-Hsin Chen, Joel Einer, Amr Suleiman, and Zhengdong Zhang.
@@ -174,6 +185,11 @@ Kenton Varda.
 \newblock Protocol buffers: Google’s data interchange format.
 \newblock {\em Google Open Source Blog, Available at least as early as Jul},
   72, 2008.
+
+\bibitem[VS16]{von2016crc}
+David~H Von~Seggern.
+\newblock {\em CRC standard curves and surfaces with mathematica}.
+\newblock CRC Press, 2016.
 
 \bibitem[WEG{\etalchar{+}}00]{wymann2000torcs}
 Bernhard Wymann, Eric Espi{\'e}, Christophe Guionneau, Christos Dimitrakakis,

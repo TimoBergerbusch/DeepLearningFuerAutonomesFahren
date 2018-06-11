@@ -9,10 +9,10 @@ All these three groups differ in the way of interpreting the given sensor data a
 \section{Mediated Perception} \label{sec: Mediated Perception}
 
 The mediated perception approach is a multi-component continuous process. Every component recognizes specific aspects for driving. For example traffic signs, lanes and other cars. Those components are then combined into one single world state representing the cars surrounding, based on the sensor data. \cite{KITTI}\\
-These world states are 3D models of the current world. Cars are identified using a classifier and then often surrounded by a 3D bounding box. An example can be seen in \Cref{pic: 3D Bounding Box}. By comparing different frames generated one can estimate the speed and distance to those objects and derive an A.I. based precedence behavior. \cite{KITTI}\cite{chen2015deepdriving}
+These world states are 3D models of the current world. Cars are identified using a classifier and then often surrounded by a 3D bounding box. An example can be seen in \Cref{pic: 3D Bounding Box}. By comparing different frames generated, one can estimate the speed and distance to those objects and derive an A.I. based precedence behavior. \cite{KITTI}\cite{chen2015deepdriving}
 
 The often stated problems with such approaches are, that computing such a scene is costly in terms of computation time. Some information is irrelevant, redundant or even misleading due to inaccuracy of sensors. To perform a right turn the sensor information of the distance to a car left behind me is irrelevant, but becomes very important when taking a left turn.\\
-Additionally many of the subtasks are still open research topics themselves. For example a reliable lane detection throughout various weather conditions or even a new road not having any drawn lines yet. \cite{aly2008real}\\
+Additionally, many of the subtasks are still open research topics themselves. For example a reliable lane detection throughout various weather conditions or even a new road not having any drawn lines yet. \cite{aly2008real}\\
 Also mediated perception approaches require very detailed information up front, like up-to-date maps.
 
 The approach of mediated perception is a reasonable and very sturdy way of handling such a complex task, but has its drawbacks regarding computational time and additional knowledge.
@@ -29,7 +29,7 @@ The approach of mediated perception is a reasonable and very sturdy way of handl
 
 The behavior reflex approach of constructing a reliable autonomous driving agent can be dated back to 1989 , where researchers tried to directly map a single frame to a decision of a steering angle. For such approaches a quite simple \nn was created. \\
 The network \alvinn consisted of a single hidden layer, used back-propagation and is fed by two cameras: a $30\times32$ pixel video and a $8\times32$ pixel range finder retina. The input neurons fired depending on the blue color band of its pixel, because it is believed to infer the highest contrast between road and non-road. The difference in color of road and non-road was fed back to the network. The bias (activation level) is proportional to the proximity of the corresponding area, based on the likelihood and importance of having road in particular fields of the image.\cite{pomerleau1989alvinn}\\
-For example having recognized that the road abruptly ends right in front of the car is more important than recognizing that there is a road in the top left corner.\\
+For example, having recognized that the road abruptly ends right in front of the car is more important than recognizing that there is a road in the top left corner.\\
 
 Such systems, even though they are simple compared to the in \Cref{sec: Mediated Perception} mentioned mediated perception approaches, have been proven to have the capability to perform simple tasks, like lane keeping perfectly. It can elegantly be trained by having a human drive a car with the cameras equipped and forward the images to the \nn and adding the current steering angles as a label.\cite{chen2015deepdriving}\\
 
@@ -52,7 +52,7 @@ For example comparing a simple straight 3 lane road with the car in the middle, 
 %In this paper we further analyze a suggested third group, called direct perception, which can traced to \cite{gibson2014ecological} in the late 80's, but was sharply criticized by researchers of the other two groups, i.e. in \cite{ullman1980against}.
 
 The direct perception is the third group of approaches, which can be dated back to the 1954 and was initially mainly researched by James J. Gibson. \cite{gibson1954theory} The approach is based on analyzing a picture, not simply deducing a steering angle, or velocity change, like the behavior reflex approaches (cf. \Cref{sec: Behavior Reflex}), but also performing further computation without parsing it into a 3D world state model like the mediated perception approaches (cf. \Cref{sec: Mediated Perception}). \cite{chen2015deepdriving}\\
-So it is a third paradigm, which can be interpreted as a hybrid of the two other paradigms. The approach tries to identify only the meaningful affordance indicators and make a decision based on those parameters. 
+So it is a third paradigm, which can be interpreted as a hybrid of the two other paradigms. The approach tries to identify only the meaningful affordance indicators and makes a decision based on those parameters. 
 
 The CNN gets trained to make a reasonable assumption about the distance of other vehicles, their velocity and lane marks. These assumptions are further called affordance indicators.
 
@@ -88,7 +88,7 @@ ii) "on marking system", when driving on the lane marking:
 \end{figure}
 
 Based on the current state, all affordance indicators of the other state are not used, since the other state is defined to be inactive.\\
-In order to identify the current state the host car is in, every state has their respective region, where they are active with an overlapping region for smooth transitioning.
+In order to identify the current state of the host car, every state has their respective region, where they are active with an overlapping region for smooth transitioning.
 
 Training is done by feeding the CNN with images of a current driving scenario as input and give estimated values to the mentioned affordance indicators active in the current state. Those values get forwarded to a controller dealing with the car. In the original approach the training was done via \torcs (c.f. \Cref{subsec: TORCS}).
 
