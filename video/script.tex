@@ -1,0 +1,85 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath} % Math
+\usepackage{amssymb} % Math symbols
+\usepackage[english]{babel} % Language
+\usepackage{fancyhdr} % Header
+\usepackage[a4paper, total={15cm, 20cm}]{geometry} % Dimensions of the paper and the text area
+\usepackage[utf8]{inputenc} % encoding in UTF, needed for umlauts if German
+\usepackage{mathtools} % Text above arrows
+\usepackage{msc} % Drawing MSCs
+\usepackage{multicol} % Multiple columns
+\usepackage[explicit]{titlesec} % Automatic section titles
+\usepackage{tikz} % Diagrams
+\usetikzlibrary{arrows.meta, automata, shapes, matrix,positioning}
+\usepackage{enumitem}   % Enumeration item
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{subcaption} 
+
+
+% Other packages that might be useful in the future
+%\usepackage{lingmacros}
+%\usepackage{tree-dvips}
+%\usepackage{ulem}
+%\usepackage{amsthm}
+%\usepackage{amsbsy}
+%\usepackage{textcomp,gensymb}
+%\usepackage{graphicx}
+%\usepackage{mathtools}
+
+% Custom variant of msc environment:
+% - No "msc" keyword, longer partial messages
+% - Increased vertical distance between messages
+% - Less distance to the frame left and right
+% - Less distance between header and processes
+% - Less distance between footer and frame
+% - Passing all given options down to the msc environment
+\newenvironment{cmsc}[1][]{\msc[msc keyword={}, self message width=1.1cm, level height=0.6cm, environment distance=1.2cm, head top distance=0.75cm, foot distance=0.5cm, #1]}{\endmsc}
+
+% No indentation at new paragraphs
+\setlength{\parindent}{0pt}
+
+% Distance between columns
+\setlength{\columnsep}{1cm}
+% Vertical line between columns
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{gray}}
+
+
+\begin{document}
+
+
+\section{The direct perception approach}
+
+The autonomous driving agent using the direct perception approach is confidently able to drive within the lanes and switch lanes in order to overtake other cars and therefore avoid collisions.\\
+
+At the top of the screen we can see the exact distance between the estimated value and the real ground truth, which can be easily captured since TORCS is used.\\
+
+On the right side is the 2D model with the current situation. The violet bounding boxes indicate the estimated position of the yellow car.\\
+
+The driving behavior deduced from the estimated distances, is derived via a Driving controller. Using a shared memory every frame could be forwarded to the net. The estimated values then are used by an imperatively programmed driving controller, which uses specialized functions calculating a possible acceleration, braking or steering action. These actions are then shared with TORCS again via shared memory.\\
+
+In this example the host car performs an emergency break, since it recognized that there is a slower car in front and no empty lane to steer to.
+
+
+\section{behavior reflex}
+
+For comparison an agent using the behavior reflex approach is tested as a baseline.
+The first scenario considers empty tracks and the task is to follow the lane.
+The agent is able to fulfill the task perfectly.\\
+
+However, when adding complexity, like other slower cars, the behavior reflex agent encounters several collisions, unnecessary lane changes and drives of track.\\
+
+Once it left the track it has in its basic version no chance to recover, since those scenarios are almost never included in training sets.
+
+\section{mediated perception}
+
+The second comparison is made using the KITTI Dataset. In order to improve the performance of direct perception, two separate CNNs are used. One for close and one for wide range. The input of the far range CNN is a cropped center image of the original image.\\
+
+The direct perception approach recognizes other cars as visualized on the right side, with the green square being the estimated position of a car. \\
+The pink dots denote data points measured that have the same height as the street. The blue dots are measured to be higher.\\
+
+Its performance is roughly as good as the performance as the deformable parts model approach, which is used in many mediated perception approaches and visualized with the red square.
+
+
+\end{document}
