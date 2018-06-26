@@ -20,14 +20,14 @@ This non-linear normalized value is forwarded to the neurons of the next layer.
 
 Those neurons are ordered in different layers, visualized in \Cref{fig: Simple NN}.
 \begin{enumerate}
-	\item input layer (green):\\ \label{item input layer}
+	\item Input layer (green):\\ \label{item input layer}
 	This layer gets fed with the input values of the problem, which can be for example sensor data or pixel color values.
-	\item hidden layer (blue):\\\label{item hidden layer}
+	\item Hidden layer (blue):\\\label{item hidden layer}
 	The hidden layer consists of neurons receiving the values from the previous layer, while not being obliged to have the same number of neurons (c.f. \Cref{fig: Simple NN}).
 	Different architectures can be distinguished to be deep (c.f. \Cref{fig: Deep Neural Net}). This means, that there are multiple hidden layers of neurons instead of just one. The number of neurons a layer contains is again independent of the previous layers.\\
 	Also for the hidden layers, it is possible to be not fully connected (c.f. \Cref{fig: not fullyconnected Neural Net}). Thus some neurons do not forward their value to every neuron of the next layer.\\
 	There is no rule dictating the best architecture, considering number of layers, neurons per layer or the connectivity.
-	\item output layer (yellow):\\ \label{item output layer}
+	\item Output layer (yellow):\\ \label{item output layer}
 	The output neurons produce the value of the \nn. Depending on the \nns purpose it can be for example a confidence value of a classification, like recognizing a stop sign, or the value of changing the steering wheel angle. 
 \end{enumerate}
 
@@ -52,9 +52,9 @@ Like most parts of \nns, also the CNNs are inspired by biological processes. It 
 The four basic layer types, which are mostly used for CNNs are:
 \begin{enumerate}
 \setlength{\itemindent}{-0.5cm}
-\item fully-connected layers:\\
+\item Fully-connected layers:\\
 	equal to the fully connected layers described for \nns (c.f. \Cref{sec: NN})
-\item convolutional layers:\\
+\item Convolutional layers:\\
 	A convolutional layer compares the given image with a list of features, the net derived, to indicate a certain item. In this context it could be an other car driving ahead of the host. Those features are not a-priori given, but learned by the CNN. \\
 	It is simple to understand using an example:\\
 	\begin{figure}[H]
@@ -93,7 +93,7 @@ The four basic layer types, which are mostly used for CNNs are:
 	The left most is the input and the second one is the kernel. The result is computed as a piece-wise multiplication and then adding them up. The convolution can differ in kernel size and stride, which denotes the movement of the kernel. In the example we have a kernel of size $2\times2$ and a stride of 1.\\
 	So for example (red case): $7\cdot(-1)+\cdot6\cdot2+\cdot6\cdot2+4\cdot0=17$\\
 	The number now represents the similarity or likelihood of the feature to be in that position. Edge detection can be applied easily using such a layer. \cite{hubel1968receptive}
-\item rectified linear units (ReLUs):\\
+\item Rectified linear units (ReLUs):\\
 	Those ReLUs perform a normalization step, by applying the function $max(0,x)$ to every element $x$. So for the example:
 	\begin{figure}[H]
 		\centering
@@ -110,8 +110,9 @@ The four basic layer types, which are mostly used for CNNs are:
 		\end{tabular}
 	\end{figure}
 	The main purpose of such a ReLU is to create the prerequisite of mathematical functions, only accepting non-negative values. Often researchers tend to use the function $ln(1+e^x)$ in order to have a differentiable approximation of ReLU. 
-\item pooling layers:\\
-	The pooling layer reduces the input by having a windows size, which is typically 2 or 3, and a stride, which is typically 2, and map the values within the window to one single value. In our example this is done using the maximum value.
+\item Pooling layers:\\
+	The pooling layer reduces the input. It does so by having a window size, which is typically a 2 elements wide and high rectangle highlighting a specific part of the input (c.f. example below). This window is moved by a stride, which is typically 2. The values within this rectangle are mapped to one single value. 
+	In our example this is done using the maximum value.
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[node distance = .5cm]
@@ -146,7 +147,7 @@ The \textit{\alexnet} was one of the best performing CNN architectures in 2012 a
 
 A highly optimized GPU implementation of this architecture combined with innovative features is publicly available. Those features lead to performance improvement and shorter training time.\cite{krizhevsky2012imagenet}
 
-An important note is that the original test is dated back to 2012 and therefore was used with an overall GPU memory of 6 GB, with which training took about six days. With modern hardware like new GPUs, SLI usage (having multiple GPUs) or even clusters, the training can be done faster, or the model can be trained with more data to improve performance. The improvement caused only by hardware can be roughly grasped through \cite{sze2017hardware}.
+An important note is that the original test is dated back to 2012 and therefore was used with an overall GPU memory of 6 GB, with which training took about six days. With modern hardware like new GPUs, Scalable Link Interface (SLI) usage, which means having multiple GPUs for computation, or even clusters, the training can be done faster, or the model can be trained with more data to improve performance. The improvement caused only by hardware can be roughly grasped through \cite{sze2017hardware}.
 
 %\todo{maybe calc the possible speed up based on ``Hardware for Machine Learning''}
 
@@ -154,8 +155,7 @@ An important note is that the original test is dated back to 2012 and therefore 
 	\centering
 %	\includegraphics[scale = 0.45]{src/pic/AlexNet-structure.PNG}
 	\includegraphics[scale = 1.3]{src/pic/AlexNet-structure-simple.PNG}
-	\caption{The \alexnet-architecture. It consists of 5 convolutional layers (at the beginning), and three fully-connected layers (at the end). \cite{han2017pre}
-	\cite{krizhevsky2012imagenet}}
+	\caption{The \alexnet-architecture. It consists of 5 convolutional layers (at the beginning), and three fully-connected layers (at the end) \cite{han2017pre}
+	\cite{krizhevsky2012imagenet}.}
 	\label{pic: AlexNet}
-	%TODO redraw in simple
 \end{figure}

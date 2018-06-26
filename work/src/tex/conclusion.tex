@@ -48,29 +48,14 @@ In this final chapter, we want to recap the languages and frameworks about their
 	\end{multicols}
 \end{figure}
 
-Overall, we can conclude that \cnnarch has the potential to become a recognized domain specific language for deep learning. The python like syntax and simplistic way of defining a net is superior to the protocol buffer approach of \caffe. Since \cnnarch is not a full framework, but compiles its code to \mxnet code, it benefits from MxNets ability of SLI and even cluster usage. The possibility to define recurrent \nns is still up to be implemented and a library of pre-trained models would also increase its potential.
+Overall, we can conclude that \cnnarch has the potential to become a recognized domain specific language for deep learning. The python like syntax and simplistic way of defining a net is superior to the protocol buffer approach of \caffe. Since \cnnarch is not a full framework, but compiles its code to \mxnet code, it benefits from MxNets ability of SLI and even cluster usage. The possibility to define recurrent \nns is still up to be implemented. An example of a \nn that can not be implemented in \cnnarch can be seen in \Cref{pic: Simple RNN}. There a neuron is connected to itself in order to use the latest value it outputted. In order to improve the reputation \cnnarch and to enlarge the community a library of pre-trained models would be desirable.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.3]{src/pic/rnn.jpg}
+	\caption{A single recurrent connection and its semantical interpretation \cite{britz2015recurrent}.}
+	\label{pic: Simple RNN}
+\end{figure}
 
 Summarizing, the most important aspect of state-of-the-art deep learning frameworks is the efficiency. Through various methods and researches like \kitti and \torcs the data to train a network is available.\\
 Also to mention is the data estimation in \cite{grzywaczewski2017training}. There, a fleet of 100 cars is analyzed based on how much useful data is produced during one year. After conservative preprocessing this leads to 104 TB of data, which would take an \alexnet roughly $1.2$ years to train, if only a single GPU is used. The possibility of using multiple machines is a key element. Using 18 DGX-1 Volta systems, the same effort of training can be done within seven days.
-
-So \cnnarch is on the right path using \mxnet in order to have the cluster computing ability.
-
-%It makes 4 assumptions:
-%\begin{itemize}
-%	\item a fleet size of 100 vehicles
-%	\item data collection interval = 1 year = 2080 hours/car
-%	\item a single car produces $1+\frac{TB}{h}$
-%	\item reducing of preprocessing: reduction to ca. $0.05\%$ 
-%\end{itemize}
-%This would 
-%Regarding the estimations mentioned in \cite{grzywaczewski2017training} a modern car provides roughly $\frac{1+TB}{h}$. Training a net in sufficient set of scenarios therefore uses 
-
-%Possible Criteria%SEE: 4.4.1 in CNNArchLang
-%\begin{itemize}
-%	\item modularity
-%	\item Installation 
-%	\item Error Handling
-%	\item for equal task?
-%	\item low-level computations
-%\end{itemize}
-%Also a general conclusion based on results and \cite{grzywaczewski2017training}

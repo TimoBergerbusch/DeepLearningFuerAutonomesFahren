@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  21 JUN 2018 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.1.18)  26 JUN 2018 17:22
 entering extended mode
 **./Seminararbeit.tex
 (Seminararbeit.tex
@@ -1086,7 +1086,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--92
  []
 
 [3]
-Overfull \hbox (1.44534pt too wide) in paragraph at lines 136--137
+Overfull \hbox (1.44534pt too wide) in paragraph at lines 137--138
 []\OT1/cmr/m/n/10.95 For the red case, the value 22 is the max-i-mum of the win
 -dow con-tain-ing $\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 17\OML/cmm/m/it/10.9
 5 ; \OT1/cmr/m/n/10.95 22\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 20\OML/cmm/m/
@@ -1098,7 +1098,7 @@ File: src/pic/AlexNet-structure-simple.PNG Graphic file (type png)
 
 <use src/pic/AlexNet-structure-simple.PNG>
 Package pdftex.def Info: src/pic/AlexNet-structure-simple.PNG used on input lin
-e 156.
+e 157.
 (pdftex.def)             Requested size: 407.43411pt x 143.11864pt.
 )
 (src/tex/deep-learning-languages.tex [4 <./src/pic/AlexNet-structure-simple.PNG
@@ -1107,24 +1107,25 @@ Chapter 2.
 [5
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 103.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 102.
 
  (D:\Tools\MikTex\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 103.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 102.
  [6]
 (src/tex/caffe-graph-and-protobuf-example.tex
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
-) [7] [8]) (src/tex/example.tex
-[9] [10
+) [7]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 134.
+
+(src/listing/mxnet-python-example.py) [8]) (src/tex/example.tex [9] [10
 
 ]
 Chapter 3.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 19.
 (src/listing/alexnet.prototxt
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
@@ -1136,7 +1137,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 4.
-[15] <src/pic/intersection.png, id=428, 620.3175pt x 332.74312pt>
+[15] <src/pic/intersection.png, id=437, 620.3175pt x 332.74312pt>
 File: src/pic/intersection.png Graphic file (type png)
 
 <use src/pic/intersection.png>
@@ -1158,7 +1159,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
  []
 
 [16 <./src/pic/intersection.png>] (src/tex/three-driving-examples.tex) [17]
-(src/tex/affordance-values-and-states.tex)) (src/tex/evaluation.tex [18]
+[18] (src/tex/affordance-values-and-states.tex)) (src/tex/evaluation.tex
 [19] [20
 
 ]
@@ -1177,7 +1178,13 @@ Overfull \hbox (6.25934pt too wide) in paragraph at lines 5--36
 
 [23
 
-]) (src/tex/appendix.tex [24]
+] <src/pic/rnn.jpg, id=539, 797.98125pt x 320.19624pt>
+File: src/pic/rnn.jpg Graphic file (type jpg)
+
+<use src/pic/rnn.jpg>
+Package pdftex.def Info: src/pic/rnn.jpg used on input line 55.
+(pdftex.def)             Requested size: 239.39621pt x 96.0596pt.
+) (src/tex/appendix.tex [24 <./src/pic/rnn.jpg>]
 Chapter 7.
 (src/listing/alexnet.prototxt) (src/listing/alexnet.prototxt)
 (src/listing/alexnet.prototxt)
@@ -1208,42 +1215,41 @@ Overfull \hbox (6.41792pt too wide) in paragraph at lines 17--18
 
 )) (Seminararbeit.bbl [27] [28
 
-]
-Underfull \hbox (badness 4242) in paragraph at lines 76--81
+] [29]
+Underfull \hbox (badness 4242) in paragraph at lines 80--85
 []\OT1/cmr/m/n/10.95 Adam Grzywaczewski.  Train-ing ai for self-driving ve-hi-c
 les: the
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 76--81
+Underfull \hbox (badness 1675) in paragraph at lines 80--85
 \OT1/cmr/m/n/10.95 chal-lenge of scale.  Tech-ni-cal re-port, Tech. rep., NVIDI
 A Cor-po-ra-
  []
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
-[]\OT1/cmr/m/n/10.95 Mxnet model gallery.  []$\OT1/pcr/m/n/10.95 https : / / gi
-thub . com / dmlc /
+
+Underfull \hbox (badness 3428) in paragraph at lines 137--140
+[]\OT1/cmr/m/n/10.95 Mxnet model gallery.  []$\OT1/pcr/m/n/10.95 https : / / mx
+net . apache . org / model _ zoo /
  []
 
-
-Underfull \hbox (badness 1168) in paragraph at lines 156--160
+[30]
+Underfull \hbox (badness 1168) in paragraph at lines 160--164
 []\OT1/cmr/m/n/10.95 Evan Shel-hamer.  Deep learn-ing for com-puter vi-sion wit
 h caffe and
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 156--160
+Underfull \hbox (badness 2368) in paragraph at lines 160--164
 \OT1/cmr/m/n/10.95 cudnn.  https://devblogs.nvidia.com/deep-learning-computer-v
 ision-caffe-
  []
 
-[30]
 ("C:\Users\Timo Bergerbusch\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-32.def
 "
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-Underfull \hbox (badness 10000) in paragraph at lines 201--206
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 \OT1/cmr/m/it/10.95 https://www.infoworld.com/article/3144025/cloud-computing/w
 hy-amazon-
  []
@@ -1255,17 +1261,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 166.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 166.
 Package rerunfilecheck Info: File `Seminararbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 9A0C84CE01FE0516774F7DECAE2F5510;1599.
+(rerunfilecheck)             Checksum: 5DB35E4A171F0DDD756A04D81212D933;1599.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 166.
  ) 
 Here is how much of TeX's memory you used:
- 26101 strings out of 493333
- 510977 string characters out of 3144357
- 673322 words of memory out of 3000000
- 28719 multiletter control sequences out of 15000+200000
+ 26128 strings out of 493333
+ 511465 string characters out of 3144357
+ 673734 words of memory out of 3000000
+ 28729 multiletter control sequences out of 15000+200000
  22666 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,18n,71p,1018b,1406s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,18n,71p,1085b,1406s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Tools/MikTex/fonts/enc/dvips/base/8r.enc}<D:/Tools/MikTex/fonts/type1/pub
 lic/amsfonts/cm/cmbx10.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmbx
 12.pfb><D:/Tools/MikTex/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/Tools/Mik
@@ -1281,9 +1287,9 @@ ls/MikTex/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/Tools/MikTex/fonts
 /type1/urw/courier/ucrr8a.pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvb8a.
 pfb><D:/Tools/MikTex/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Tools/MikTex/fonts
 /type1/urw/zapfding/uzdr.pfb>
-Output written on Seminararbeit.pdf (37 pages, 1972548 bytes).
+Output written on Seminararbeit.pdf (37 pages, 2023520 bytes).
 PDF statistics:
- 910 PDF objects out of 1000 (max. 8388607)
- 381 named destinations out of 1000 (max. 500000)
- 256 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 930 PDF objects out of 1000 (max. 8388607)
+ 393 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
